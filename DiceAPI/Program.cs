@@ -17,6 +17,12 @@ if (connectionString.StartsWith("postgres://"))
     connectionString =
         $"Host={uri.Host};Port={uri.Port};Database={uri.AbsolutePath.TrimStart('/')};" +
         $"Username={userInfo[0]};Password={userInfo[1]};SSL Mode=Require;Trust Server Certificate=true";
+    
+    Console.WriteLine("ENV DATABASE_URL: " + Environment.GetEnvironmentVariable("DATABASE_URL"));
+    if (string.IsNullOrEmpty(connectionString))
+    {
+        throw new InvalidOperationException("Brak ustawionej zmiennej DATABASE_URL ani wpisu DefaultConnection w appsettings.");
+    }
 }
 
 builder.Services.AddDbContext<DiceContext>(options =>
