@@ -9,21 +9,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8e027a5-9be0-4afb-8ad5-886cba30df82" name="Changes" comment="" />
+    <list default="true" id="d8e027a5-9be0-4afb-8ad5-886cba30df82" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/DiceAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/DiceAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/DiceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/DiceController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/DiceAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/DiceAPI.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/DiceAPI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/DiceAPI.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/DiceAPI.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/DiceAPI.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Main.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;PawelFlorczak&quot;
+  }
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="aa16990b-be06-4422-bf88-94de8269f784" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/PawelFlorczak/dnd2.git&quot;,
+    &quot;accountId&quot;: &quot;aa16990b-be06-4422-bf88-94de8269f784&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/DiceAPI/DiceController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="2ysjCvUVG9ouYeG4DXfW2Y0gSOz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,6 +88,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -122,6 +180,34 @@
         <option name="Build Solution" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DiceAPI/Dockerfile" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="imageTag" value="diceapi" />
+          <option name="containerName" value="diceapi" />
+          <option name="contextFolderPath" value="C:\Users\pawel\Documents\Godot Projects\Dnd2" />
+          <option name="portBindings">
+            <list>
+              <DockerPortBindingImpl>
+                <option name="containerPort" value="8080" />
+                <option name="hostIp" value="127.0.0.1" />
+                <option name="hostPort" value="8080" />
+              </DockerPortBindingImpl>
+            </list>
+          </option>
+          <option name="sourceFilePath" value="DiceAPI/Dockerfile" />
+        </settings>
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <EXTENSION ID="com.jetbrains.rider.docker.debug" isFastModeEnabled="true" isSslEnabled="false" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -136,14 +222,57 @@
       <updated>1730074164100</updated>
       <workItem from="1730074165213" duration="881000" />
       <workItem from="1750630058027" duration="1972000" />
+      <workItem from="1750689213583" duration="3157000" />
+      <workItem from="1750699965022" duration="4028000" />
     </task>
+    <task id="LOCAL-00001" summary="Innit">
+      <option name="closed" value="true" />
+      <created>1750689483369</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750689483369</updated>
+    </task>
+    <task id="LOCAL-00002" summary="docker">
+      <option name="closed" value="true" />
+      <created>1750690376030</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750690376030</updated>
+    </task>
+    <task id="LOCAL-00003" summary="docker fix">
+      <option name="closed" value="true" />
+      <created>1750691121818</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750691121818</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Innit" />
+    <MESSAGE value="docker" />
+    <MESSAGE value="docker fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="docker fix" />
   </component>
 </project>

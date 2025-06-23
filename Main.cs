@@ -19,7 +19,8 @@ public partial class Main : Control
 
     private void OnRollPressed()
     {
-        var url = "http://localhost:5254/dice/roll?sides=20";
+        //var url = "http://localhost:5254/dice/roll?sides=20"; 
+        var url = "https://dnd2.onrender.com/dice/roll?sides=20";
         _http.Request(url);
     }
 

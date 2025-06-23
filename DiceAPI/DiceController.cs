@@ -6,17 +6,29 @@ namespace DiceAPI.Controllers;
 [Route("[controller]")]
 public class DiceController : ControllerBase
 {
-    private readonly ILogger<DiceController> _logger;
+    private readonly DiceContext _context;
 
-    public DiceController(ILogger<DiceController> logger)
+    public DiceController(DiceContext context)
     {
-        _logger = logger;
+        _context = context;
     }
 
     [HttpGet("roll")]
-    public IActionResult Roll([FromQuery] int sides = 6)
+    public async Task<IActionResult> Roll([FromQuery] int sides = 20, [FromQuery] string player = "unknown")
     {
         var result = Random.Shared.Next(1, sides + 1);
+        var roll = new DiceRoll
+        {
+            PlayerName = player,
+            Sides = sides,
+            Result = result,
+            Timestamp = DateTime.UtcNow
+        };
+
+        _context.DiceRolls.Add(roll);
+        await _context.SaveChangesAsync();
+
         return Ok(new { result });
     }
+
 }
