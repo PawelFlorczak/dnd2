@@ -1,3 +1,5 @@
+using DiceAPI.Data;
+using DiceAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DiceAPI.Controllers;
