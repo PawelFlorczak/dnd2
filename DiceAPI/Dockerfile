@@ -1,23 +1,11 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-USER $APP_UID
-WORKDIR /app
-EXPOSE 8080
-EXPOSE 8081
-
+﻿# Etap 1: Build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-COPY ["DiceAPI/DiceAPI.csproj", "DiceAPI/"]
-RUN dotnet restore "DiceAPI/DiceAPI.csproj"
-COPY . .
-WORKDIR "/src/DiceAPI"
-RUN dotnet build "DiceAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build
-
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "DiceAPI.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
-
-FROM base AS final
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY . .
+RUN dotnet publish "DiceAPI.csproj" -c Release -o /app/out
+
+# Etap 2: Runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+COPY --from=build /app/out .
 ENTRYPOINT ["dotnet", "DiceAPI.dll"]
