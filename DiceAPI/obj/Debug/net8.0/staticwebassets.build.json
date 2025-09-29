@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "vSfH+wuPM83a2EpDfbEecwPGmr2nwOaRyiA0BMTuSuk=",
-  "Source": "DiceAPI",
-  "BasePath": "_content/DiceAPI",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"4ByipoEOi4j3EnxWib1O26EsZQWN34YA8fNs9icPSDg=","Source":"DiceAPI","BasePath":"_content/DiceAPI","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
