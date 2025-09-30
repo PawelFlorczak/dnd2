@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9G+bYSYeXrQ=",
+  "dgSpecHash": "0/sGAOJPqhc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Użytkownik\\Godot\\Godot_v4.5-stable_mono_win64\\Projects\\Dnd2\\DiceAPI\\DiceAPI.csproj",
+  "projectFilePath": "C:\\Users\\Użytkownik\\RiderProjects\\dnd2\\DiceAPI\\DiceAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Użytkownik\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Użytkownik\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.12\\microsoft.aspnetcore.openapi.8.0.12.nupkg.sha512",
@@ -53,11 +53,7 @@
     "C:\\Users\\Użytkownik\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Użytkownik\\.nuget\\packages\\system.text.encodings.web\\9.0.6\\system.text.encodings.web.9.0.6.nupkg.sha512",
     "C:\\Users\\Użytkownik\\.nuget\\packages\\system.text.json\\9.0.6\\system.text.json.9.0.6.nupkg.sha512",
-    "C:\\Users\\Użytkownik\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\Użytkownik\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.20\\microsoft.netcore.app.ref.8.0.20.nupkg.sha512",
-    "C:\\Users\\Użytkownik\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.20\\microsoft.windowsdesktop.app.ref.8.0.20.nupkg.sha512",
-    "C:\\Users\\Użytkownik\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.20\\microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512",
-    "C:\\Users\\Użytkownik\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.20\\microsoft.netcore.app.host.win-x64.8.0.20.nupkg.sha512"
+    "C:\\Users\\Użytkownik\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

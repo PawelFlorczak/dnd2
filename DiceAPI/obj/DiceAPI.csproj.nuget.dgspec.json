@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Użytkownik\\Godot\\Godot_v4.5-stable_mono_win64\\Projects\\Dnd2\\DiceAPI\\DiceAPI.csproj": {}
+    "C:\\Users\\Użytkownik\\RiderProjects\\dnd2\\DiceAPI\\DiceAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Użytkownik\\Godot\\Godot_v4.5-stable_mono_win64\\Projects\\Dnd2\\DiceAPI\\DiceAPI.csproj": {
+    "C:\\Users\\Użytkownik\\RiderProjects\\dnd2\\DiceAPI\\DiceAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Użytkownik\\Godot\\Godot_v4.5-stable_mono_win64\\Projects\\Dnd2\\DiceAPI\\DiceAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Użytkownik\\RiderProjects\\dnd2\\DiceAPI\\DiceAPI.csproj",
         "projectName": "DiceAPI",
-        "projectPath": "C:\\Users\\Użytkownik\\Godot\\Godot_v4.5-stable_mono_win64\\Projects\\Dnd2\\DiceAPI\\DiceAPI.csproj",
+        "projectPath": "C:\\Users\\Użytkownik\\RiderProjects\\dnd2\\DiceAPI\\DiceAPI.csproj",
         "packagesPath": "C:\\Users\\Użytkownik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Użytkownik\\Godot\\Godot_v4.5-stable_mono_win64\\Projects\\Dnd2\\DiceAPI\\obj\\",
+        "outputPath": "C:\\Users\\Użytkownik\\RiderProjects\\dnd2\\DiceAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Użytkownik\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -37,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -78,24 +77,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -104,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.414/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
