@@ -15,8 +15,17 @@ public partial class Main : Control
 
         var button = GetNode<Button>("Button");
         button.Pressed += OnRollPressed;
+        
+        var ws = GetNode<DiceWebSocket>("DiceWebSocket");
+        ws.Connect("RollReceived", new Callable(this, nameof(OnRollReceived)));
     }
 
+    private void OnRollReceived(string msg)
+    {
+        // tutaj np. sparsujesz JSON i wrzucisz do historii
+        GD.Print("🎲 Nowy rzut: ", msg);
+    }
+    
     private void OnRollPressed()
     {
         //var url = "http://localhost:5254/dice/roll?sides=20"; 

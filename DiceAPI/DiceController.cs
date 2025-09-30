@@ -1,6 +1,8 @@
 using DiceAPI.Data;
 using DiceAPI.Models;
+using DiceAPI.Hubs;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 
 namespace DiceAPI.Controllers;
@@ -10,10 +12,12 @@ namespace DiceAPI.Controllers;
 public class DiceController : ControllerBase
 {
     private readonly DiceContext _context;
+    private readonly IHubContext<DiceHub> _hubContext;
 
-    public DiceController(DiceContext context)
+    public DiceController(DiceContext context, IHubContext<DiceHub> hubContext)
     {
         _context = context;
+        _hubContext = hubContext;
     }
 
     [HttpGet("roll")]
@@ -30,8 +34,10 @@ public class DiceController : ControllerBase
 
         _context.DiceRolls.Add(roll);
         await _context.SaveChangesAsync();
+        
+        await _hubContext.Clients.All.SendAsync("ReceiveRoll", roll);
 
-        return Ok(new { result });
+        return Ok(new { result = roll.Result });
     }
     
     [HttpGet("history")]
@@ -52,5 +58,6 @@ public class DiceController : ControllerBase
         return Ok(rolls);
     }
 
+    
 
 }

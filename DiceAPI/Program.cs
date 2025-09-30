@@ -1,4 +1,5 @@
 using DiceAPI.Data;
+using DiceAPI.Hubs;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ builder.Services.AddDbContext<DiceContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllers();
+builder.Services.AddSignalR().AddJsonProtocol();
 
 var app = builder.Build();
 
@@ -24,6 +26,7 @@ using (var scope = app.Services.CreateScope())
 }
 
 
-app.UseHttpsRedirection();
 app.MapControllers();
+app.MapHub<DiceHub>("/diceHub");
+app.UseHttpsRedirection();
 app.Run();
