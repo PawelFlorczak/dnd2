@@ -17,6 +17,13 @@ using (var scope = app.Services.CreateScope())
     context.Database.Migrate();
 }
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<DiceContext>();
+    db.Database.Migrate();
+}
+
+
 app.UseHttpsRedirection();
 app.MapControllers();
 app.Run();
