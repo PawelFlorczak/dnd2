@@ -1,6 +1,9 @@
 using Godot;
 using Microsoft.AspNetCore.SignalR.Client;
 using System.Threading.Tasks;
+using DiceAPI.Models;
+using System.Text.Json;
+using Godot.Collections;
 
 public partial class DiceSignalRClient : Node
 {
@@ -15,12 +18,27 @@ public partial class DiceSignalRClient : Node
             .WithAutomaticReconnect()
             .Build();
 
-        _connection.On<string>("ReceiveRoll", (msg) =>
+        // _connection.On<DiceRoll>("ReceiveRoll", (msg) =>
+        // {
+        //     GD.Print("Otrzymano rzut: ", msg);
+        //     EmitSignal(nameof(RollReceived), msg);
+        // });
+        
+        _connection.On<DiceRoll>("ReceiveRoll", (roll) =>
         {
-            GD.Print("Otrzymano rzut: ", msg);
-            EmitSignal(nameof(RollReceived), msg);
-        });
+            var dict = new Dictionary
+            {
+                { "id", roll.Id },
+                { "playerName", roll.PlayerName },
+                { "sides", roll.Sides },
+                { "result", roll.Result },
+                { "timestamp", roll.Timestamp.ToString("O") }
+            };
 
+            EmitSignal(SignalName.RollReceived, dict);
+        });
+        
+        
         try
         {
             await _connection.StartAsync();
@@ -35,11 +53,11 @@ public partial class DiceSignalRClient : Node
     [Signal]
     public delegate void RollReceivedEventHandler(string message);
 
-    public async Task SendRoll(string player, int sides, int result)
+    public async Task SendRoll(string playerName, int sides, int result)
     {
         if (_connection.State == HubConnectionState.Connected)
         {
-            await _connection.InvokeAsync("BroadcastRoll", player, sides, result);
+            await _connection.InvokeAsync("BroadcastRoll", playerName, sides, result);
         }
     }
 }

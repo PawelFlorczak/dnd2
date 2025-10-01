@@ -10,8 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8e027a5-9be0-4afb-8ad5-886cba30df82" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DiceAPI/DiceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/DiceController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/main.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceSignalRClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceSignalRClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dnd2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/dnd2.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +220,7 @@
       <workItem from="1750699965022" duration="5288000" />
       <workItem from="1750713291106" duration="869000" />
       <workItem from="1759219646115" duration="12671000" />
-      <workItem from="1759309936235" duration="4212000" />
+      <workItem from="1759309936235" duration="7340000" />
     </task>
     <task id="LOCAL-00001" summary="Innit">
       <option name="closed" value="true" />
@@ -315,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759313309787</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="WebSocket with SignalR Test 2">
+      <option name="closed" value="true" />
+      <created>1759314824251</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1759314824251</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -347,6 +366,7 @@
     <MESSAGE value="DiceHub mk1" />
     <MESSAGE value="WebSocket with SignalR Test 1" />
     <MESSAGE value="zapomniałem o tym XD" />
-    <option name="LAST_COMMIT_MESSAGE" value="zapomniałem o tym XD" />
+    <MESSAGE value="WebSocket with SignalR Test 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="WebSocket with SignalR Test 2" />
   </component>
 </project>
