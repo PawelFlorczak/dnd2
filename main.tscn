@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dwdftodq2saj8"]
+[gd_scene load_steps=3 format=3 uid="uid://dwdftodq2saj8"]
 
 [ext_resource type="Script" uid="uid://cr488xnnopd82" path="res://Main.cs" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://doxykclwf1jw6" path="res://DiceWebSocket.cs" id="2_0xm2m"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -37,3 +38,6 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="DiceWebSocket" type="Node" parent="."]
+script = ExtResource("2_0xm2m")

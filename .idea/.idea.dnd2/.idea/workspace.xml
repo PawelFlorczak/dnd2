@@ -10,23 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8e027a5-9be0-4afb-8ad5-886cba30df82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DiceAPI/Hubs/DiceHub.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/DiceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/DiceController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Main.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dnd2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/dnd2.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/main.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,15 +26,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {}
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/PawelFlorczak/dnd2.git",
-    "accountId": "446bc52a-976e-4da0-9e02-d36756541bcc"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/PawelFlorczak/dnd2.git&quot;,
+    &quot;accountId&quot;: &quot;446bc52a-976e-4da0-9e02-d36756541bcc&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/DiceAPI/DiceController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/Hubs/DiceHub.cs" root0="FORCE_HIGHLIGHTING" />
@@ -74,7 +64,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -223,7 +213,8 @@
       <workItem from="1750689213583" duration="3157000" />
       <workItem from="1750699965022" duration="5288000" />
       <workItem from="1750713291106" duration="869000" />
-      <workItem from="1759219646115" duration="10433000" />
+      <workItem from="1759219646115" duration="12671000" />
+      <workItem from="1759309936235" duration="2116000" />
     </task>
     <task id="LOCAL-00001" summary="Innit">
       <option name="closed" value="true" />
@@ -305,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759226160250</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="DiceHub mk1">
+      <option name="closed" value="true" />
+      <created>1759230352254</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1759230352254</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +333,7 @@
     <MESSAGE value="Dalszy ciąg fixowania" />
     <MESSAGE value="kolejny fix" />
     <MESSAGE value="teraz na pewno pójdzie" />
-    <option name="LAST_COMMIT_MESSAGE" value="teraz na pewno pójdzie" />
+    <MESSAGE value="DiceHub mk1" />
+    <option name="LAST_COMMIT_MESSAGE" value="DiceHub mk1" />
   </component>
 </project>
