@@ -408,3 +408,6 @@ C:\Users\Użytkownik\RiderProjects\dnd2\DiceAPI\obj\Debug\net8.0\refint\DiceAPI.
 C:\Users\Użytkownik\RiderProjects\dnd2\DiceAPI\obj\Debug\net8.0\DiceAPI.pdb
 C:\Users\Użytkownik\RiderProjects\dnd2\DiceAPI\obj\Debug\net8.0\DiceAPI.genruntimeconfig.cache
 C:\Users\Użytkownik\RiderProjects\dnd2\DiceAPI\obj\Debug\net8.0\ref\DiceAPI.dll
+C:\Users\Użytkownik\RiderProjects\dnd2\DiceAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\Użytkownik\RiderProjects\dnd2\DiceAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\Użytkownik\RiderProjects\dnd2\DiceAPI\bin\Debug\net8.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
