@@ -37,7 +37,7 @@ public class DiceController : ControllerBase
         
         await _hubContext.Clients.All.SendAsync("ReceiveRoll", roll);
 
-        return Ok(new { result = roll.Result });
+        return Ok(roll);
     }
     
     [HttpGet("history")]
