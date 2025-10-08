@@ -1,64 +1,61 @@
 using Godot;
+using System;
 using Microsoft.AspNetCore.SignalR.Client;
 using System.Threading.Tasks;
-using DiceAPI.Models;
+using DiceAPI.Models; // Jeśli używasz klasy DiceRoll
 using DiceAPI.Hubs;
-using System.Text.Json;
-using Godot.Collections;
 
 public partial class DiceSignalRClient : Node
 {
+    [Export] public string ServerUrl { get; set; } = "http://localhost:5254/DiceHub";
+
     private HubConnection _connection;
+
+    [Signal]
+    public delegate void RollReceivedEventHandler(string player, int result, int sides, string timestamp);
 
     public override async void _Ready()
     {
         GD.Print("Łączenie z SignalR...");
 
         _connection = new HubConnectionBuilder()
-            .WithUrl("http://localhost:5254/DiceHub")
+            .WithUrl(ServerUrl)
             .WithAutomaticReconnect()
             .Build();
 
-        // _connection.On<DiceRoll>("ReceiveRoll", (msg) =>
-        // {
-        //     GD.Print("Otrzymano rzut: ", msg);
-        //     EmitSignal(nameof(RollReceived), msg);
-        // });
-        
         _connection.On<DiceRoll>("ReceiveRoll", (roll) =>
         {
-            var dict = new Dictionary
-            {
-                { "id", roll.Id },
-                { "playerName", roll.PlayerName },
-                { "sides", roll.Sides },
-                { "result", roll.Result },
-                { "timestamp", roll.Timestamp.ToString("O") }
-            };
-
-            EmitSignal(SignalName.RollReceived, dict);
+            // Używamy CallDeferred, żeby przenieść wywołanie na główny wątek Godota
+            CallDeferred(nameof(EmitSignal), nameof(RollReceived), roll.PlayerName, roll.Result, roll.Sides, roll.Timestamp.ToString("HH:mm:ss"));
         });
-        
-        
+
         try
         {
             await _connection.StartAsync();
             GD.Print("Połączono z SignalR!");
         }
-        catch (System.Exception ex)
+        catch (Exception ex)
         {
             GD.PrintErr("Błąd połączenia z SignalR: ", ex.Message);
         }
     }
 
-    [Signal]
-    public delegate void RollReceivedEventHandler(string message);
-
-    public async Task SendRoll(string playerName, int sides, int result)
+    public async Task SendRollAsync(string player, int result, int sides)
     {
-        if (_connection.State == HubConnectionState.Connected)
+        if (_connection == null || _connection.State != HubConnectionState.Connected)
         {
-            await _connection.InvokeAsync("BroadcastRoll", playerName, sides, result);
+            GD.PrintErr("SignalR nie jest połączony!");
+            return;
         }
+
+        var roll = new DiceRoll
+        {
+            PlayerName = player,
+            Result = result,
+            Sides = sides,
+            Timestamp = DateTime.UtcNow
+        };
+
+        await _connection.InvokeAsync("SendRoll", roll);
     }
 }

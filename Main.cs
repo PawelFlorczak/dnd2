@@ -16,7 +16,7 @@ public partial class Main : Control
 		var button = GetNode<Button>("Button");
 		button.Pressed += OnRollPressed;
 		
-		var signalR = GetNode<DiceSignalRClient>("SignalRClient");
+		var signalR = GetNode<DiceSignalRClient>("DiceSignalRClient");
 		signalR.Connect("RollReceived", new Callable(this, nameof(OnRollReceived)));
 		
 	}

@@ -39,5 +39,5 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="SignalRClient" type="Node" parent="."]
+[node name="DiceSignalRClient" type="Node" parent="."]
 script = ExtResource("2_0xm2m")
