@@ -15,13 +15,15 @@ Global
 		{AA88433B-BCBA-4BB0-83C1-7BF66874B4EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA88433B-BCBA-4BB0-83C1-7BF66874B4EF}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
 		{AA88433B-BCBA-4BB0-83C1-7BF66874B4EF}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
-		{AA88433B-BCBA-4BB0-83C1-7BF66874B4EF}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
-		{AA88433B-BCBA-4BB0-83C1-7BF66874B4EF}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{AA88433B-BCBA-4BB0-83C1-7BF66874B4EF}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA88433B-BCBA-4BB0-83C1-7BF66874B4EF}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+		{AA88433B-BCBA-4BB0-83C1-7BF66874B4EF}.ExportRelease|Any CPU.Deploy.0 = Debug|Any CPU
 		{D4FB5B6E-2CCC-4E12-A09A-C2F139C85FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4FB5B6E-2CCC-4E12-A09A-C2F139C85FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4FB5B6E-2CCC-4E12-A09A-C2F139C85FE3}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4FB5B6E-2CCC-4E12-A09A-C2F139C85FE3}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
 		{D4FB5B6E-2CCC-4E12-A09A-C2F139C85FE3}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4FB5B6E-2CCC-4E12-A09A-C2F139C85FE3}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+		{D4FB5B6E-2CCC-4E12-A09A-C2F139C85FE3}.ExportRelease|Any CPU.Deploy.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

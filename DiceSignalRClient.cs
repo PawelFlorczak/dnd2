@@ -2,6 +2,7 @@ using Godot;
 using Microsoft.AspNetCore.SignalR.Client;
 using System.Threading.Tasks;
 using DiceAPI.Models;
+using DiceAPI.Hubs;
 using System.Text.Json;
 using Godot.Collections;
 
@@ -14,7 +15,7 @@ public partial class DiceSignalRClient : Node
         GD.Print("Łączenie z SignalR...");
 
         _connection = new HubConnectionBuilder()
-            .WithUrl("https://dnd2.onrender.com/DiceHub")
+            .WithUrl("http://localhost:5254/DiceHub")
             .WithAutomaticReconnect()
             .Build();
 

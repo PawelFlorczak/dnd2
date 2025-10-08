@@ -1,32 +1,47 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 using DiceAPI.Data;
 using DiceAPI.Hubs;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<DiceContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+// CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy
+            .AllowAnyOrigin()
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 
 builder.Services.AddControllers();
-builder.Services.AddSignalR().AddJsonProtocol();
+builder.Services.AddSignalR();
+
+// 🧩 Wybór bazy w zależności od środowiska
+var env = builder.Environment.EnvironmentName;
+if (env == "Development")
+{
+    builder.Services.AddDbContext<DiceContext>(options =>
+        options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
+}
+else
+{
+    builder.Services.AddDbContext<DiceContext>(options =>
+        options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+}
 
 var app = builder.Build();
 
-// Automatically apply migrations on startup
-using (var scope = app.Services.CreateScope())
-{
-    var context = scope.ServiceProvider.GetRequiredService<DiceContext>();
-    context.Database.Migrate();
-}
-
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<DiceContext>();
-    db.Database.Migrate();
-}
-
+app.UseRouting();
+app.UseCors("AllowAll");
 
 app.MapControllers();
-app.MapHub<DiceHub>("/diceHub");
-app.UseHttpsRedirection();
+app.MapHub<DiceHub>("/DiceHub");
+
 app.Run();

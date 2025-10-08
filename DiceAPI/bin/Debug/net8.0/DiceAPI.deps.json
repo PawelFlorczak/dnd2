@@ -9,9 +9,11 @@
       "DiceAPI/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.OpenApi": "8.0.12",
-          "Microsoft.AspNetCore.SignalR.Client": "8.0.0",
+          "Microsoft.AspNetCore.SignalR.Client": "8.0.1",
+          "Microsoft.AspNetCore.SignalR.Common": "8.0.1",
           "Microsoft.EntityFrameworkCore": "9.0.6",
           "Microsoft.EntityFrameworkCore.Design": "9.0.6",
+          "Microsoft.EntityFrameworkCore.Sqlite": "9.0.6",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
           "Swashbuckle.AspNetCore": "6.6.2"
         },
@@ -27,28 +29,40 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Connections.Abstractions/8.0.0": {
+      "Microsoft.AspNetCore.Connections.Abstractions/8.0.1": {
         "dependencies": {
-          "Microsoft.Extensions.Features": "8.0.0",
+          "Microsoft.Extensions.Features": "8.0.1",
           "System.IO.Pipelines": "9.0.6"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Connections.Abstractions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.123.58008"
+          }
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Client/8.0.0": {
+      "Microsoft.AspNetCore.Http.Connections.Client/8.0.1": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Common": "8.0.0",
+          "Microsoft.AspNetCore.Http.Connections.Common": "8.0.1",
           "Microsoft.Extensions.Logging.Abstractions": "9.0.6",
           "Microsoft.Extensions.Options": "9.0.6"
         },
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.Http.Connections.Client.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53112"
+            "assemblyVersion": "8.0.1.0",
+            "fileVersion": "8.0.123.58008"
           }
         }
       },
-      "Microsoft.AspNetCore.Http.Connections.Common/8.0.0": {
+      "Microsoft.AspNetCore.Http.Connections.Common/8.0.1": {
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "8.0.0"
+          "Microsoft.AspNetCore.Connections.Abstractions": "8.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Http.Connections.Common.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.123.58008"
+          }
         }
       },
       "Microsoft.AspNetCore.OpenApi/8.0.12": {
@@ -62,42 +76,54 @@
           }
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client/8.0.0": {
+      "Microsoft.AspNetCore.SignalR.Client/8.0.1": {
         "dependencies": {
-          "Microsoft.AspNetCore.Http.Connections.Client": "8.0.0",
-          "Microsoft.AspNetCore.SignalR.Client.Core": "8.0.0"
+          "Microsoft.AspNetCore.Http.Connections.Client": "8.0.1",
+          "Microsoft.AspNetCore.SignalR.Client.Core": "8.0.1"
         },
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.SignalR.Client.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53112"
+            "assemblyVersion": "8.0.1.0",
+            "fileVersion": "8.0.123.58008"
           }
         }
       },
-      "Microsoft.AspNetCore.SignalR.Client.Core/8.0.0": {
+      "Microsoft.AspNetCore.SignalR.Client.Core/8.0.1": {
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "8.0.0",
-          "Microsoft.AspNetCore.SignalR.Protocols.Json": "8.0.0",
+          "Microsoft.AspNetCore.SignalR.Common": "8.0.1",
+          "Microsoft.AspNetCore.SignalR.Protocols.Json": "8.0.1",
           "Microsoft.Extensions.DependencyInjection": "9.0.6",
           "Microsoft.Extensions.Logging": "9.0.6",
           "System.Threading.Channels": "8.0.0"
         },
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.SignalR.Client.Core.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53112"
+            "assemblyVersion": "8.0.1.0",
+            "fileVersion": "8.0.123.58008"
           }
         }
       },
-      "Microsoft.AspNetCore.SignalR.Common/8.0.0": {
+      "Microsoft.AspNetCore.SignalR.Common/8.0.1": {
         "dependencies": {
-          "Microsoft.AspNetCore.Connections.Abstractions": "8.0.0",
+          "Microsoft.AspNetCore.Connections.Abstractions": "8.0.1",
           "Microsoft.Extensions.Options": "9.0.6"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.SignalR.Common.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.123.58008"
+          }
         }
       },
-      "Microsoft.AspNetCore.SignalR.Protocols.Json/8.0.0": {
+      "Microsoft.AspNetCore.SignalR.Protocols.Json/8.0.1": {
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR.Common": "8.0.0"
+          "Microsoft.AspNetCore.SignalR.Common": "8.0.1"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.SignalR.Protocols.Json.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.123.58008"
+          }
         }
       },
       "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
@@ -396,6 +422,17 @@
           }
         }
       },
+      "Microsoft.Data.Sqlite.Core/9.0.6": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.10"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Data.Sqlite.dll": {
+            "assemblyVersion": "9.0.6.0",
+            "fileVersion": "9.0.625.26607"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore/9.0.6": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Abstractions": "9.0.6",
@@ -451,6 +488,36 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.Relational.dll": {
+            "assemblyVersion": "9.0.6.0",
+            "fileVersion": "9.0.625.26607"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Sqlite/9.0.6": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "9.0.6",
+          "Microsoft.Extensions.Caching.Memory": "9.0.6",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.6",
+          "Microsoft.Extensions.DependencyModel": "9.0.6",
+          "Microsoft.Extensions.Logging": "9.0.6",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.1.10",
+          "SQLitePCLRaw.core": "2.1.10",
+          "System.Text.Json": "9.0.6"
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Sqlite.Core/9.0.6": {
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "9.0.6",
+          "Microsoft.EntityFrameworkCore.Relational": "9.0.6",
+          "Microsoft.Extensions.Caching.Memory": "9.0.6",
+          "Microsoft.Extensions.Configuration.Abstractions": "9.0.6",
+          "Microsoft.Extensions.DependencyModel": "9.0.6",
+          "Microsoft.Extensions.Logging": "9.0.6",
+          "SQLitePCLRaw.core": "2.1.10",
+          "System.Text.Json": "9.0.6"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {
             "assemblyVersion": "9.0.6.0",
             "fileVersion": "9.0.625.26607"
           }
@@ -525,7 +592,14 @@
           }
         }
       },
-      "Microsoft.Extensions.Features/8.0.0": {},
+      "Microsoft.Extensions.Features/8.0.1": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Features.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.123.58008"
+          }
+        }
+      },
       "Microsoft.Extensions.Logging/9.0.6": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "9.0.6",
@@ -611,6 +685,149 @@
           "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "assemblyVersion": "9.0.4.0",
             "fileVersion": "9.0.4.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
+        "dependencies": {
+          "SQLitePCLRaw.lib.e_sqlite3": "2.1.10",
+          "SQLitePCLRaw.provider.e_sqlite3": "2.1.10"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {
+            "assemblyVersion": "2.1.10.2445",
+            "fileVersion": "2.1.10.2445"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/2.1.10": {
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {
+            "assemblyVersion": "2.1.10.2445",
+            "fileVersion": "2.1.10.2445"
+          }
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3/2.1.10": {
+        "runtimeTargets": {
+          "runtimes/browser-wasm/nativeassets/net8.0/e_sqlite3.a": {
+            "rid": "browser-wasm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm/native/libe_sqlite3.so": {
+            "rid": "linux-arm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-arm64/native/libe_sqlite3.so": {
+            "rid": "linux-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-armel/native/libe_sqlite3.so": {
+            "rid": "linux-armel",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-mips64/native/libe_sqlite3.so": {
+            "rid": "linux-mips64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-arm/native/libe_sqlite3.so": {
+            "rid": "linux-musl-arm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-arm64/native/libe_sqlite3.so": {
+            "rid": "linux-musl-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-s390x/native/libe_sqlite3.so": {
+            "rid": "linux-musl-s390x",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-musl-x64/native/libe_sqlite3.so": {
+            "rid": "linux-musl-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-ppc64le/native/libe_sqlite3.so": {
+            "rid": "linux-ppc64le",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-s390x/native/libe_sqlite3.so": {
+            "rid": "linux-s390x",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x64/native/libe_sqlite3.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/linux-x86/native/libe_sqlite3.so": {
+            "rid": "linux-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/maccatalyst-arm64/native/libe_sqlite3.dylib": {
+            "rid": "maccatalyst-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/maccatalyst-x64/native/libe_sqlite3.dylib": {
+            "rid": "maccatalyst-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-arm64/native/libe_sqlite3.dylib": {
+            "rid": "osx-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libe_sqlite3.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm/native/e_sqlite3.dll": {
+            "rid": "win-arm",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-arm64/native/e_sqlite3.dll": {
+            "rid": "win-arm64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/e_sqlite3.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x86/native/e_sqlite3.dll": {
+            "rid": "win-x86",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.e_sqlite3/2.1.10": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.10"
+        },
+        "runtime": {
+          "lib/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll": {
+            "assemblyVersion": "2.1.10.2445",
+            "fileVersion": "2.1.10.2445"
           }
         }
       },
@@ -737,6 +954,7 @@
           }
         }
       },
+      "System.Memory/4.5.3": {},
       "System.Reflection.Metadata/7.0.0": {
         "dependencies": {
           "System.Collections.Immutable": "7.0.0"
@@ -787,26 +1005,26 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Connections.Abstractions/8.0.0": {
+    "Microsoft.AspNetCore.Connections.Abstractions/8.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-WgJE2+VyA0RW4yl+hgfrB7r4CSGcLzAvcVo31swukjXHZvBAjMilyG/pRJ8kroOO1h7sGf4r91Wii2L9gCMNfA==",
-      "path": "microsoft.aspnetcore.connections.abstractions/8.0.0",
-      "hashPath": "microsoft.aspnetcore.connections.abstractions.8.0.0.nupkg.sha512"
+      "sha512": "sha512-F65Oe4garTqUmicSwdh/6817o4AJri6kfdUZ6KFX8xoWFEDInIZNWtO4rkRXN+q2LYerQ9Gm9tJYfLqVRL5E/w==",
+      "path": "microsoft.aspnetcore.connections.abstractions/8.0.1",
+      "hashPath": "microsoft.aspnetcore.connections.abstractions.8.0.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Http.Connections.Client/8.0.0": {
+    "Microsoft.AspNetCore.Http.Connections.Client/8.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-21F+t8ofQvH3LCKt6cvg6uzbF5jNbRwMJB5XOB4Prz7nEttP0iAq/EwqE7egdG8Nuoz56xd5jeKXHjU4S+KJ9g==",
-      "path": "microsoft.aspnetcore.http.connections.client/8.0.0",
-      "hashPath": "microsoft.aspnetcore.http.connections.client.8.0.0.nupkg.sha512"
+      "sha512": "sha512-p7HUOtagrkevqUzl0lWpf5r2tLG3RIiriSs+iyBOndFBtHuu67/S6xinHk93/u+HCc1cjgbPe7jwfHvckwjdoA==",
+      "path": "microsoft.aspnetcore.http.connections.client/8.0.1",
+      "hashPath": "microsoft.aspnetcore.http.connections.client.8.0.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.Http.Connections.Common/8.0.0": {
+    "Microsoft.AspNetCore.Http.Connections.Common/8.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iNum3ueml3fqP2YFx6QQSQDsUw5kn7UfZ88NUNwF93bLGebYZ0xIjwdEKOFwutrWfQK/a0QaITUEfygM8pVbeA==",
-      "path": "microsoft.aspnetcore.http.connections.common/8.0.0",
-      "hashPath": "microsoft.aspnetcore.http.connections.common.8.0.0.nupkg.sha512"
+      "sha512": "sha512-gaSpKummrkxW0nEOQ/ubLLjLr4W+zCwh7h9J7zMBImFefhI5+7WWbhy1ZLp0maLBQ+IyhxFtOCLfWcfLB9fqmw==",
+      "path": "microsoft.aspnetcore.http.connections.common/8.0.1",
+      "hashPath": "microsoft.aspnetcore.http.connections.common.8.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.OpenApi/8.0.12": {
       "type": "package",
@@ -815,33 +1033,33 @@
       "path": "microsoft.aspnetcore.openapi/8.0.12",
       "hashPath": "microsoft.aspnetcore.openapi.8.0.12.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.SignalR.Client/8.0.0": {
+    "Microsoft.AspNetCore.SignalR.Client/8.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZAxPPLh32MAEg06maSaUMYTklH8cfZdHUqLGUA5CdolzLNmtjslLXGPzIGetzyDmOXZPzTT1QAj/gK2DSrqFjw==",
-      "path": "microsoft.aspnetcore.signalr.client/8.0.0",
-      "hashPath": "microsoft.aspnetcore.signalr.client.8.0.0.nupkg.sha512"
+      "sha512": "sha512-DieCTJnFEEMb1D2E0NT7c5Q0xQUS4RHz9sq00m1QZNWOgjgKMPYwuIGYo7KD7C8DjQF6xemP1d1Qvxbi+AqZhA==",
+      "path": "microsoft.aspnetcore.signalr.client/8.0.1",
+      "hashPath": "microsoft.aspnetcore.signalr.client.8.0.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.SignalR.Client.Core/8.0.0": {
+    "Microsoft.AspNetCore.SignalR.Client.Core/8.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-EIhKwrVMEy4IpFZY7+3I/91QwSFFAFIlAvTz1Q98VCoIYFuFMQsenA8Pg4lKmHCP8oIASVhtPB45haJ2ufovRw==",
-      "path": "microsoft.aspnetcore.signalr.client.core/8.0.0",
-      "hashPath": "microsoft.aspnetcore.signalr.client.core.8.0.0.nupkg.sha512"
+      "sha512": "sha512-2pQurC875SbmY+OEL1AonwvAnbHDayJkxx0iW2eV8YkHFOp7WFvUQowqMNe93sqVZ6i/C+YWRUbnB8cy75nG2w==",
+      "path": "microsoft.aspnetcore.signalr.client.core/8.0.1",
+      "hashPath": "microsoft.aspnetcore.signalr.client.core.8.0.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.SignalR.Common/8.0.0": {
+    "Microsoft.AspNetCore.SignalR.Common/8.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HOy32Kb4z69sCep+pVUTL11L49pk8Ze18HuqCYllaRMdDlfcSrBE0stb8fJL+ogPKTB7XZAxpj1UT/IJQIfS6g==",
-      "path": "microsoft.aspnetcore.signalr.common/8.0.0",
-      "hashPath": "microsoft.aspnetcore.signalr.common.8.0.0.nupkg.sha512"
+      "sha512": "sha512-ckSytDgkXjLl/dRR3dqCimq3TKG8EuO4XPEZ9tCVp66OoyePim61y7Vt2LnymK4wcT9W92dMn3sTJ6gQUbcFOA==",
+      "path": "microsoft.aspnetcore.signalr.common/8.0.1",
+      "hashPath": "microsoft.aspnetcore.signalr.common.8.0.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.SignalR.Protocols.Json/8.0.0": {
+    "Microsoft.AspNetCore.SignalR.Protocols.Json/8.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3ygw561TXBKnqzfa5L7IBuo6BYgReHocyx4jdLc8utM49OAzU5u+6fTNjH/nvYOrDlPvUV+PZ3hH3jkZ0+Uocg==",
-      "path": "microsoft.aspnetcore.signalr.protocols.json/8.0.0",
-      "hashPath": "microsoft.aspnetcore.signalr.protocols.json.8.0.0.nupkg.sha512"
+      "sha512": "sha512-3tFVyDuOTcKnEs4GCYmNHBiMU4qRnOE3xsMJRk+asgjo7BpfcnBR3/lKbK9FqjRCpBWE/RZ0Em6LJWCnTXQC8A==",
+      "path": "microsoft.aspnetcore.signalr.protocols.json/8.0.1",
+      "hashPath": "microsoft.aspnetcore.signalr.protocols.json.8.0.1.nupkg.sha512"
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",
@@ -906,6 +1124,13 @@
       "path": "microsoft.codeanalysis.workspaces.msbuild/4.8.0",
       "hashPath": "microsoft.codeanalysis.workspaces.msbuild.4.8.0.nupkg.sha512"
     },
+    "Microsoft.Data.Sqlite.Core/9.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3auiudiViGzj1TidUdjuDqtP3+f6PBk4xdw6r9sBaTtkYoGc3AZn0cP8LgYZaLRnJBqY5bXRLB+qhjoB+iATzA==",
+      "path": "microsoft.data.sqlite.core/9.0.6",
+      "hashPath": "microsoft.data.sqlite.core.9.0.6.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore/9.0.6": {
       "type": "package",
       "serviceable": true,
@@ -940,6 +1165,20 @@
       "sha512": "sha512-Ht6OT17sYnO31Dx+hX72YHrc5kZt53g5napaw0FpyIekXCvb+gUVvufEG55Fa7taFm8ccy0Vzs+JVNR9NL0JlA==",
       "path": "microsoft.entityframeworkcore.relational/9.0.6",
       "hashPath": "microsoft.entityframeworkcore.relational.9.0.6.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Sqlite/9.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bVSdfFrqIo3ZeQfWYYfnVVanP1GWghkdw+MnEmZJz7jUwtdPQpBKHr0BW9dMizPamzU+SMA1Qu4nXuRTlKVAGQ==",
+      "path": "microsoft.entityframeworkcore.sqlite/9.0.6",
+      "hashPath": "microsoft.entityframeworkcore.sqlite.9.0.6.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Sqlite.Core/9.0.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xP+SvMDR/GZCDNXFw7z4WYbO2sYpECvht3+lqejg+Md8vLtURwTBvdsOUAnY4jBGmNFqHeh87hZSmUGmuxyqMA==",
+      "path": "microsoft.entityframeworkcore.sqlite.core/9.0.6",
+      "hashPath": "microsoft.entityframeworkcore.sqlite.core.9.0.6.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
       "type": "package",
@@ -990,12 +1229,12 @@
       "path": "microsoft.extensions.dependencymodel/9.0.6",
       "hashPath": "microsoft.extensions.dependencymodel.9.0.6.nupkg.sha512"
     },
-    "Microsoft.Extensions.Features/8.0.0": {
+    "Microsoft.Extensions.Features/8.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-fxj+P9aIbTLtguFwiNqBtGNl4ZU/2Aggwj4/Ruf3qFaiBk7r1t8KnyJ+bEIK5emMyGSszTndwnP/g+gBEP9zLA==",
-      "path": "microsoft.extensions.features/8.0.0",
-      "hashPath": "microsoft.extensions.features.8.0.0.nupkg.sha512"
+      "sha512": "sha512-NvMvu+dkfE3YtLFSIeSDOyY4qxdDRSS5zsBlK53TVifWOzdW9K3O60lwJfuRtoeczAQIrA9pQ6J59n/qXm6R9g==",
+      "path": "microsoft.extensions.features/8.0.1",
+      "hashPath": "microsoft.extensions.features.8.0.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging/9.0.6": {
       "type": "package",
@@ -1052,6 +1291,34 @@
       "sha512": "sha512-mw5vcY2IEc7L+IeGrxpp/J5OSnCcjkjAgJYCm/eD52wpZze8zsSifdqV7zXslSMmfJG2iIUGZyo3KuDtEFKwMQ==",
       "path": "npgsql.entityframeworkcore.postgresql/9.0.4",
       "hashPath": "npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512"
+    },
+    "SQLitePCLRaw.bundle_e_sqlite3/2.1.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UxWuisvZ3uVcVOLJQv7urM/JiQH+v3TmaJc1BLKl5Dxfm/nTzTUrqswCqg/INiYLi61AXnHo1M1JPmPqqLnAdg==",
+      "path": "sqlitepclraw.bundle_e_sqlite3/2.1.10",
+      "hashPath": "sqlitepclraw.bundle_e_sqlite3.2.1.10.nupkg.sha512"
+    },
+    "SQLitePCLRaw.core/2.1.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ii8JCbC7oiVclaE/mbDEK000EFIJ+ShRPwAvvV89GOZhQ+ZLtlnSWl6ksCNMKu/VGXA4Nfi2B7LhN/QFN9oBcw==",
+      "path": "sqlitepclraw.core/2.1.10",
+      "hashPath": "sqlitepclraw.core.2.1.10.nupkg.sha512"
+    },
+    "SQLitePCLRaw.lib.e_sqlite3/2.1.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mAr69tDbnf3QJpRy2nJz8Qdpebdil00fvycyByR58Cn9eARvR+UiG2Vzsp+4q1tV3ikwiYIjlXCQFc12GfebbA==",
+      "path": "sqlitepclraw.lib.e_sqlite3/2.1.10",
+      "hashPath": "sqlitepclraw.lib.e_sqlite3.2.1.10.nupkg.sha512"
+    },
+    "SQLitePCLRaw.provider.e_sqlite3/2.1.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uZVTi02C1SxqzgT0HqTWatIbWGb40iIkfc3FpFCpE/r7g6K0PqzDUeefL6P6HPhDtc6BacN3yQysfzP7ks+wSQ==",
+      "path": "sqlitepclraw.provider.e_sqlite3/2.1.10",
+      "hashPath": "sqlitepclraw.provider.e_sqlite3.2.1.10.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.6.2": {
       "type": "package",
@@ -1150,6 +1417,13 @@
       "sha512": "sha512-0nlr0reXrRmkZNKifKqh2DgGhQgfkT7Qa3gQxIn/JI7/y3WDiTz67M+Sq3vFhUqcG8O5zVrpqHvIHeGPGUBsEw==",
       "path": "system.io.pipelines/9.0.6",
       "hashPath": "system.io.pipelines.9.0.6.nupkg.sha512"
+    },
+    "System.Memory/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
     },
     "System.Reflection.Metadata/7.0.0": {
       "type": "package",
