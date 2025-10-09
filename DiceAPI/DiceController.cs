@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace DiceAPI.Controllers;
 
 [ApiController]
@@ -35,7 +36,7 @@ public class DiceController : ControllerBase
         _context.DiceRolls.Add(roll);
         await _context.SaveChangesAsync();
         
-        await _hubContext.Clients.All.SendAsync("ReceiveRoll", roll);
+        await _hubContext.Clients.All.SendAsync("OnRollReceived", roll);
 
         return Ok(roll);
     }

@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.SignalR.Client;
 using System.Threading.Tasks;
 using DiceAPI.Models; // Jeśli używasz klasy DiceRoll
 using DiceAPI.Hubs;
+using DiceAPI;
 
 public partial class DiceSignalRClient : Node
 {
@@ -26,6 +27,7 @@ public partial class DiceSignalRClient : Node
 
         _connection.On<DiceRoll>("OnRollReceived", (roll) =>
         {
+            GD.Print($"🎲 Otrzymano rzut od {roll.PlayerName}: {roll.Result}/{roll.Sides}");
             // Używamy CallDeferred, żeby przenieść wywołanie na główny wątek Godota
             CallDeferred(nameof(EmitSignal), nameof(OnRollReceived),
                 roll.PlayerName, roll.Result, roll.Sides, roll.Timestamp.ToString("HH:mm:ss"));

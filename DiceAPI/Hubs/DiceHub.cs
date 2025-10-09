@@ -9,7 +9,7 @@ namespace DiceAPI.Hubs
         public async Task SendRoll(DiceRoll roll)
         {
             // Wyślij do wszystkich podłączonych klientów
-            await Clients.All.SendAsync("ReceiveRoll", roll);
+            await Clients.All.SendAsync("OnRollReceived", roll);
         }
     }
 }
