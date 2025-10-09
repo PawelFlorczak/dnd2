@@ -11,10 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8e027a5-9be0-4afb-8ad5-886cba30df82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DiceAPI/dice_local.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/dice_local.db" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/dice_local.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" afterDir="false" />
@@ -22,7 +23,7 @@
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceSignalRClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceSignalRClient.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Main.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/main.tscn" afterDir="false" />
@@ -45,11 +46,11 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/4b9c23aac6cb430a8538fc21510bc3494c00/61/048e4f1e/02000003pdb2.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/DiceController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/Hubs/DiceHub.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Użytkownik/RiderProjects/dnd2/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -242,7 +243,8 @@
       <workItem from="1759219646115" duration="12671000" />
       <workItem from="1759309936235" duration="8826000" />
       <workItem from="1759923244697" duration="4394000" />
-      <workItem from="1759927758258" duration="3754000" />
+      <workItem from="1759927758258" duration="3798000" />
+      <workItem from="1760001521352" duration="3225000" />
     </task>
     <task id="LOCAL-00001" summary="Innit">
       <option name="closed" value="true" />
@@ -380,7 +382,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759930425568</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="error: Method not found">
+      <option name="closed" value="true" />
+      <created>1759931606233</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1759931606233</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,7 +426,8 @@
     <MESSAGE value="WebSocket with SignalR Test 3" />
     <MESSAGE value="Websocket test 4 ughhh" />
     <MESSAGE value="Przejście na localhosta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Przejście na localhosta" />
+    <MESSAGE value="error: Method not found" />
+    <option name="LAST_COMMIT_MESSAGE" value="error: Method not found" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

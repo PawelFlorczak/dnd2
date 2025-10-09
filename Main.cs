@@ -17,12 +17,12 @@ public partial class Main : Control
 		button.Pressed += OnRollPressed;
 		
 		var signalR = GetNode<DiceSignalRClient>("DiceSignalRClient");
-		signalR.Connect("RollReceived", new Callable(this, nameof(OnRollReceived)));
+		signalR.Connect("OnRollReceived", new Callable(this, nameof(OnRollReceived)));
 		
 	}
 
 
-	private void OnRollReceived(string msg)
+	public void OnRollReceived(string msg)
 	{
 		GD.Print("UI dostało rzut: " + msg);
 		// tu możesz dodać do historii w Label/ListView

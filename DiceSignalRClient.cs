@@ -12,7 +12,8 @@ public partial class DiceSignalRClient : Node
     private HubConnection _connection;
 
     [Signal]
-    public delegate void RollReceivedEventHandler(string player, int result, int sides, string timestamp);
+    public delegate void OnRollReceivedEventHandler(string player, int result, int sides, string timestamp);
+
 
     public override async void _Ready()
     {
@@ -23,10 +24,11 @@ public partial class DiceSignalRClient : Node
             .WithAutomaticReconnect()
             .Build();
 
-        _connection.On<DiceRoll>("ReceiveRoll", (roll) =>
+        _connection.On<DiceRoll>("OnRollReceived", (roll) =>
         {
             // Używamy CallDeferred, żeby przenieść wywołanie na główny wątek Godota
-            CallDeferred(nameof(EmitSignal), nameof(RollReceived), roll.PlayerName, roll.Result, roll.Sides, roll.Timestamp.ToString("HH:mm:ss"));
+            CallDeferred(nameof(EmitSignal), nameof(OnRollReceived),
+                roll.PlayerName, roll.Result, roll.Sides, roll.Timestamp.ToString("HH:mm:ss"));
         });
 
         try

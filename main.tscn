@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dwdftodq2saj8"]
+[gd_scene load_steps=4 format=3 uid="uid://dwdftodq2saj8"]
 
 [ext_resource type="Script" uid="uid://cr488xnnopd82" path="res://Main.cs" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://dmw7vj3tbwfrg" path="res://DiceSignalRClient.cs" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://up226eonq8ln" path="res://DiceUi.cs" id="3_h2yge"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -41,3 +42,22 @@ grow_vertical = 2
 
 [node name="DiceSignalRClient" type="Node" parent="."]
 script = ExtResource("2_0xm2m")
+
+[node name="DiceUI" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 0.29200003
+anchor_bottom = 0.52900004
+offset_right = -0.3840332
+offset_bottom = 0.2079773
+script = ExtResource("3_h2yge")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DiceUI"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0090001
+anchor_bottom = 0.97700006
+offset_right = -0.024017334
+offset_bottom = -0.11102295
+
+[node name="Label" type="Label" parent="DiceUI/VBoxContainer"]
+layout_mode = 2
