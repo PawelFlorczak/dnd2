@@ -29,7 +29,7 @@ public partial class DiceSignalRClient : Node
         {
             GD.Print($"🎲 Otrzymano rzut od {roll.PlayerName}: {roll.Result}/{roll.Sides}");
             // Używamy CallDeferred, żeby przenieść wywołanie na główny wątek Godota
-            CallDeferred(nameof(EmitSignal), nameof(OnRollReceived),
+            CallDeferred(nameof(EmitSignalDeferred), 
                 roll.PlayerName, roll.Result, roll.Sides, roll.Timestamp.ToString("HH:mm:ss"));
         });
 
@@ -44,22 +44,9 @@ public partial class DiceSignalRClient : Node
         }
     }
 
-    public async Task SendRollAsync(string player, int result, int sides)
+    private void EmitSignalDeferred(string playerName, int result, int sides, string timestamp)
     {
-        if (_connection == null || _connection.State != HubConnectionState.Connected)
-        {
-            GD.PrintErr("SignalR nie jest połączony!");
-            return;
-        }
-
-        var roll = new DiceRoll
-        {
-            PlayerName = player,
-            Result = result,
-            Sides = sides,
-            Timestamp = DateTime.UtcNow
-        };
-
-        await _connection.InvokeAsync("SendRoll", roll);
+        EmitSignal(SignalName.OnRollReceived, playerName, result, sides, timestamp);
     }
+
 }
