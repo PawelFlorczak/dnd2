@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cr488xnnopd82" path="res://Main.cs" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://dmw7vj3tbwfrg" path="res://DiceSignalRClient.cs" id="2_0xm2m"]
-[ext_resource type="Script" uid="uid://up226eonq8ln" path="res://DiceUi.cs" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://up226eonq8ln" path="res://DiceUI.cs" id="3_h2yge"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -44,20 +44,28 @@ grow_vertical = 2
 script = ExtResource("2_0xm2m")
 
 [node name="DiceUI" type="Control" parent="."]
+clip_contents = true
 layout_mode = 1
-anchor_right = 0.29200003
-anchor_bottom = 0.52900004
-offset_right = -0.3840332
-offset_bottom = 0.2079773
+anchor_left = 0.71000004
+anchor_top = 0.582
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.079956055
+offset_top = -0.13601685
+grow_horizontal = 0
 script = ExtResource("3_h2yge")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="DiceUI"]
+[node name="ScrollContainer" type="ScrollContainer" parent="DiceUI"]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0090001
-anchor_bottom = 0.97700006
-offset_right = -0.024017334
-offset_bottom = -0.11102295
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_scroll_mode = 2
+metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="DiceUI/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="DiceUI/ScrollContainer"]
+clip_contents = true
 layout_mode = 2
+metadata/_edit_lock_ = true

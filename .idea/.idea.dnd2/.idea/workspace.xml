@@ -11,7 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8e027a5-9be0-4afb-8ad5-886cba30df82" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DiceAPI/Hubs/DiceHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Hubs/DiceHub.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
@@ -23,7 +22,7 @@
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceSignalRClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceSignalRClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/main.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +31,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
@@ -44,6 +44,7 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/4b9c23aac6cb430a8538fc21510bc3494c00/61/048e4f1e/02000003pdb2.il" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5e5dffaf94b24d09a042fe733776ffa24e00/e1/fa233f2e/02000003pdb2.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/DiceController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/Hubs/DiceHub.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/Program.cs" root0="FORCE_HIGHLIGHTING" />
