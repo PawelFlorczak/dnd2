@@ -33,11 +33,16 @@ public partial class DiceUI : Control
         _container.AddChild(label);
         
         // Auto-scroll to bottom to show newest roll
-        CallDeferred(nameof(ScrollToBottom));
+        // Wait for next frame to ensure layout is updated with Clip Contents
+        GetTree().ProcessFrame += ScrollToBottomNextFrame;
     }
     
-    private void ScrollToBottom()
+    private void ScrollToBottomNextFrame()
     {
+        // Disconnect the signal to avoid multiple calls
+        GetTree().ProcessFrame -= ScrollToBottomNextFrame;
+        
+        // Now scroll to bottom after layout is fully updated
         _scrollContainer.ScrollVertical = (int)_scrollContainer.GetVScrollBar().MaxValue;
     }
 }
