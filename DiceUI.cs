@@ -13,7 +13,8 @@ public partial class DiceUI : Control
         _scrollContainer = GetNode<ScrollContainer>("ScrollContainer");
         _container = GetNode<VBoxContainer>("ScrollContainer/VBoxContainer");
         
-        _signalrClient = GetNode<DiceSignalRClient>("../DiceSignalRClient");
+        // Find DiceSignalRClient more reliably by searching from root
+        _signalrClient = GetTree().Root.FindChild("DiceSignalRClient", true, false) as DiceSignalRClient;
 
         if (_signalrClient != null)
         {

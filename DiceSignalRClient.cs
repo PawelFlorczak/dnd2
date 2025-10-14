@@ -8,12 +8,15 @@ using DiceAPI;
 
 public partial class DiceSignalRClient : Node
 {
-    [Export] public string ServerUrl { get; set; } = "http://localhost:5254/DiceHub";
+    [Export] public string ServerUrl { get; set; } = "http://localhost:5000/DiceHub";
 
     private HubConnection _connection;
 
     [Signal]
     public delegate void OnRollReceivedEventHandler(string player, int result, int sides, string timestamp);
+    
+    [Signal]
+    public delegate void OnCharacterRollReceivedEventHandler(Godot.Collections.Dictionary rollResult);
 
 
     public override async void _Ready()
@@ -33,6 +36,14 @@ public partial class DiceSignalRClient : Node
                 roll.PlayerName, roll.Result, roll.Sides, roll.Timestamp.ToString("HH:mm:ss"));
         });
 
+        _connection.On<object>("OnCharacterRollReceived", (rollResult) =>
+        {
+            GD.Print($"🎲 Otrzymano rzut postaci: {rollResult}");
+            // Convert to Godot dictionary for easier handling in Godot scripts
+            var jsonString = rollResult?.ToString() ?? "";
+            CallDeferred(nameof(EmitCharacterRollSignalDeferred), jsonString);
+        });
+
         try
         {
             await _connection.StartAsync();
@@ -47,6 +58,23 @@ public partial class DiceSignalRClient : Node
     private void EmitSignalDeferred(string playerName, int result, int sides, string timestamp)
     {
         EmitSignal(SignalName.OnRollReceived, playerName, result, sides, timestamp);
+    }
+
+    private void EmitCharacterRollSignalDeferred(string jsonString)
+    {
+        // Convert the rollResult to a Godot dictionary
+        var json = new Json();
+        var parseResult = json.Parse(jsonString);
+        
+        if (parseResult == Error.Ok)
+        {
+            var dict = json.Data.AsGodotDictionary();
+            EmitSignal(SignalName.OnCharacterRollReceived, dict);
+        }
+        else
+        {
+            GD.PrintErr("Failed to parse character roll result");
+        }
     }
 
 }

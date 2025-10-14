@@ -11,18 +11,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8e027a5-9be0-4afb-8ad5-886cba30df82" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AppController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CharacterSheetUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Controllers/AuthController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Controllers/AuthController.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Controllers/CharacterController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Controllers/CharacterController.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Data/DiceContext.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Hubs/DiceHub.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Migrations/20251008120605_LocalInit.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Migrations/20251008120605_LocalInit.Designer.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Migrations/20251008120605_LocalInit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Migrations/20251008120605_LocalInit.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Migrations/20251013101519_AddAuthenticationAndCharacters.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Migrations/20251013101519_AddAuthenticationAndCharacters.Designer.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Migrations/20251013101519_AddAuthenticationAndCharacters.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Migrations/20251013101519_AddAuthenticationAndCharacters.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Migrations/DiceContextModelSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Migrations/DiceContextModelSnapshot.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/Character.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/Character.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/CharacterItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/CharacterItem.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/CharacterSkill.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/CharacterSkill.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/CharacterTalent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/CharacterTalent.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/DTOs/CharacterRollRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/DTOs/CharacterRollRequest.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/DTOs/LoginRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/DTOs/LoginRequest.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/DiceRoll.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/User.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/User.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Services/PasswordService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Services/PasswordService.cs.uid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/dice_local.db-shm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DiceAPI/dice_local.db-wal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoginUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/Data/DiceContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Data/DiceContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/DiceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/DiceController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/dice_local.db" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/dice_local.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceSignalRClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceSignalRClient.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/main.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +91,16 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/4b9c23aac6cb430a8538fc21510bc3494c00/61/048e4f1e/02000003pdb2.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5e5dffaf94b24d09a042fe733776ffa24e00/e1/fa233f2e/02000003pdb2.il" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/6436c37f38a047caa600bdf0d2858b674e00/0c/2218e9b9/02000002pdb1.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/DiceController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/Hubs/DiceHub.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 7
@@ -72,7 +122,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.godotPlugin&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -243,6 +293,9 @@
       <workItem from="1759923244697" duration="4394000" />
       <workItem from="1759927758258" duration="3798000" />
       <workItem from="1760001521352" duration="12076000" />
+      <workItem from="1760343396102" duration="1239000" />
+      <workItem from="1760348989461" duration="9648000" />
+      <workItem from="1760429505951" duration="13543000" />
     </task>
     <task id="LOCAL-00001" summary="Innit">
       <option name="closed" value="true" />
@@ -412,7 +465,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760097458407</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="ScrollBar Works">
+      <option name="closed" value="true" />
+      <created>1760098480330</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1760098480330</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +514,8 @@
     <MESSAGE value="WEBSOCKET FINALLY WORKS WOOOOOOO!!!" />
     <MESSAGE value="UI works wow" />
     <MESSAGE value="ScrollBar" />
-    <option name="LAST_COMMIT_MESSAGE" value="ScrollBar" />
+    <MESSAGE value="ScrollBar Works" />
+    <option name="LAST_COMMIT_MESSAGE" value="ScrollBar Works" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

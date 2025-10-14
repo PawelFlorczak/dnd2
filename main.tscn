@@ -1,61 +1,79 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwdftodq2saj8"]
+[gd_scene load_steps=6 format=3 uid="uid://dwdftodq2saj8"]
 
-[ext_resource type="Script" uid="uid://cr488xnnopd82" path="res://Main.cs" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://da1qdx5rp4psy" path="res://AppController.cs" id="1_lquwl"]
 [ext_resource type="Script" uid="uid://dmw7vj3tbwfrg" path="res://DiceSignalRClient.cs" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://du5066b2r7jwh" path="res://login_ui.tscn" id="2_7mycd"]
 [ext_resource type="Script" uid="uid://up226eonq8ln" path="res://DiceUI.cs" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dao6jneyycujg" path="res://character_sheet_ui.tscn" id="4_lquwl"]
 
-[node name="Main" type="Control"]
+[node name="AppController" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ig7tw")
+script = ExtResource("1_lquwl")
 
-[node name="HTTPRequest" type="HTTPRequest" parent="."]
-
-[node name="Button" type="Button" parent="."]
+[node name="LoginUI" parent="." instance=ExtResource("2_7mycd")]
 layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -48.5
-offset_right = 48.5
-offset_bottom = 31.0
-grow_horizontal = 2
-text = "Rzuć kościa"
 
-[node name="Label" type="Label" parent="."]
+[node name="GameUI" type="Control" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DiceSignalRClient" type="Node" parent="."]
-script = ExtResource("2_0xm2m")
-
-[node name="DiceUI" type="Control" parent="."]
-clip_contents = true
+[node name="Header" type="HBoxContainer" parent="GameUI"]
+z_index = 1
 layout_mode = 1
-anchor_left = 0.71000004
-anchor_top = 0.582
+anchors_preset = -1
+anchor_left = 0.43600002
+anchor_right = 0.564
+anchor_bottom = 0.048
+offset_left = 0.22796631
+offset_right = -0.22802734
+offset_bottom = -0.10400009
+grow_horizontal = 2
+
+[node name="UserLabel" type="Label" parent="GameUI/Header"]
+z_index = 1
+layout_mode = 2
+text = "Welcome!"
+
+[node name="LogoutButton" type="Button" parent="GameUI/Header"]
+z_index = 1
+layout_mode = 2
+action_mode = 0
+text = "Logout!"
+
+[node name="TabContainer" type="TabContainer" parent="GameUI"]
+layout_mode = 1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 0.079956055
-offset_top = -0.13601685
-grow_horizontal = 0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="DiceRoll" type="Control" parent="GameUI/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="DiceUI" type="Control" parent="GameUI/TabContainer/DiceRoll"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("3_h2yge")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="DiceUI"]
+[node name="ScrollContainer" type="ScrollContainer" parent="GameUI/TabContainer/DiceRoll/DiceUI"]
+clip_contents = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -63,9 +81,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 vertical_scroll_mode = 2
-metadata/_edit_lock_ = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="DiceUI/ScrollContainer"]
-clip_contents = true
+[node name="VBoxContainer" type="VBoxContainer" parent="GameUI/TabContainer/DiceRoll/DiceUI/ScrollContainer"]
 layout_mode = 2
-metadata/_edit_lock_ = true
+size_flags_horizontal = 3
+
+[node name="CharacterSheet" type="Control" parent="GameUI/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="CharacterSheetUI" parent="GameUI/TabContainer/CharacterSheet" instance=ExtResource("4_lquwl")]
+layout_mode = 1
+
+[node name="DiceSignalRClient" type="Node" parent="."]
+script = ExtResource("2_0xm2m")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
