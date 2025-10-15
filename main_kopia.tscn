@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://wxgy7ppdo68x"]
+
+[ext_resource type="Script" uid="uid://cr488xnnopd82" path="res://Main.cs" id="1_j3xts"]
+[ext_resource type="Script" uid="uid://dmw7vj3tbwfrg" path="res://DiceSignalRClient.cs" id="2_e53lo"]
+[ext_resource type="Script" uid="uid://up226eonq8ln" path="res://DiceUI.cs" id="3_7ebhq"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_j3xts")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -48.5
+offset_right = 48.5
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "Rzuć kościa"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DiceSignalRClient" type="Node" parent="."]
+script = ExtResource("2_e53lo")
+
+[node name="DiceUI" type="Control" parent="."]
+clip_contents = true
+layout_mode = 1
+anchor_left = 0.71000004
+anchor_top = 0.582
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.079956055
+offset_top = -0.13601685
+grow_horizontal = 0
+script = ExtResource("3_7ebhq")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="DiceUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_scroll_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DiceUI/ScrollContainer"]
+clip_contents = true
+layout_mode = 2
+metadata/_edit_lock_ = true

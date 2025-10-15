@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://du5066b2r7jwh"]
+
+[ext_resource type="Script" uid="uid://dhnnw0emv447g" path="res://LoginUI.cs" id="1_1s85c"]
+
+[node name="LoginUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1s85c")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CenterContainer/VBox"]
+layout_mode = 2
+text = "WFRP Dice & Character System"
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBox"]
+layout_mode = 2
+
+[node name="UsernameInput" type="LineEdit" parent="CenterContainer/VBox"]
+layout_mode = 2
+placeholder_text = "Username"
+
+[node name="PasswordInput" type="LineEdit" parent="CenterContainer/VBox"]
+layout_mode = 2
+placeholder_text = "Password"
+secret = true
+
+[node name="RegisterContainer" type="VBoxContainer" parent="CenterContainer/VBox"]
+visible = false
+layout_mode = 2
+
+[node name="EmailInput" type="LineEdit" parent="CenterContainer/VBox/RegisterContainer"]
+layout_mode = 2
+placeholder_text = "Email"
+
+[node name="HSeparator2" type="HSeparator" parent="CenterContainer/VBox"]
+layout_mode = 2
+
+[node name="LoginButton" type="Button" parent="CenterContainer/VBox"]
+layout_mode = 2
+text = "Login"
+
+[node name="RegisterButton" type="Button" parent="CenterContainer/VBox"]
+visible = false
+layout_mode = 2
+text = "Register"
+
+[node name="ToggleButton" type="Button" parent="CenterContainer/VBox"]
+layout_mode = 2
+text = "Switch to Register"
+
+[node name="StatusLabel" type="Label" parent="CenterContainer/VBox"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

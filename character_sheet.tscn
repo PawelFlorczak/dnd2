@@ -1,0 +1,280 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4h8r0u6w2l6p"]
+
+[ext_resource type="Script" path="res://CharacterSheetUI.cs" id="1_j3m8s"]
+
+[node name="CharacterSheetUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_j3m8s")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Header" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="CharacterSelect" type="OptionButton" parent="VBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SaveButton" type="Button" parent="VBox/Header"]
+layout_mode = 2
+text = "Save"
+
+[node name="NewButton" type="Button" parent="VBox/Header"]
+layout_mode = 2
+text = "New Character"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CharacterForm" type="VBoxContainer" parent="VBox/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="BasicInfo" type="VBoxContainer" parent="VBox/ScrollContainer/CharacterForm"]
+layout_mode = 2
+
+[node name="BasicLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/BasicInfo"]
+layout_mode = 2
+text = "Basic Information"
+
+[node name="NameInput" type="LineEdit" parent="VBox/ScrollContainer/CharacterForm/BasicInfo"]
+layout_mode = 2
+placeholder_text = "Character Name"
+
+[node name="SpeciesInput" type="LineEdit" parent="VBox/ScrollContainer/CharacterForm/BasicInfo"]
+layout_mode = 2
+placeholder_text = "Species"
+
+[node name="CareerInput" type="LineEdit" parent="VBox/ScrollContainer/CharacterForm/BasicInfo"]
+layout_mode = 2
+placeholder_text = "Career"
+
+[node name="Characteristics" type="GridContainer" parent="VBox/ScrollContainer/CharacterForm"]
+layout_mode = 2
+columns = 3
+
+[node name="CharLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Characteristics"
+
+[node name="Label" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "WS"
+
+[node name="WSInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+max_value = 100.0
+
+[node name="WSRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Roll WS"
+
+[node name="Label4" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "BS"
+
+[node name="BSInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+max_value = 100.0
+
+[node name="BSRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Roll BS"
+
+[node name="Label5" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "S"
+
+[node name="SInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+max_value = 100.0
+
+[node name="SRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Roll S"
+
+[node name="Label6" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "T"
+
+[node name="TInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+max_value = 100.0
+
+[node name="TRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Roll T"
+
+[node name="Label7" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "I"
+
+[node name="IInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+max_value = 100.0
+
+[node name="IRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Roll I"
+
+[node name="Label8" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Ag"
+
+[node name="AgInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+max_value = 100.0
+
+[node name="AGRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Roll AG"
+
+[node name="Label9" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Dex"
+
+[node name="DexInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+max_value = 100.0
+
+[node name="DEXRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Roll DEX"
+
+[node name="Label10" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Int"
+
+[node name="IntInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+max_value = 100.0
+
+[node name="INTRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Roll INT"
+
+[node name="Label11" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "WP"
+
+[node name="WPInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+max_value = 100.0
+
+[node name="WPRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Roll WP"
+
+[node name="Label12" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Fel"
+
+[node name="FelInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+max_value = 100.0
+
+[node name="FELRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+layout_mode = 2
+text = "Roll FEL"
+
+[node name="Secondary" type="VBoxContainer" parent="VBox/ScrollContainer/CharacterForm"]
+layout_mode = 2
+
+[node name="SecondaryLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Secondary"]
+layout_mode = 2
+text = "Secondary Characteristics"
+
+[node name="WoundsContainer" type="HBoxContainer" parent="VBox/ScrollContainer/CharacterForm/Secondary"]
+layout_mode = 2
+
+[node name="WoundsLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Secondary/WoundsContainer"]
+layout_mode = 2
+text = "Wounds:"
+
+[node name="WoundsInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Secondary/WoundsContainer"]
+layout_mode = 2
+max_value = 100.0
+
+[node name="CurrentWoundsLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Secondary/WoundsContainer"]
+layout_mode = 2
+text = "Current:"
+
+[node name="CurrentWoundsInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Secondary/WoundsContainer"]
+layout_mode = 2
+max_value = 100.0
+
+[node name="MovementContainer" type="HBoxContainer" parent="VBox/ScrollContainer/CharacterForm/Secondary"]
+layout_mode = 2
+
+[node name="MovementLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Secondary/MovementContainer"]
+layout_mode = 2
+text = "Movement:"
+
+[node name="MovementInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Secondary/MovementContainer"]
+layout_mode = 2
+max_value = 20.0
+
+[node name="Status" type="VBoxContainer" parent="VBox/ScrollContainer/CharacterForm"]
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Status"]
+layout_mode = 2
+text = "Status & Experience"
+
+[node name="StatusInput" type="LineEdit" parent="VBox/ScrollContainer/CharacterForm/Status"]
+layout_mode = 2
+placeholder_text = "Status (Bronze/Silver/Gold)"
+
+[node name="ExpContainer" type="HBoxContainer" parent="VBox/ScrollContainer/CharacterForm/Status"]
+layout_mode = 2
+
+[node name="CurrentExpLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Status/ExpContainer"]
+layout_mode = 2
+text = "Current XP:"
+
+[node name="CurrentExpInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Status/ExpContainer"]
+layout_mode = 2
+max_value = 10000.0
+
+[node name="SpentExpLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Status/ExpContainer"]
+layout_mode = 2
+text = "Spent XP:"
+
+[node name="SpentExpInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Status/ExpContainer"]
+layout_mode = 2
+max_value = 10000.0
+
+[node name="FateContainer" type="HBoxContainer" parent="VBox/ScrollContainer/CharacterForm/Status"]
+layout_mode = 2
+
+[node name="FateLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Status/FateContainer"]
+layout_mode = 2
+text = "Fate:"
+
+[node name="FateInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Status/FateContainer"]
+layout_mode = 2
+max_value = 10.0
+
+[node name="FortuneLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Status/FateContainer"]
+layout_mode = 2
+text = "Fortune:"
+
+[node name="FortuneInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Status/FateContainer"]
+layout_mode = 2
+max_value = 10.0
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

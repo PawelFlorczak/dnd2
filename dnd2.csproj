@@ -11,8 +11,14 @@
     <EmbeddedResource Remove="DiceAPI\**" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="API_Endpoints_Summary.md" />
+    <Content Include="character_sheet.tscn" />
+    <Content Include="character_sheet_ui.tscn" />
+    <Content Include="login.tscn" />
+    <Content Include="login_ui.tscn" />
     <Content Include="Main.cs.uid" />
     <Content Include="main.tscn" />
+    <Content Include="main_kopia.tscn" />
     <Content Include="project.godot" />
   </ItemGroup>
   <ItemGroup>
