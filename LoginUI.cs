@@ -68,7 +68,7 @@ public partial class LoginUI : Control
         var json = JsonSerializer.Serialize(loginData);
         var headers = new[] { "Content-Type: application/json" };
         
-        _httpRequest.Request("http://localhost:5254/auth/login", headers, HttpClient.Method.Post, json);
+        _httpRequest.Request("http://localhost:5000/auth/login", headers, HttpClient.Method.Post, json);
         _statusLabel.Text = "Logging in...";
     }
 
@@ -92,7 +92,7 @@ public partial class LoginUI : Control
         var json = JsonSerializer.Serialize(registerData);
         var headers = new[] { "Content-Type: application/json" };
         
-        _httpRequest.Request("http://localhost:5254/auth/register", headers, HttpClient.Method.Post, json);
+        _httpRequest.Request("http://localhost:5000/auth/register", headers, HttpClient.Method.Post, json);
         _statusLabel.Text = "Registering...";
     }
 

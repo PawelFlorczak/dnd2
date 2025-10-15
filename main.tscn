@@ -19,6 +19,7 @@ script = ExtResource("1_lquwl")
 layout_mode = 1
 
 [node name="GameUI" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,16 +28,16 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Header" type="HBoxContainer" parent="GameUI"]
+top_level = true
 z_index = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.43600002
-anchor_right = 0.564
+anchor_left = 0.87200004
+anchor_right = 1.0
 anchor_bottom = 0.048
-offset_left = 0.22796631
-offset_right = -0.22802734
+offset_left = 0.45593262
 offset_bottom = -0.10400009
-grow_horizontal = 2
+grow_horizontal = 0
 
 [node name="UserLabel" type="Label" parent="GameUI/Header"]
 z_index = 1
@@ -50,6 +51,7 @@ action_mode = 0
 text = "Logout!"
 
 [node name="TabContainer" type="TabContainer" parent="GameUI"]
+z_index = -1
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,6 +59,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 current_tab = 0
+metadata/_edit_lock_ = true
 
 [node name="DiceRoll" type="Control" parent="GameUI/TabContainer"]
 layout_mode = 2
