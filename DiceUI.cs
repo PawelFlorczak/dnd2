@@ -31,6 +31,7 @@ public partial class DiceUI : Control
     {
         var label = new Label();
         label.Text = $"{timestamp} — {player} rzucił {result}/{sides}";
+        label.AutowrapMode = TextServer.AutowrapMode.WordSmart;  
         _container.AddChild(label);
         
         // Auto-scroll to bottom to show newest roll

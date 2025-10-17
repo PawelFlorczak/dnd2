@@ -9,7 +9,7 @@ public partial class AppController : Control
     private DiceUI _diceUI;
     private DiceSignalRClient _signalRClient;
     
-    private TabContainer _tabContainer;
+    private HSplitContainer _hsplitContainer;
     private Button _logoutButton;
     private Label _userLabel;
     
@@ -27,9 +27,9 @@ public partial class AppController : Control
         // Assuming the scene structure has these nodes
         _loginUI = GetNode<LoginUI>("LoginUI");
         _gameUI = GetNode<Control>("GameUI");
-        _tabContainer = GetNode<TabContainer>("GameUI/TabContainer");
-        _diceUI = GetNode<DiceUI>("GameUI/TabContainer/DiceRoll/DiceUI");
-        _characterSheetUI = GetNode<CharacterSheetUI>("GameUI/TabContainer/CharacterSheet/CharacterSheetUI");
+        _hsplitContainer = GetNode<HSplitContainer>("GameUI/HSplitContainer");
+        _diceUI = GetNode<DiceUI>("GameUI/HSplitContainer/DiceRoll/DiceUI");
+        _characterSheetUI = GetNode<CharacterSheetUI>("GameUI/HSplitContainer/CharacterSheet/CharacterSheetUI");
         try
         {
             _signalRClient = GetNode<DiceSignalRClient>("DiceSignalRClient");

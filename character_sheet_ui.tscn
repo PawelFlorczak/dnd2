@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dao6jneyycujg"]
+[gd_scene load_steps=5 format=3 uid="uid://dao6jneyycujg"]
 
 [ext_resource type="Script" uid="uid://cu13gnal6c46j" path="res://CharacterSheetUI.cs" id="1_rqy50"]
+[ext_resource type="Theme" uid="uid://dj25gbivxevrn" path="res://Theme_CharacterSheet.tres" id="1_tgtj5"]
+[ext_resource type="Texture2D" uid="uid://dauj4fl336hyi" path="res://wh1.png" id="2_kcblx"]
+[ext_resource type="Texture2D" uid="uid://c08s5hs3tx1wq" path="res://wh2.png" id="4_kefbw"]
 
 [node name="CharacterSheetUI" type="Control"]
 layout_mode = 3
@@ -9,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_tgtj5")
 script = ExtResource("1_rqy50")
 
 [node name="VBox" type="VBoxContainer" parent="."]
@@ -34,263 +38,306 @@ text = "Save"
 layout_mode = 2
 text = "New Character"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="VBox"]
+[node name="TabContainer" type="TabContainer" parent="VBox"]
 layout_mode = 2
 size_flags_vertical = 3
+current_tab = 0
 
-[node name="CharacterForm" type="VBoxContainer" parent="VBox/ScrollContainer"]
+[node name="Postać" type="ScrollContainer" parent="VBox/TabContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+vertical_scroll_mode = 2
+metadata/_tab_index = 0
+
+[node name="TexturePostać" type="TextureRect" parent="VBox/TabContainer/Postać"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_kcblx")
+expand_mode = 5
 
-[node name="BasicInfo" type="VBoxContainer" parent="VBox/ScrollContainer/CharacterForm"]
+[node name="CharacterForm" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="BasicInfo" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
 layout_mode = 2
 
-[node name="BasicLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/BasicInfo"]
+[node name="BasicLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/BasicInfo"]
 layout_mode = 2
 text = "=== Basic Information ==="
 
-[node name="NameInput" type="LineEdit" parent="VBox/ScrollContainer/CharacterForm/BasicInfo"]
+[node name="NameInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/BasicInfo"]
 layout_mode = 2
 placeholder_text = "Character Name"
 
-[node name="SpeciesInput" type="LineEdit" parent="VBox/ScrollContainer/CharacterForm/BasicInfo"]
+[node name="SpeciesInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/BasicInfo"]
 layout_mode = 2
 placeholder_text = "Species (Human, Dwarf, etc.)"
 
-[node name="CareerInput" type="LineEdit" parent="VBox/ScrollContainer/CharacterForm/BasicInfo"]
+[node name="CareerInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/BasicInfo"]
 layout_mode = 2
 placeholder_text = "Career"
 
-[node name="HSeparator1" type="HSeparator" parent="VBox/ScrollContainer/CharacterForm"]
+[node name="HSeparator1" type="HSeparator" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
 layout_mode = 2
 
-[node name="Characteristics" type="GridContainer" parent="VBox/ScrollContainer/CharacterForm"]
+[node name="Characteristics" type="GridContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
 layout_mode = 2
 columns = 3
 
-[node name="CharLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="CharLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "=== Characteristics ==="
 
-[node name="EmptyLabel1" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="EmptyLabel1" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 
-[node name="EmptyLabel2" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="EmptyLabel2" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 
-[node name="WSLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="WSLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "WS (Weapon Skill)"
 
-[node name="WSInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="WSInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 value = 20.0
 
-[node name="WSRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="WSRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Roll WS"
 
-[node name="BSLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="BSLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "BS (Ballistic Skill)"
 
-[node name="BSInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="BSInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 value = 20.0
 
-[node name="BSRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="BSRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Roll BS"
 
-[node name="SLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="SLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "S (Strenght)"
 
-[node name="SInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="SInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 value = 20.0
 
-[node name="SRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="SRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Roll S"
 
-[node name="TLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="TLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "T (Toughness)"
 
-[node name="TInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="TInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 value = 20.0
 
-[node name="TRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="TRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Roll T"
 
-[node name="ILabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="ILabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "I (Initiative"
 
-[node name="IInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="IInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 value = 20.0
 
-[node name="IRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="IRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Roll I"
 
-[node name="AgLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="AgLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "AG (Agility)"
 
-[node name="AgInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="AgInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 value = 20.0
 
-[node name="AGRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="AGRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Roll AG"
 
-[node name="DexLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="DexLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Dex (Dexterity)"
 
-[node name="DexInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="DexInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 value = 20.0
 
-[node name="DEXRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="DEXRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Roll DEX"
 
-[node name="IntLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="IntLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Int (Intelligence)"
 
-[node name="IntInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="IntInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 value = 20.0
 
-[node name="INTRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="INTRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Roll INT"
 
-[node name="WPLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="WPLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "WP (Willpower)"
 
-[node name="WPInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="WPInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 value = 20.0
 
-[node name="WPRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="WPRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Roll WP"
 
-[node name="FelLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="FelLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Fel (Fellowship)"
 
-[node name="FelInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="FelInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 value = 20.0
 
-[node name="FELRollButton" type="Button" parent="VBox/ScrollContainer/CharacterForm/Characteristics"]
+[node name="FELRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
 layout_mode = 2
 text = "Roll FEL"
 
-[node name="HSeparator2" type="HSeparator" parent="VBox/ScrollContainer/CharacterForm"]
+[node name="HSeparator2" type="HSeparator" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
 layout_mode = 2
 
-[node name="Secondary" type="VBoxContainer" parent="VBox/ScrollContainer/CharacterForm"]
+[node name="Secondary" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBox/ScrollContainer/CharacterForm/Secondary"]
+[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary"]
 layout_mode = 2
 text = "=== Secondary Characteristics ==="
 
-[node name="WoundsContainer" type="HBoxContainer" parent="VBox/ScrollContainer/CharacterForm/Secondary"]
+[node name="WoundsContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary"]
 layout_mode = 2
 
-[node name="WoundsLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Secondary/WoundsContainer"]
+[node name="WoundsLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary/WoundsContainer"]
 layout_mode = 2
 text = "Wounds:"
 
-[node name="WoundsInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Secondary/WoundsContainer"]
+[node name="WoundsInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary/WoundsContainer"]
 layout_mode = 2
 value = 10.0
 
-[node name="CurrentWoundsLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Secondary/WoundsContainer"]
+[node name="CurrentWoundsLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary/WoundsContainer"]
 layout_mode = 2
 text = "Current:"
 
-[node name="CurrentWoundsInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Secondary/WoundsContainer"]
+[node name="CurrentWoundsInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary/WoundsContainer"]
 layout_mode = 2
 value = 10.0
 
-[node name="MovementContainer" type="HBoxContainer" parent="VBox/ScrollContainer/CharacterForm/Secondary"]
+[node name="MovementContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary"]
 layout_mode = 2
 
-[node name="MovementLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Secondary/MovementContainer"]
+[node name="MovementLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary/MovementContainer"]
 layout_mode = 2
 text = "Movement"
 
-[node name="MovementInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Secondary/MovementContainer"]
+[node name="MovementInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary/MovementContainer"]
 layout_mode = 2
 max_value = 20.0
 value = 4.0
 
-[node name="HSeparator3" type="HSeparator" parent="VBox/ScrollContainer/CharacterForm"]
+[node name="HSeparator3" type="HSeparator" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
 layout_mode = 2
 
-[node name="Status" type="VBoxContainer" parent="VBox/ScrollContainer/CharacterForm"]
+[node name="Status" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
 layout_mode = 2
 
-[node name="StatusLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Status"]
+[node name="StatusLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status"]
 layout_mode = 2
 text = "=== Status & Experience ==="
 
-[node name="StatusInput" type="LineEdit" parent="VBox/ScrollContainer/CharacterForm/Status"]
+[node name="StatusInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status"]
 layout_mode = 2
 placeholder_text = "Status (Bronze/Silver/Gold) "
 
-[node name="ExpContainer" type="HBoxContainer" parent="VBox/ScrollContainer/CharacterForm/Status"]
+[node name="ExpContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status"]
 layout_mode = 2
 
-[node name="CurrentExpLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Status/ExpContainer"]
+[node name="CurrentExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/ExpContainer"]
 layout_mode = 2
 text = "Current XP:"
 
-[node name="CurrentExpInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Status/ExpContainer"]
+[node name="CurrentExpInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/ExpContainer"]
 layout_mode = 2
 max_value = 10000.0
 
-[node name="SpentExpLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Status/ExpContainer"]
+[node name="SpentExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/ExpContainer"]
 layout_mode = 2
 text = "Spent XP"
 
-[node name="SpentExpInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Status/ExpContainer"]
+[node name="SpentExpInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/ExpContainer"]
 layout_mode = 2
 max_value = 10000.0
 
-[node name="FateContainer" type="HBoxContainer" parent="VBox/ScrollContainer/CharacterForm/Status"]
+[node name="FateContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status"]
 layout_mode = 2
 
-[node name="FateLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Status/FateContainer"]
+[node name="FateLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/FateContainer"]
 layout_mode = 2
 text = "Fate:"
 
-[node name="FateInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Status/FateContainer"]
+[node name="FateInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/FateContainer"]
 layout_mode = 2
 max_value = 10.0
 value = 1.0
 
-[node name="FortuneLabel" type="Label" parent="VBox/ScrollContainer/CharacterForm/Status/FateContainer"]
+[node name="FortuneLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/FateContainer"]
 layout_mode = 2
 text = "Fortune:"
 
-[node name="FortuneInput" type="SpinBox" parent="VBox/ScrollContainer/CharacterForm/Status/FateContainer"]
+[node name="FortuneInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/FateContainer"]
 layout_mode = 2
 max_value = 10.0
 value = 1.0
+
+[node name="Ekwipunek" type="ScrollContainer" parent="VBox/TabContainer"]
+visible = false
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_tab_index = 1
+
+[node name="TextureEkwipunek" type="TextureRect" parent="VBox/TabContainer/Ekwipunek"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("4_kefbw")
+expand_mode = 5
+
+[node name="CharacterForm" type="VBoxContainer" parent="VBox/TabContainer/Ekwipunek/TextureEkwipunek"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
