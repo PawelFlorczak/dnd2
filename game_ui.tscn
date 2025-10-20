@@ -23,18 +23,19 @@ color = Color(0.21176471, 0.21176471, 0.21176471, 1)
 [node name="HSplitContainer" type="HSplitContainer" parent="ColorRect"]
 z_index = 1
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 split_offset = 100
+dragging_enabled = false
 
 [node name="PanelContainer2" type="PanelContainer" parent="ColorRect/HSplitContainer"]
 layout_mode = 2
 
 [node name="CharacterSheet" type="Control" parent="ColorRect/HSplitContainer/PanelContainer2"]
-custom_minimum_size = Vector2(900, 0)
+custom_minimum_size = Vector2(1200, 0)
 layout_mode = 2
 
 [node name="CharacterSheetUI" parent="ColorRect/HSplitContainer/PanelContainer2/CharacterSheet" instance=ExtResource("2_mj8uy")]

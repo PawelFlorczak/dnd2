@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dj25gbivxevrn"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dj25gbivxevrn"]
 
 [ext_resource type="FontFile" uid="uid://mr1fv2gfj6ry" path="res://KMOVDH+CaslonAntiqueFS.ttf" id="1_gyk45"]
 
@@ -14,9 +14,12 @@ bg_color = Color(0.8862745, 0.8862745, 0.8862745, 0.5686275)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4e55n"]
 bg_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f4pvv"]
+bg_color = Color(0.77688444, 0.7643293, 0.6634753, 0.3647059)
+
 [resource]
 default_font = ExtResource("1_gyk45")
-default_font_size = 26
+default_font_size = 20
 Button/colors/font_color = Color(0, 0, 0, 1)
 Button/styles/normal = SubResource("StyleBoxFlat_gyk45")
 CheckBox/colors/font_color = Color(0, 0, 0, 1)
@@ -40,8 +43,11 @@ LinkButton/colors/font_color = Color(0, 0, 0, 1)
 MenuBar/colors/font_color = Color(0, 0, 0, 1)
 MenuButton/colors/font_color = Color(0, 0, 0, 1)
 OptionButton/colors/font_color = Color(0, 0, 0, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_f4pvv")
 PopupMenu/colors/font_color = Color(0, 0, 0, 1)
 ProgressBar/colors/font_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/colors/font_outline_color = Color(1, 1, 1, 1)
 TextEdit/colors/font_color = Color(0, 0, 0, 1)
 TooltipLabel/colors/font_color = Color(0, 0, 0, 1)
 Tree/colors/font_color = Color(0, 0, 0, 1)

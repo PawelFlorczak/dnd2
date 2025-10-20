@@ -57,269 +57,526 @@ size_flags_vertical = 3
 texture = ExtResource("2_kcblx")
 expand_mode = 5
 
-[node name="CharacterForm" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać"]
+[node name="VBoxContainer" type="BoxContainer" parent="VBox/TabContainer/Postać/TexturePostać"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.07154088
-anchor_top = 0.12591125
-anchor_right = 0.9323899
-anchor_bottom = 0.9521647
-offset_top = 1.5258789e-05
+anchor_left = 0.072000004
+anchor_top = 0.125
+anchor_right = 0.929
+anchor_bottom = 0.952
+offset_left = -174.58401
+offset_top = 0.45469666
+offset_right = 174.31201
+offset_bottom = -0.73706055
 grow_horizontal = 2
 grow_vertical = 2
+vertical = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 2
 size_flags_horizontal = 3
-metadata/_edit_use_anchors_ = true
 
-[node name="BasicInfo" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
-[node name="BasicLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/BasicInfo"]
+[node name="NameInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-text = "=== Basic Information ==="
-
-[node name="NameInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/BasicInfo"]
-layout_mode = 2
+size_flags_horizontal = 3
 placeholder_text = "Character Name"
 
-[node name="SpeciesInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/BasicInfo"]
+[node name="SpeciesInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-placeholder_text = "Species (Human, Dwarf, etc.)"
+size_flags_horizontal = 3
+placeholder_text = "Species"
 
-[node name="CareerInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/BasicInfo"]
+[node name="ClassInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Class"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CareerInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
 placeholder_text = "Career"
 
-[node name="HSeparator1" type="HSeparator" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
+[node name="CareerlevelInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Career"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Characteristics" type="GridContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
+[node name="CareerPathInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Career Path"
+
+[node name="StatusInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Status"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="AgeInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Age"
+
+[node name="HeightInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Height"
+
+[node name="HairInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Hair"
+
+[node name="EyesInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Eyes"
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 2
+
+[node name="Characteristics" type="GridContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+columns = 11
+
+[node name="EmptyLabel1" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="WSLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "WS"
+
+[node name="BSLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "BS"
+
+[node name="SLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "S"
+
+[node name="TLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "T"
+
+[node name="ILabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "I"
+
+[node name="AgLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "AG"
+
+[node name="DexLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Dex"
+
+[node name="IntLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Int"
+
+[node name="WPLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "WP"
+
+[node name="FelLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Fel"
+
+[node name="InitLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Init"
+
+[node name="WSInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="BSInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="SInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="TInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="IInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="AgInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="DexInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="IntInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="WPInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="FelInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="AdvancesLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Adv"
+
+[node name="WSInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="BSInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="SInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="TInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="IInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="AgInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="DexInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="IntInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="WPInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="FelInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+value = 20.0
+
+[node name="CurrentLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Curr"
+
+[node name="WSLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="BSLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="SLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ILabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="AgLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="DexLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="IntLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="WPLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="FelLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="EmptyLabel2" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "
+"
+
+[node name="WSRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Roll WS"
+
+[node name="BSRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Roll BS"
+
+[node name="SRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Roll S"
+
+[node name="TRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Roll T"
+
+[node name="IRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Roll I"
+
+[node name="AGRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Roll AG"
+
+[node name="DEXRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Roll DEX"
+
+[node name="INTRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Roll INT"
+
+[node name="WPRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Roll WP"
+
+[node name="FELRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Roll FEL"
+
+[node name="HeroInfo" type="BoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+vertical = true
+
+[node name="HSplitContainer" type="HSplitContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo"]
+layout_mode = 2
+
+[node name="ResilienceContainer" type="GridContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer"]
 layout_mode = 2
 columns = 3
 
-[node name="CharLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="ResilienceLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer/ResilienceContainer"]
 layout_mode = 2
-text = "=== Characteristics ==="
+text = "Resilience"
 
-[node name="EmptyLabel1" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="SpentExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer/ResilienceContainer"]
 layout_mode = 2
+text = "Resolve"
 
-[node name="EmptyLabel2" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="TotalExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer/ResilienceContainer"]
 layout_mode = 2
+text = "Motivation"
 
-[node name="WSLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="CurrentExpInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer/ResilienceContainer"]
 layout_mode = 2
-text = "WS (Weapon Skill)"
+max_value = 10000.0
 
-[node name="WSInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="SpentExpInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer/ResilienceContainer"]
 layout_mode = 2
-value = 20.0
+max_value = 10000.0
 
-[node name="WSRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="TotalExpLabel2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer/ResilienceContainer"]
 layout_mode = 2
-text = "Roll WS"
+max_value = 10000.0
 
-[node name="BSLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="ExpContainer" type="GridContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer"]
 layout_mode = 2
-text = "BS (Ballistic Skill)"
+columns = 3
 
-[node name="BSInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="CurrentExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer/ExpContainer"]
 layout_mode = 2
-value = 20.0
+text = "Current XP"
 
-[node name="BSRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="SpentExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer/ExpContainer"]
 layout_mode = 2
-text = "Roll BS"
+text = "Spent XP"
 
-[node name="SLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="TotalExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer/ExpContainer"]
 layout_mode = 2
-text = "S (Strenght)"
+text = "Total XP"
 
-[node name="SInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="CurrentExpInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer/ExpContainer"]
 layout_mode = 2
-value = 20.0
+max_value = 10000.0
 
-[node name="SRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="SpentExpInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer/ExpContainer"]
 layout_mode = 2
-text = "Roll S"
+max_value = 10000.0
 
-[node name="TLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
+[node name="TotalExpLabel2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer/ExpContainer"]
 layout_mode = 2
-text = "T (Toughness)"
+max_value = 10000.0
 
-[node name="TInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-value = 20.0
-
-[node name="TRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "Roll T"
-
-[node name="ILabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "I (Initiative"
-
-[node name="IInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-value = 20.0
-
-[node name="IRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "Roll I"
-
-[node name="AgLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "AG (Agility)"
-
-[node name="AgInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-value = 20.0
-
-[node name="AGRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "Roll AG"
-
-[node name="DexLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "Dex (Dexterity)"
-
-[node name="DexInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-value = 20.0
-
-[node name="DEXRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "Roll DEX"
-
-[node name="IntLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "Int (Intelligence)"
-
-[node name="IntInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-value = 20.0
-
-[node name="INTRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "Roll INT"
-
-[node name="WPLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "WP (Willpower)"
-
-[node name="WPInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-value = 20.0
-
-[node name="WPRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "Roll WP"
-
-[node name="FelLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "Fel (Fellowship)"
-
-[node name="FelInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-value = 20.0
-
-[node name="FELRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Characteristics"]
-layout_mode = 2
-text = "Roll FEL"
-
-[node name="HSeparator2" type="HSeparator" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
+[node name="HSplitContainer2" type="HSplitContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo"]
 layout_mode = 2
 
-[node name="Secondary" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
+[node name="FateContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer2"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary"]
+[node name="FateLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer2/FateContainer"]
 layout_mode = 2
-text = "=== Secondary Characteristics ==="
+text = "Fate:"
 
-[node name="WoundsContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary"]
+[node name="FateInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer2/FateContainer"]
 layout_mode = 2
+max_value = 10.0
+value = 1.0
 
-[node name="WoundsLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary/WoundsContainer"]
+[node name="FortuneLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer2/FateContainer"]
 layout_mode = 2
-text = "Wounds:"
+text = "Fortune:"
 
-[node name="WoundsInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary/WoundsContainer"]
+[node name="FortuneInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer2/FateContainer"]
 layout_mode = 2
-value = 10.0
+max_value = 10.0
+value = 1.0
 
-[node name="CurrentWoundsLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary/WoundsContainer"]
-layout_mode = 2
-text = "Current:"
-
-[node name="CurrentWoundsInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary/WoundsContainer"]
-layout_mode = 2
-value = 10.0
-
-[node name="MovementContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary"]
+[node name="MovementContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer2"]
 layout_mode = 2
 
-[node name="MovementLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary/MovementContainer"]
+[node name="MovementLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer2/MovementContainer"]
 layout_mode = 2
 text = "Movement"
 
-[node name="MovementInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Secondary/MovementContainer"]
+[node name="MovementInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/HeroInfo/HSplitContainer2/MovementContainer"]
 layout_mode = 2
 max_value = 20.0
 value = 4.0
 
-[node name="HSeparator3" type="HSeparator" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
+[node name="BoxContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
-[node name="Status" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/BoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
 
-[node name="StatusLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status"]
+[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/BoxContainer/VBoxContainer"]
 layout_mode = 2
-text = "=== Status & Experience ==="
+text = "Umiejętności podstawowe
+"
 
-[node name="StatusInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/BoxContainer"]
 layout_mode = 2
-placeholder_text = "Status (Bronze/Silver/Gold) "
+size_flags_horizontal = 3
 
-[node name="ExpContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status"]
+[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/BoxContainer/VBoxContainer2"]
 layout_mode = 2
+text = "Umiejętności podstawowe
+"
 
-[node name="CurrentExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/ExpContainer"]
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/BoxContainer"]
 layout_mode = 2
-text = "Current XP:"
+size_flags_horizontal = 3
 
-[node name="CurrentExpInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/ExpContainer"]
+[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/BoxContainer/VBoxContainer3"]
 layout_mode = 2
-max_value = 10000.0
-
-[node name="SpentExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/ExpContainer"]
-layout_mode = 2
-text = "Spent XP"
-
-[node name="SpentExpInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/ExpContainer"]
-layout_mode = 2
-max_value = 10000.0
-
-[node name="FateContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status"]
-layout_mode = 2
-
-[node name="FateLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/FateContainer"]
-layout_mode = 2
-text = "Fate:"
-
-[node name="FateInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/FateContainer"]
-layout_mode = 2
-max_value = 10.0
-value = 1.0
-
-[node name="FortuneLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/FateContainer"]
-layout_mode = 2
-text = "Fortune:"
-
-[node name="FortuneInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/CharacterForm/Status/FateContainer"]
-layout_mode = 2
-max_value = 10.0
-value = 1.0
+text = "Umiejętności podstawowe
+"
 
 [node name="Ekwipunek" type="ScrollContainer" parent="VBox/TabContainer"]
 visible = false
@@ -343,5 +600,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
+
+[node name="WoundsContainer" type="HBoxContainer" parent="VBox/TabContainer/Ekwipunek/TextureEkwipunek/CharacterForm"]
+layout_mode = 2
+
+[node name="WoundsLabel" type="Label" parent="VBox/TabContainer/Ekwipunek/TextureEkwipunek/CharacterForm/WoundsContainer"]
+layout_mode = 2
+text = "Wounds:"
+
+[node name="WoundsInput" type="SpinBox" parent="VBox/TabContainer/Ekwipunek/TextureEkwipunek/CharacterForm/WoundsContainer"]
+layout_mode = 2
+value = 10.0
+
+[node name="CurrentWoundsLabel" type="Label" parent="VBox/TabContainer/Ekwipunek/TextureEkwipunek/CharacterForm/WoundsContainer"]
+layout_mode = 2
+text = "Current:"
+
+[node name="CurrentWoundsInput" type="SpinBox" parent="VBox/TabContainer/Ekwipunek/TextureEkwipunek/CharacterForm/WoundsContainer"]
+layout_mode = 2
+value = 10.0
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
