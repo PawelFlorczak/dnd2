@@ -20,7 +20,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.21176471, 0.21176471, 0.21176471, 1)
 
-[node name="HSplitContainer" type="HSplitContainer" parent="ColorRect"]
+[node name="HSplitContainer" type="HBoxContainer" parent="ColorRect"]
 z_index = 1
 layout_mode = 1
 anchors_preset = 15
@@ -28,25 +28,31 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-split_offset = 100
-dragging_enabled = false
 
-[node name="PanelContainer2" type="PanelContainer" parent="ColorRect/HSplitContainer"]
-layout_mode = 2
-
-[node name="CharacterSheet" type="Control" parent="ColorRect/HSplitContainer/PanelContainer2"]
+[node name="CharacterSheet" type="Control" parent="ColorRect/HSplitContainer"]
 custom_minimum_size = Vector2(1200, 0)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.8
 
-[node name="CharacterSheetUI" parent="ColorRect/HSplitContainer/PanelContainer2/CharacterSheet" instance=ExtResource("2_mj8uy")]
+[node name="CharacterSheetUI" parent="ColorRect/HSplitContainer/CharacterSheet" instance=ExtResource("2_mj8uy")]
 layout_mode = 1
+anchors_preset = -1
+offset_right = 0.00012207031
+grow_horizontal = 1
+grow_vertical = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="VSplitContainer" type="VSplitContainer" parent="ColorRect/HSplitContainer"]
+[node name="VSplitContainer" type="VBoxContainer" parent="ColorRect/HSplitContainer"]
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
 
 [node name="Header" type="HBoxContainer" parent="ColorRect/HSplitContainer/VSplitContainer"]
 layout_mode = 2
-size_flags_vertical = 0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
 
 [node name="UserLabel" type="Label" parent="ColorRect/HSplitContainer/VSplitContainer/Header"]
 z_index = 1
@@ -61,6 +67,7 @@ text = "Logout!"
 
 [node name="PanelContainer" type="PanelContainer" parent="ColorRect/HSplitContainer/VSplitContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="DiceRoll" type="Control" parent="ColorRect/HSplitContainer/VSplitContainer/PanelContainer"]
 layout_mode = 2

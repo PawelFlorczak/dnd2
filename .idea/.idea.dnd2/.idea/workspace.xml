@@ -11,6 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8e027a5-9be0-4afb-8ad5-886cba30df82" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
@@ -23,7 +24,6 @@
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Theme_CharacterSheet.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Theme_CharacterSheet.tres" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/character_sheet_ui.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/character_sheet_ui.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dnd2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/dnd2.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/game_ui.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/game_ui.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
@@ -259,6 +259,7 @@
       <workItem from="1760517616237" duration="10335000" />
       <workItem from="1760605334474" duration="11403000" />
       <workItem from="1760691442546" duration="9167000" />
+      <workItem from="1761034625978" duration="9763000" />
     </task>
     <task id="LOCAL-00001" summary="Innit">
       <option name="closed" value="true" />
@@ -468,7 +469,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760705978119</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="UI still in work">
+      <option name="closed" value="true" />
+      <created>1760968586112</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1760968586112</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,7 +498,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Innit" />
     <MESSAGE value="docker" />
     <MESSAGE value="docker fix" />
     <MESSAGE value="database" />
@@ -514,7 +522,8 @@
     <MESSAGE value="Logout button works" />
     <MESSAGE value="some left behind files" />
     <MESSAGE value="Praca nad nowym UI(na razie nie działa)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Praca nad nowym UI(na razie nie działa)" />
+    <MESSAGE value="UI still in work" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI still in work" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -17,12 +17,17 @@ config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=1600
-window/size/viewport_height=720
+window/size/viewport_width=1800
+window/size/viewport_height=900
+window/stretch/aspect="keep_height"
 
 [dotnet]
 
 project/assembly_name="dnd2"
+
+[gui]
+
+theme/default_font_multichannel_signed_distance_field=true
 
 [rendering]
 
