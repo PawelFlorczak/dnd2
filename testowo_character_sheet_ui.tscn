@@ -1,0 +1,782 @@
+[gd_scene load_steps=5 format=3 uid="uid://c23vqoo6b70y5"]
+
+[ext_resource type="Theme" uid="uid://dj25gbivxevrn" path="res://Theme_CharacterSheet.tres" id="1_m0amx"]
+[ext_resource type="Script" uid="uid://cu13gnal6c46j" path="res://CharacterSheetUI.cs" id="2_gks40"]
+[ext_resource type="Texture2D" uid="uid://dauj4fl336hyi" path="res://wh1.png" id="3_wko0a"]
+[ext_resource type="Texture2D" uid="uid://c08s5hs3tx1wq" path="res://wh2.png" id="4_lhair"]
+
+[node name="CharacterSheetUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_m0amx")
+script = ExtResource("2_gks40")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="HBoxContainer" parent="VBox"]
+layout_mode = 2
+
+[node name="CharacterSelect" type="OptionButton" parent="VBox/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SaveButton" type="Button" parent="VBox/Header"]
+layout_mode = 2
+text = "Save"
+
+[node name="NewButton" type="Button" parent="VBox/Header"]
+layout_mode = 2
+text = "New Character"
+
+[node name="TabContainer" type="TabContainer" parent="VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+
+[node name="Postać" type="ScrollContainer" parent="VBox/TabContainer"]
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+vertical_scroll_mode = 2
+metadata/_tab_index = 0
+
+[node name="TexturePostać" type="TextureRect" parent="VBox/TabContainer/Postać"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("3_wko0a")
+expand_mode = 5
+
+[node name="VBoxContainer" type="Control" parent="VBox/TabContainer/Postać/TexturePostać"]
+layout_mode = 1
+anchor_left = 0.072000004
+anchor_top = 0.125
+anchor_right = 0.929
+anchor_bottom = 0.952
+offset_left = -0.6240082
+offset_top = 0.45469666
+offset_right = 0.031982422
+offset_bottom = -0.73706055
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.097
+offset_bottom = -0.35906982
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="NameInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Character Name"
+
+[node name="SpeciesInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Species"
+
+[node name="ClassInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Class"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CareerInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Career"
+
+[node name="CareerlevelInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Career"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CareerPathInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Career Path"
+
+[node name="StatusInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Status"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="AgeInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Age"
+
+[node name="HeightInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Height"
+
+[node name="HairInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Hair"
+
+[node name="EyesInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Eyes"
+
+[node name="Characteristics" type="GridContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.102000006
+anchor_right = 0.462
+anchor_bottom = 0.185
+offset_top = -0.6147003
+offset_right = 0.36999512
+offset_bottom = 0.34204102
+columns = 11
+
+[node name="EmptyLabel1" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="WSLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "WS"
+
+[node name="BSLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "BS"
+
+[node name="SLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "S"
+
+[node name="TLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "T"
+
+[node name="ILabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "I"
+
+[node name="AgLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "AG"
+
+[node name="DexLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Dex"
+
+[node name="IntLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Int"
+
+[node name="WPLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "WP"
+
+[node name="FelLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Fel"
+
+[node name="InitLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Init"
+
+[node name="WSInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="BSInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="SInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="TInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="IInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="AgInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="DexInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="IntInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="WPInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="FelInput" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="AdvancesLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Adv"
+
+[node name="WSInputAdv" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="BSInputAdv" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="SInputAdv" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="TInputAdv" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="IInputAdv" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="AgInputAdv" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="DexInputAdv" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="IntInputAdv" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="WPInputAdv" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="FelInputAdv" type="LineEdit" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="CurrentLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Curr"
+
+[node name="WSLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="BSLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="SLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="TLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="ILabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="AgLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="DexLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="IntLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="WPLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="FelLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/Characteristics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+
+[node name="GridContainer" type="GridContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.186
+anchor_right = 0.462
+anchor_bottom = 0.25800002
+offset_left = 1.0
+offset_top = 0.69091797
+offset_right = -0.6300049
+offset_bottom = 0.80999756
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 5
+
+[node name="WSRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Roll WS"
+
+[node name="BSRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Roll BS"
+
+[node name="SRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Roll S"
+
+[node name="TRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Roll T"
+
+[node name="IRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Roll I"
+
+[node name="AGRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Roll AG"
+
+[node name="DEXRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Roll DEX"
+
+[node name="INTRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Roll INT"
+
+[node name="WPRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Roll WP"
+
+[node name="FELRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Roll FEL"
+
+[node name="ResilienceContainer" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.46886447
+anchor_top = 0.09981077
+anchor_right = 0.7882784
+anchor_bottom = 0.18884104
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ResilienceContainer"]
+layout_mode = 2
+text = "Resilience"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ResilienceContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ResilienceLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ResilienceContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "Resilience"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpentExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ResilienceContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "Resolve"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TotalExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ResilienceContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "Motivation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ResilienceContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CurrentExpInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ResilienceContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+max_value = 10000.0
+
+[node name="SpentExpInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ResilienceContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+max_value = 10000.0
+
+[node name="TotalExpLabel2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ResilienceContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+max_value = 10000.0
+
+[node name="ExpContainer" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7956044
+anchor_top = 0.101022065
+anchor_right = 1.0
+anchor_bottom = 0.18884104
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ExpContainer"]
+layout_mode = 2
+text = "Experience"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ExpContainer"]
+layout_mode = 2
+
+[node name="CurrentExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ExpContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "Current XP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpentExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ExpContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "Spent XP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TotalExpLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ExpContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+text = "Total XP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ExpContainer"]
+layout_mode = 2
+
+[node name="CurrentExpInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ExpContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10000.0
+
+[node name="SpentExpInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ExpContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10000.0
+
+[node name="TotalExpLabel2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/ExpContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 10000.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 0
+anchor_left = 0.46886447
+anchor_top = 0.19429189
+anchor_right = 0.73626375
+anchor_bottom = 0.25970188
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Fate"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FateContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="FateLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/FateContainer"]
+layout_mode = 2
+text = "Fate:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FateInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/FateContainer"]
+layout_mode = 2
+max_value = 10.0
+value = 1.0
+alignment = 1
+
+[node name="FortuneLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/FateContainer"]
+layout_mode = 2
+text = "Fortune:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FortuneInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer2/FateContainer"]
+layout_mode = 2
+max_value = 10.0
+value = 1.0
+alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 0
+anchor_left = 0.74212456
+anchor_top = 0.19429189
+anchor_right = 1.0007327
+anchor_bottom = 0.2609132
+offset_right = -0.00012207031
+offset_bottom = -3.0517578e-05
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Movement"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MovementContainer" type="HBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+alignment = 1
+
+[node name="MovementLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer3/MovementContainer"]
+layout_mode = 2
+text = "Movement"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MovementInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer3/MovementContainer"]
+layout_mode = 2
+max_value = 20.0
+value = 4.0
+alignment = 1
+
+[node name="WalkLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer3/MovementContainer"]
+layout_mode = 2
+text = "Walk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WalkInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer3/MovementContainer"]
+layout_mode = 2
+max_value = 20.0
+value = 4.0
+alignment = 1
+
+[node name="RunLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer3/MovementContainer"]
+layout_mode = 2
+text = "Run"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RunInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer3/MovementContainer"]
+layout_mode = 2
+theme_override_constants/field_and_buttons_separation = 0
+theme_override_constants/buttons_width = 0
+theme_override_constants/set_min_buttons_width_from_icons = 0
+max_value = 20.0
+value = 4.0
+alignment = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 0
+anchor_left = 0.00073260075
+anchor_top = 0.266364
+anchor_right = 0.33260074
+anchor_bottom = 0.6255134
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "Umiejętności podstawowe
+"
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 0
+anchor_left = 0.33919415
+anchor_top = 0.26575837
+anchor_right = 0.6652015
+anchor_bottom = 0.626119
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer5"]
+layout_mode = 2
+text = "Umiejętności podstawowe
+"
+
+[node name="VBoxContainer6" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 0
+anchor_left = 0.6688645
+anchor_top = 0.26515272
+anchor_right = 1.0007327
+anchor_bottom = 0.626119
+offset_right = -0.00012207031
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/VBoxContainer6"]
+layout_mode = 2
+text = "Umiejętności podstawowe
+"
+
+[node name="Ekwipunek" type="ScrollContainer" parent="VBox/TabContainer"]
+visible = false
+clip_contents = false
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_tab_index = 1
+
+[node name="TextureEkwipunek" type="TextureRect" parent="VBox/TabContainer/Ekwipunek"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("4_lhair")
+expand_mode = 5
+
+[node name="CharacterForm" type="VBoxContainer" parent="VBox/TabContainer/Ekwipunek/TextureEkwipunek"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="WoundsContainer" type="HBoxContainer" parent="VBox/TabContainer/Ekwipunek/TextureEkwipunek/CharacterForm"]
+layout_mode = 2
+
+[node name="WoundsLabel" type="Label" parent="VBox/TabContainer/Ekwipunek/TextureEkwipunek/CharacterForm/WoundsContainer"]
+layout_mode = 2
+text = "Wounds:"
+
+[node name="WoundsInput" type="SpinBox" parent="VBox/TabContainer/Ekwipunek/TextureEkwipunek/CharacterForm/WoundsContainer"]
+layout_mode = 2
+value = 10.0
+
+[node name="CurrentWoundsLabel" type="Label" parent="VBox/TabContainer/Ekwipunek/TextureEkwipunek/CharacterForm/WoundsContainer"]
+layout_mode = 2
+text = "Current:"
+
+[node name="CurrentWoundsInput" type="SpinBox" parent="VBox/TabContainer/Ekwipunek/TextureEkwipunek/CharacterForm/WoundsContainer"]
+layout_mode = 2
+value = 10.0
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]

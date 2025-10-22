@@ -483,6 +483,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ResilienceContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Resilience"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -549,6 +550,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ExpContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Experience"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -609,6 +611,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/FateContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Fate"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -655,6 +658,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/MovementContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Movement"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -703,8 +707,9 @@ max_value = 20.0
 value = 4.0
 alignment = 1
 
-[node name="VBoxContainer4" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
-layout_mode = 0
+[node name="BasicSkillsContainer1" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.00073260075
 anchor_top = 0.266364
 anchor_right = 0.33260074
@@ -712,78 +717,481 @@ anchor_bottom = 0.6255134
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer4"]
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
 text = "Basic Skills"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer4"]
+[node name="BasicSkillsHeader" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
 layout_mode = 2
+size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer4/HBoxContainer"]
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/BasicSkillsHeader"]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 7
 size_flags_vertical = 1
+size_flags_stretch_ratio = 2.5
 text = "Name	"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer4/HBoxContainer"]
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/BasicSkillsHeader"]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 7
 size_flags_vertical = 1
 text = "Characteristic"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer4/HBoxContainer"]
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/BasicSkillsHeader"]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Adv"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label4" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer4/HBoxContainer"]
+[node name="Label4" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/BasicSkillsHeader"]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 7
 size_flags_vertical = 1
 text = "Skill"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer4"]
+[node name="HBoxArt" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
 layout_mode = 2
-columns = 5
+size_flags_vertical = 3
 
-[node name="Label" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer4/GridContainer"]
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
 theme_override_font_sizes/font_size = 24
 text = "Art"
 
-[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer4/GridContainer"]
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
 layout_mode = 2
-size_flags_horizontal = 10
+size_flags_horizontal = 3
 text = "Dex"
+horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer4/GridContainer"]
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
 layout_mode = 2
-size_flags_horizontal = 3
-text = "0"
+size_flags_horizontal = 2
+text = "20"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer4/GridContainer"]
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 0
 placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer4/GridContainer"]
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
+horizontal_alignment = 1
 
-[node name="VBoxContainer5" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
+[node name="HBoxAthletics" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Athletics"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ag"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxBribery" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Bribery"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fel"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxCharm" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Charm"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fel"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxCharmAnimal" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Charm Animal"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "WP"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxClimb" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Climb"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "S"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxCool" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Cool"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "WP"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxConsumeAlcohol" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Consume Alcohol"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "T"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxDodge" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Dodge"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ag"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxDrive" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Drive"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ag"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxEndurance" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Endurance"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "T"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxEntertain" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Entertain"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fel"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxGamble" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Gamble"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Int"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="BasicSkillsContainer2" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
 layout_mode = 0
 anchor_left = 0.33919415
 anchor_top = 0.26575837
@@ -792,13 +1200,481 @@ anchor_bottom = 0.626119
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer5"]
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
 layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
 text = "Basic Skills"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VBoxContainer6" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
+[node name="BasicSkillsHeader" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/BasicSkillsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.5
+text = "Name	"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/BasicSkillsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+text = "Characteristic"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/BasicSkillsHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Adv"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/BasicSkillsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+text = "Skill"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxGossip" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Gossip"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fel"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxHaggle" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Haggle"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fel"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxIntimidate" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Intimidate"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "S"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxIntuition" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Intuition"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "I"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxLeadership" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Leadership"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fel"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxMeleeBasic" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Melee (Basic)"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "WS"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxMelee" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Melee"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "WS"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxNavigation" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Navigation"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "I"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxOutdoorSurvival" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Outdoor Survival"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Int"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxPerception" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Perception"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "I"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxRide" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Ride"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ag"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxRow" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Row"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "S"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="HBoxStealth" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_stretch_ratio = 2.5
+theme_override_font_sizes/font_size = 24
+text = "Stealth"
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ag"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "20"
+
+[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
+layout_mode = 2
+size_flags_horizontal = 0
+placeholder_text = "0"
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="AdvancedSkillsContainer" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
 layout_mode = 0
 anchor_left = 0.6688645
 anchor_top = 0.26515272
@@ -808,11 +1684,304 @@ offset_right = -0.00012207031
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/VBoxContainer6"]
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AdvancedSkillsContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 24
 text = "Grouped & Advanced Skills"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AdvancedSkillsHeader" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AdvancedSkillsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AdvancedSkillsContainer/AdvancedSkillsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.5
+text = "Name	"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AdvancedSkillsContainer/AdvancedSkillsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+text = "Characteristic"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AdvancedSkillsContainer/AdvancedSkillsHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Adv"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AdvancedSkillsContainer/AdvancedSkillsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+text = "Skill"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AdvancedSkillsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="NameEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AdvancedSkillsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.5
+wrap_mode = 1
+
+[node name="CharacteristicEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AdvancedSkillsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+
+[node name="CharacteristicBaseEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AdvancedSkillsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+
+[node name="CharacteristicAdvEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AdvancedSkillsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+
+[node name="SkillEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AdvancedSkillsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+
+[node name="TalentsContainer" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00093801663
+anchor_top = 0.63236946
+anchor_right = 0.48401484
+anchor_bottom = 0.99880594
+offset_right = -0.00012207031
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/TalentsContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Talents"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TalentsHeader" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/TalentsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/TalentsContainer/TalentsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "Talent Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/TalentsContainer/TalentsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+text = "Times taken"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/TalentsContainer/TalentsHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "Description"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/TalentsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TalentNameEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/TalentsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+wrap_mode = 1
+
+[node name="TimesTakenEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/TalentsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+wrap_mode = 1
+
+[node name="DescriptionEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/TalentsContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+wrap_mode = 1
+
+[node name="AmbitionsContainer" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49104983
+anchor_top = 0.63172317
+anchor_right = 0.9999219
+anchor_bottom = 0.7810121
+offset_right = -0.00012207031
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AmbitionsContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Ambitions"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AmbitionsHeader" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AmbitionsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AmbitionsContainer/AmbitionsHeader"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AmbitionsContainer/AmbitionsHeader/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.4
+text = "Short-
+term"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShortAmbitionEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AmbitionsContainer/AmbitionsHeader/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+
+[node name="VBoxContainer2" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AmbitionsContainer/AmbitionsHeader"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AmbitionsContainer/AmbitionsHeader/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.4
+text = "Long-
+term"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LongAmbitionEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/AmbitionsContainer/AmbitionsHeader/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+
+[node name="PartyContainer" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49104983
+anchor_top = 0.7868286
+anchor_right = 0.9999219
+anchor_bottom = 0.9994522
+offset_right = -0.00012207031
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Party"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TalentsHeader" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PartyNameContainer" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer/TalentsHeader"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer/TalentsHeader/PartyNameContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.4
+text = "Party Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PartyNameEdit" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer/TalentsHeader/PartyNameContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PartyShortContainer3" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer/TalentsHeader"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer/TalentsHeader/PartyShortContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.4
+text = "Party
+Short-term"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PartyShortAmbitionEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer/TalentsHeader/PartyShortContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+
+[node name="PartyLongContainer" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer/TalentsHeader"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer/TalentsHeader/PartyLongContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.4
+text = "Party
+Long-term"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PartyLongAmbitionEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer/TalentsHeader/PartyLongContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+
+[node name="PartyMembersContainer" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer/TalentsHeader"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer/TalentsHeader/PartyMembersContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.4
+text = "Members"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PartyMembersEdit" type="TextEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/PartyContainer/TalentsHeader/PartyMembersContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
 
 [node name="Equipment" type="ScrollContainer" parent="VBox/TabContainer"]
 visible = false

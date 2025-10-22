@@ -22,9 +22,9 @@
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KMOVDH+CaslonAntiqueFS.ttf.import" beforeDir="false" afterPath="$PROJECT_DIR$/KMOVDH+CaslonAntiqueFS.ttf.import" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Theme_CharacterSheet.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Theme_CharacterSheet.tres" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/character_sheet_ui.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/character_sheet_ui.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_ui.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/game_ui.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -259,7 +259,8 @@
       <workItem from="1760517616237" duration="10335000" />
       <workItem from="1760605334474" duration="11403000" />
       <workItem from="1760691442546" duration="9167000" />
-      <workItem from="1761034625978" duration="9763000" />
+      <workItem from="1761034625978" duration="9862000" />
+      <workItem from="1761121413465" duration="7647000" />
     </task>
     <task id="LOCAL-00001" summary="Innit">
       <option name="closed" value="true" />
@@ -477,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760968586112</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="UI cosmetics fix(Logic not implemented YET)">
+      <option name="closed" value="true" />
+      <created>1761054758615</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1761054758615</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -498,7 +507,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="docker" />
     <MESSAGE value="docker fix" />
     <MESSAGE value="database" />
     <MESSAGE value="Kolejny fix" />
@@ -523,7 +531,8 @@
     <MESSAGE value="some left behind files" />
     <MESSAGE value="Praca nad nowym UI(na razie nie działa)" />
     <MESSAGE value="UI still in work" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI still in work" />
+    <MESSAGE value="UI cosmetics fix(Logic not implemented YET)" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI cosmetics fix(Logic not implemented YET)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

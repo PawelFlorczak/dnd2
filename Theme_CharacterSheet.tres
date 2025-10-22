@@ -1,6 +1,6 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dj25gbivxevrn"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://dj25gbivxevrn"]
 
-[ext_resource type="FontFile" uid="uid://mr1fv2gfj6ry" path="res://KMOVDH+CaslonAntiqueFS.ttf" id="1_gyk45"]
+[ext_resource type="FontFile" uid="uid://by7quhde7ekpc" path="res://CaslonAntiquePL.ttf" id="1_gyk45"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gyk45"]
 bg_color = Color(0.76359546, 0.7746916, 0.80768925, 0.39215687)
@@ -16,6 +16,12 @@ bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f4pvv"]
 bg_color = Color(0.77688444, 0.7643293, 0.6634753, 0.3647059)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7080"]
+bg_color = Color(0.6, 0.6, 0.5921569, 0.49803922)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_blcwq"]
+bg_color = Color(0.6, 0.6, 0.6, 0.12941177)
 
 [resource]
 default_base_scale = 1.0
@@ -52,5 +58,7 @@ ProgressBar/colors/font_color = Color(0, 0, 0, 1)
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/colors/font_outline_color = Color(1, 1, 1, 1)
 TextEdit/colors/font_color = Color(0, 0, 0, 1)
+TextEdit/styles/focus = SubResource("StyleBoxFlat_c7080")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_blcwq")
 TooltipLabel/colors/font_color = Color(0, 0, 0, 1)
 Tree/colors/font_color = Color(0, 0, 0, 1)

@@ -2,19 +2,19 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bf5ertsxjb4en"
-path="res://.godot/imported/KMOVDH+CaslonAntiqueFS.ttf-3279873f8b457e0550d8805db403a661.fontdata"
+uid="uid://nbtrvo8mw8dp"
+path="res://.godot/imported/CaslonAntique.ttf-f8b7842e6fef67f49d1c351e42a4de27.fontdata"
 
 [deps]
 
-source_file="res://KMOVDH+CaslonAntiqueFS.ttf"
-dest_files=["res://.godot/imported/KMOVDH+CaslonAntiqueFS.ttf-3279873f8b457e0550d8805db403a661.fontdata"]
+source_file="res://CaslonAntique.ttf"
+dest_files=["res://.godot/imported/CaslonAntique.ttf-f8b7842e6fef67f49d1c351e42a4de27.fontdata"]
 
 [params]
 
 Rendering=null
 antialiasing=1
-generate_mipmaps=true
+generate_mipmaps=false
 disable_embedded_bitmaps=true
 multichannel_signed_distance_field=true
 msdf_pixel_range=8
@@ -31,14 +31,14 @@ fallbacks=[]
 Compress=null
 compress=true
 preload=[{
-"chars": [260, 261, 262, 263, 280, 281, 322, 323, 324, 346, 347, 378, 379, 380],
+"chars": [],
 "glyphs": [],
 "name": "Nowa konfiguracja",
 "size": Vector2i(16, 0),
 &"variation_embolden": 0.0
 }]
 language_support={
-"pl": true
+"en": true
 }
 script_support={}
 opentype_features={}

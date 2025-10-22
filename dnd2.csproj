@@ -12,6 +12,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="API_Endpoints_Summary.md" />
+    <Content Include="CaslonAntique.ttf" />
+    <Content Include="CaslonAntique.ttf.import" />
+    <Content Include="CaslonAntiquePL.ttf" />
+    <Content Include="CaslonAntiquePL.ttf.import" />
     <Content Include="character_sheet.tscn" />
     <Content Include="character_sheet_ui.tscn" />
     <Content Include="game_ui.tscn" />
@@ -24,6 +28,7 @@
     <Content Include="main.tscn" />
     <Content Include="main_kopia.tscn" />
     <Content Include="project.godot" />
+    <Content Include="testowo_character_sheet_ui.tscn" />
     <Content Include="Theme_CharacterSheet.tres" />
     <Content Include="wh1.png" />
     <Content Include="wh1.png.import" />
