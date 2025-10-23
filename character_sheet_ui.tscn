@@ -49,9 +49,10 @@ text = "New Character"
 [node name="TabContainer" type="TabContainer" parent="VBox"]
 layout_mode = 2
 size_flags_vertical = 3
-current_tab = 0
+current_tab = 1
 
 [node name="Character" type="ScrollContainer" parent="VBox/TabContainer"]
+visible = false
 clip_contents = false
 layout_mode = 2
 size_flags_vertical = 3
@@ -156,13 +157,11 @@ placeholder_text = "Eyes"
 [node name="CharacteristicsContainer" type="GridContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.102000006
-anchor_right = 0.462
-anchor_bottom = 0.19000001
-offset_top = -0.6147003
-offset_right = 0.37002563
-offset_bottom = 0.48661804
+anchor_top = 0.102426045
+anchor_right = 0.46228927
+anchor_bottom = 0.21229237
 columns = 11
+metadata/_edit_use_anchors_ = true
 
 [node name="EmptyLabel1" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
@@ -235,55 +234,75 @@ size_flags_horizontal = 7
 size_flags_vertical = 7
 text = "Init"
 
-[node name="WSInput" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="WSInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="BSInput" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="BSInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="SInput" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="SInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="TInput" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="TInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="IInput" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="IInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="AgInput" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="AgInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="DexInput" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="DexInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="IntInput" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="IntInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="WPInput" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="WPInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="FelInput" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="FelInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
 [node name="AdvancesLabel" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
@@ -291,55 +310,159 @@ size_flags_horizontal = 7
 size_flags_vertical = 7
 text = "Adv"
 
-[node name="WSInputAdv" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="WSInputAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="BSInputAdv" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="BSInputAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="SInputAdv" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="SInputAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="TInputAdv" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="TInputAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="IInputAdv" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="IInputAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="AgInputAdv" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="AgInputAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="DexInputAdv" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="DexInputAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="IntInputAdv" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="IntInputAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="WPInputAdv" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="WPInputAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
 
-[node name="FelInputAdv" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+[node name="FelInputAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+update_on_text_changed = true
+
+[node name="ModLabel" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+layout_mode = 2
+text = "Mod"
+
+[node name="WSInputMod" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+min_value = -100.0
+update_on_text_changed = true
+
+[node name="BSInputMod" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+min_value = -100.0
+update_on_text_changed = true
+
+[node name="SInputMod" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+min_value = -100.0
+update_on_text_changed = true
+
+[node name="TInputMod" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+min_value = -100.0
+update_on_text_changed = true
+
+[node name="IInputMod" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+min_value = -100.0
+update_on_text_changed = true
+
+[node name="AgInputMod" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+min_value = -100.0
+update_on_text_changed = true
+
+[node name="DexInputMod" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+min_value = -100.0
+update_on_text_changed = true
+
+[node name="IntInputMod" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+min_value = -100.0
+update_on_text_changed = true
+
+[node name="WPInputMod" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+min_value = -100.0
+update_on_text_changed = true
+
+[node name="FelInputMod" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+theme_override_constants/field_and_buttons_separation = -16
+min_value = -100.0
+update_on_text_changed = true
 
 [node name="CurrentLabel" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
@@ -349,59 +472,79 @@ text = "Curr"
 
 [node name="WSLabelCurrent" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
-size_flags_horizontal = 7
-size_flags_vertical = 7
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 2
+vertical_alignment = 1
 
 [node name="BSLabelCurrent" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
-size_flags_horizontal = 7
-size_flags_vertical = 7
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 2
+vertical_alignment = 1
 
 [node name="SLabelCurrent" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
-size_flags_horizontal = 7
-size_flags_vertical = 7
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 2
+vertical_alignment = 1
 
 [node name="TLabelCurrent" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
-size_flags_horizontal = 7
-size_flags_vertical = 7
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 2
+vertical_alignment = 1
 
 [node name="ILabelCurrent" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
-size_flags_horizontal = 7
-size_flags_vertical = 7
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 2
+vertical_alignment = 1
 
 [node name="AgLabelCurrent" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
-size_flags_horizontal = 7
-size_flags_vertical = 7
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 2
+vertical_alignment = 1
 
 [node name="DexLabelCurrent" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
-size_flags_horizontal = 7
-size_flags_vertical = 7
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 2
+vertical_alignment = 1
 
 [node name="IntLabelCurrent" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
-size_flags_horizontal = 7
-size_flags_vertical = 7
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 2
+vertical_alignment = 1
 
 [node name="WPLabelCurrent" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
-size_flags_horizontal = 7
-size_flags_vertical = 7
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 2
+vertical_alignment = 1
 
 [node name="FelLabelCurrent" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer"]
 layout_mode = 2
-size_flags_horizontal = 7
-size_flags_vertical = 7
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/outline_size = 2
+vertical_alignment = 1
 
 [node name="CharacteristicsRollContainer" type="GridContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0009026085
-anchor_top = 0.1939623
+anchor_top = 0.21358491
 anchor_right = 0.46143135
 anchor_bottom = 0.25860462
 grow_horizontal = 2
@@ -629,7 +772,6 @@ vertical_alignment = 1
 [node name="FateInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/FateContainer/HBoxContainer"]
 layout_mode = 2
 max_value = 10.0
-value = 1.0
 alignment = 1
 
 [node name="FortuneLabel" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/FateContainer/HBoxContainer"]
@@ -641,7 +783,6 @@ vertical_alignment = 1
 [node name="FortuneInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/FateContainer/HBoxContainer"]
 layout_mode = 2
 max_value = 10.0
-value = 1.0
 alignment = 1
 
 [node name="MovementContainer" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
@@ -676,8 +817,6 @@ vertical_alignment = 1
 
 [node name="MovementInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/MovementContainer/HBoxContainer"]
 layout_mode = 2
-max_value = 20.0
-value = 4.0
 alignment = 1
 
 [node name="WalkLabel" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/MovementContainer/HBoxContainer"]
@@ -688,8 +827,6 @@ vertical_alignment = 1
 
 [node name="WalkInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/MovementContainer/HBoxContainer"]
 layout_mode = 2
-max_value = 20.0
-value = 4.0
 alignment = 1
 
 [node name="RunLabel" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/MovementContainer/HBoxContainer"]
@@ -703,8 +840,6 @@ layout_mode = 2
 theme_override_constants/field_and_buttons_separation = 0
 theme_override_constants/buttons_width = 0
 theme_override_constants/set_min_buttons_width_from_icons = 0
-max_value = 20.0
-value = 4.0
 alignment = 1
 
 [node name="BasicSkillsContainer1" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
@@ -782,7 +917,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
 layout_mode = 2
@@ -815,7 +950,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
 layout_mode = 2
@@ -848,7 +983,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
 layout_mode = 2
@@ -881,7 +1016,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
 layout_mode = 2
@@ -914,7 +1049,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
 layout_mode = 2
@@ -947,7 +1082,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
 layout_mode = 2
@@ -980,7 +1115,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
 layout_mode = 2
@@ -1013,7 +1148,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
 layout_mode = 2
@@ -1046,7 +1181,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
 layout_mode = 2
@@ -1079,7 +1214,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
 layout_mode = 2
@@ -1112,7 +1247,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
 layout_mode = 2
@@ -1145,7 +1280,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
 layout_mode = 2
@@ -1178,7 +1313,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
 layout_mode = 2
@@ -1265,7 +1400,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
 layout_mode = 2
@@ -1298,7 +1433,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
 layout_mode = 2
@@ -1331,7 +1466,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
 layout_mode = 2
@@ -1364,7 +1499,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
 layout_mode = 2
@@ -1397,7 +1532,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
 layout_mode = 2
@@ -1430,7 +1565,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
 layout_mode = 2
@@ -1463,7 +1598,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
 layout_mode = 2
@@ -1496,7 +1631,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
 layout_mode = 2
@@ -1529,7 +1664,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
 layout_mode = 2
@@ -1562,7 +1697,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
 layout_mode = 2
@@ -1595,7 +1730,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
 layout_mode = 2
@@ -1628,7 +1763,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
 layout_mode = 2
@@ -1661,7 +1796,7 @@ horizontal_alignment = 1
 [node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
 layout_mode = 2
 size_flags_horizontal = 2
-text = "20"
+text = "0"
 
 [node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
 layout_mode = 2
@@ -1984,7 +2119,6 @@ size_flags_horizontal = 3
 wrap_mode = 1
 
 [node name="Equipment" type="ScrollContainer" parent="VBox/TabContainer"]
-visible = false
 clip_contents = false
 layout_mode = 2
 size_flags_vertical = 3
@@ -2008,23 +2142,633 @@ grow_vertical = 2
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="WoundsContainer" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
-layout_mode = 0
+[node name="ArmourContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008600469
+anchor_top = 0.0011904762
+anchor_right = 0.65363574
+anchor_bottom = 0.17321429
+offset_right = -0.00012207031
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
 
-[node name="WoundsLabel" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer"]
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Armour"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ArmourHeader" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer/ArmourHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "Name	"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer/ArmourHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+text = "Locations"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer/ArmourHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.3
+text = "Enc"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer/ArmourHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+text = "AP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer/ArmourHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "Qualities"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer"]
+layout_mode = 2
+
+[node name="ArmourContainer" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ArmourNameEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer/ArmourContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+wrap_mode = 1
+
+[node name="ArmourLocationsEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer/ArmourContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+wrap_mode = 1
+
+[node name="ArmourEncEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer/ArmourContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+wrap_mode = 1
+
+[node name="ArmourAPEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer/ArmourContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+wrap_mode = 1
+
+[node name="ArmourQualitiesEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourContainer/ArmourContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+wrap_mode = 1
+
+[node name="ArmourPointsContainer" type="Control" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
+layout_mode = 1
+anchor_left = 0.6747459
+anchor_top = 0.0005952381
+anchor_right = 1.0
+anchor_bottom = 0.3809524
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5889423
+anchor_top = 0.050078247
+anchor_right = 0.8701923
+anchor_bottom = 0.09546166
+theme_override_font_sizes/font_size = 24
+text = "Armour Points"
+metadata/_edit_use_anchors_ = true
+
+[node name="HeadAPContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.10817308
+anchor_top = 0.12989046
+anchor_right = 0.31730777
+anchor_bottom = 0.26604068
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/HeadAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = "01-09"
+
+[node name="HeadAPEdit" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/HeadAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+allow_lesser = true
+alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/HeadAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Head"
+
+[node name="LeftArmAPContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7139423
+anchor_top = 0.21596244
+anchor_right = 0.923077
+anchor_bottom = 0.35211268
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/LeftArmAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = "10-24"
+
+[node name="LeftArmAPEdit" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/LeftArmAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+allow_lesser = true
+alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/LeftArmAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Left Arm"
+
+[node name="RightArmAPContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0625
+anchor_top = 0.35211268
+anchor_right = 0.2716347
+anchor_bottom = 0.48826292
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/RightArmAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = "25-44"
+
+[node name="RightArmAPEdit" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/RightArmAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+allow_lesser = true
+alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/RightArmAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Right Arm"
+
+[node name="BodyAPContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.7331731
+anchor_top = 0.4600939
+anchor_right = 0.9423078
+anchor_bottom = 0.59624416
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/BodyAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = "45-79"
+
+[node name="BodyAPEdit" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/BodyAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+allow_lesser = true
+alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/BodyAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Body"
+
+[node name="RightLegAPContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.043269232
+anchor_top = 0.5586854
+anchor_right = 0.25240391
+anchor_bottom = 0.69483566
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/RightLegAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = "90-00"
+
+[node name="RightLegAPEdit" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/RightLegAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+allow_lesser = true
+alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/RightLegAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Right Leg"
+
+[node name="LeftLegAPContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.77403843
+anchor_top = 0.71048516
+anchor_right = 0.98317313
+anchor_bottom = 0.84663534
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/LeftLegAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 14
+text = "80-89"
+
+[node name="LeftLegAPEdit" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/LeftLegAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+allow_lesser = true
+alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/LeftLegAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Left Leg"
+
+[node name="ShieldAPContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.07451923
+anchor_top = 0.81533647
+anchor_right = 0.28365391
+anchor_bottom = 0.9514867
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ShieldAPEdit" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/ShieldAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+allow_lesser = true
+alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/ArmourPointsContainer/ShieldAPContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Shield"
+
+[node name="TrappingsContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00938233
+anchor_top = 0.18035714
+anchor_right = 0.33072722
+anchor_bottom = 0.5547619
+offset_right = -0.00012207031
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/TrappingsContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Trappings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TrappingsHeader" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/TrappingsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/TrappingsContainer/TrappingsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "Name	"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/TrappingsContainer/TrappingsHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.3
+text = "Enc"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/TrappingsContainer"]
+layout_mode = 2
+
+[node name="TrappingsContainer" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/TrappingsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TrappingNameEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/TrappingsContainer/TrappingsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+wrap_mode = 1
+
+[node name="TrappingEncEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/TrappingsContainer/TrappingsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+wrap_mode = 1
+
+[node name="WealthContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.34401873
+anchor_top = 0.38809523
+anchor_right = 0.48788115
+anchor_bottom = 0.55535716
+offset_left = 3.0517578e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WealthContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Wealth"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WealthContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WealthContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="WealthLabelD" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WealthContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "D:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WealthInputD" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WealthContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+allow_greater = true
+allow_lesser = true
+
+[node name="WealthLabelSS" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WealthContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "SS:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WealthInputSS" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WealthContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+allow_greater = true
+allow_lesser = true
+
+[node name="WealthLabelGC" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WealthContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "GC:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WealthInputGC" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WealthContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+allow_greater = true
+allow_lesser = true
+
+[node name="EncumbranceContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5027365
+anchor_top = 0.38809523
+anchor_right = 0.6653636
+anchor_bottom = 0.55773807
+offset_right = -6.1035156e-05
+offset_bottom = 6.1035156e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Encumbrance"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="EncumbranceLabelWeapons" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Weapons:"
+vertical_alignment = 1
+
+[node name="EncumbranceInputWeapons" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+allow_greater = true
+allow_lesser = true
+
+[node name="EncumbranceLabelArmour" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Armour:"
+vertical_alignment = 1
+
+[node name="EncumbranceInputArmour" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+allow_greater = true
+allow_lesser = true
+
+[node name="EncumbranceLabelTrappings" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Trappings:"
+vertical_alignment = 1
+
+[node name="EncumbranceInputTrappings" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+allow_greater = true
+allow_lesser = true
+
+[node name="EncumbranceLabelMaxEnc" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Max Enc.:"
+vertical_alignment = 1
+
+[node name="EncumbranceInputMaxEnc" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+allow_greater = true
+allow_lesser = true
+
+[node name="EncumbranceLabelTotal" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Total:"
+vertical_alignment = 1
+
+[node name="EncumbranceInputTotal" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/EncumbranceContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+allow_greater = true
+allow_lesser = true
+
+[node name="WoundsContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6747459
+anchor_top = 0.38869047
+anchor_right = 0.9953088
+anchor_bottom = 0.55595237
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Wounds"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="WoundsLabelSB" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "SB:"
+vertical_alignment = 1
+
+[node name="WoundsInputSB" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="WoundsLabelTB" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "TB×2:"
+vertical_alignment = 1
+
+[node name="WoundsInputTB" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="WoundsLabelWPB" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "WPB:"
+vertical_alignment = 1
+
+[node name="WoundsInputWPB" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="WoundsLabelHardy" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+text = "Hardy:"
+vertical_alignment = 1
+
+[node name="WoundsInputHardy" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
+
+[node name="WoundsLabelCurrent" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 7
 text = "Wounds:"
+vertical_alignment = 1
 
-[node name="WoundsInput" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer"]
+[node name="WoundsInputCurrent" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
-value = 10.0
+size_flags_horizontal = 3
+size_flags_vertical = 7
+allow_lesser = true
 
-[node name="CurrentWoundsLabel" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer"]
+[node name="VSeparator" type="VSeparator" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer"]
 layout_mode = 2
-text = "Current:"
 
-[node name="CurrentWoundsInput" type="SpinBox" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer"]
+[node name="WoundsMiscTextEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer"]
 layout_mode = 2
-value = 10.0
+size_flags_horizontal = 3
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]

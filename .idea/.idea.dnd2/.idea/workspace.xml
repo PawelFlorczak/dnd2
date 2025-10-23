@@ -22,10 +22,9 @@
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/KMOVDH+CaslonAntiqueFS.ttf.import" beforeDir="false" afterPath="$PROJECT_DIR$/KMOVDH+CaslonAntiqueFS.ttf.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Theme_CharacterSheet.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Theme_CharacterSheet.tres" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/character_sheet_ui.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/character_sheet_ui.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testowo_character_sheet_ui.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/testowo_character_sheet_ui.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wh2.png" beforeDir="false" afterPath="$PROJECT_DIR$/wh2.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +259,9 @@
       <workItem from="1760605334474" duration="11403000" />
       <workItem from="1760691442546" duration="9167000" />
       <workItem from="1761034625978" duration="9862000" />
-      <workItem from="1761121413465" duration="7647000" />
+      <workItem from="1761121413465" duration="8036000" />
+      <workItem from="1761211867548" duration="155000" />
+      <workItem from="1761212310365" duration="5799000" />
     </task>
     <task id="LOCAL-00001" summary="Innit">
       <option name="closed" value="true" />
@@ -486,7 +487,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761054758615</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="CharacterSheetUI character finished(Backend not included)">
+      <option name="closed" value="true" />
+      <created>1761139703984</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1761139703984</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Added localisation files WIP">
+      <option name="closed" value="true" />
+      <created>1761139831970</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1761139831970</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,8 +524,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="docker fix" />
-    <MESSAGE value="database" />
     <MESSAGE value="Kolejny fix" />
     <MESSAGE value="Dalszy ciąg fixowania" />
     <MESSAGE value="kolejny fix" />
@@ -532,7 +547,9 @@
     <MESSAGE value="Praca nad nowym UI(na razie nie działa)" />
     <MESSAGE value="UI still in work" />
     <MESSAGE value="UI cosmetics fix(Logic not implemented YET)" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI cosmetics fix(Logic not implemented YET)" />
+    <MESSAGE value="CharacterSheetUI character finished(Backend not included)" />
+    <MESSAGE value="Added localisation files WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added localisation files WIP" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

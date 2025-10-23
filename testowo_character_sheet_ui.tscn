@@ -144,7 +144,398 @@ layout_mode = 2
 size_flags_horizontal = 3
 placeholder_text = "Eyes"
 
+[node name="GridContainer2" type="GridContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0010413994
+anchor_top = 0.10191252
+anchor_right = 0.46250975
+anchor_bottom = 0.2595495
+columns = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InitLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Init"
+vertical_alignment = 1
+
+[node name="AdvancesLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Adv"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+text = "Mod"
+
+[node name="CurrentLabel" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Curr"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InitLabel2" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Init"
+vertical_alignment = 1
+
+[node name="AdvancesLabel2" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Adv"
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+text = "Mod"
+
+[node name="CurrentLabel2" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "Curr"
+vertical_alignment = 1
+
+[node name="WSRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "WS"
+
+[node name="WSInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="WSInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="WSInputAdv2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="WSLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AGRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "AG"
+
+[node name="AgInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="AgInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="AgInputAdv2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="AgLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BSRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "BS"
+
+[node name="BSInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="BSInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="BSInputAdv2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="BSLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DEXRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "DEX"
+
+[node name="DexInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="DexInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="DexInputAdv2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="DexLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "S"
+
+[node name="SInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="SInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="SInputAdv2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="SLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="INTRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "INT"
+
+[node name="IntInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="IntInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="IntInputAdv2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="IntLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "T"
+
+[node name="TInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="TInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="TInputAdv2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="TLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WPRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "WP"
+
+[node name="WPInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="WPInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="WPInputAdv2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="WPLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "I"
+
+[node name="IInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="IInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="IInputAdv2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="ILabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FELRollButton" type="Button" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+text = "FEL"
+
+[node name="FelInput" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="FelInputAdv" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="FelInputAdv2" type="SpinBox" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+alignment = 1
+
+[node name="FelLabelCurrent" type="Label" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Characteristics" type="GridContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.102000006
@@ -389,6 +780,7 @@ size_flags_horizontal = 7
 size_flags_vertical = 7
 
 [node name="GridContainer" type="GridContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.186
@@ -592,6 +984,7 @@ size_flags_horizontal = 3
 max_value = 10000.0
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+visible = false
 layout_mode = 0
 anchor_left = 0.46886447
 anchor_top = 0.19429189
@@ -635,6 +1028,7 @@ value = 1.0
 alignment = 1
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+visible = false
 layout_mode = 0
 anchor_left = 0.74212456
 anchor_top = 0.19429189
@@ -695,7 +1089,9 @@ value = 4.0
 alignment = 1
 
 [node name="VBoxContainer4" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
-layout_mode = 0
+visible = false
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.00073260075
 anchor_top = 0.266364
 anchor_right = 0.33260074
@@ -709,7 +1105,9 @@ text = "Umiejętności podstawowe
 "
 
 [node name="VBoxContainer5" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
-layout_mode = 0
+visible = false
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.33919415
 anchor_top = 0.26575837
 anchor_right = 0.6652015
@@ -723,6 +1121,7 @@ text = "Umiejętności podstawowe
 "
 
 [node name="VBoxContainer6" type="VBoxContainer" parent="VBox/TabContainer/Postać/TexturePostać/VBoxContainer"]
+visible = false
 layout_mode = 0
 anchor_left = 0.6688645
 anchor_top = 0.26515272
