@@ -23,8 +23,7 @@
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/character_sheet_ui.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/character_sheet_ui.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testowo_character_sheet_ui.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/testowo_character_sheet_ui.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wh2.png" beforeDir="false" afterPath="$PROJECT_DIR$/wh2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_ui.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/game_ui.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +260,8 @@
       <workItem from="1761034625978" duration="9862000" />
       <workItem from="1761121413465" duration="8036000" />
       <workItem from="1761211867548" duration="155000" />
-      <workItem from="1761212310365" duration="5799000" />
+      <workItem from="1761212310365" duration="5841000" />
+      <workItem from="1761293713609" duration="3619000" />
     </task>
     <task id="LOCAL-00001" summary="Innit">
       <option name="closed" value="true" />
@@ -503,7 +503,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761139831970</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Equipment UI WIP">
+      <option name="closed" value="true" />
+      <created>1761227727739</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1761227727739</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +532,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Kolejny fix" />
     <MESSAGE value="Dalszy ciąg fixowania" />
     <MESSAGE value="kolejny fix" />
     <MESSAGE value="teraz na pewno pójdzie" />
@@ -549,7 +556,8 @@
     <MESSAGE value="UI cosmetics fix(Logic not implemented YET)" />
     <MESSAGE value="CharacterSheetUI character finished(Backend not included)" />
     <MESSAGE value="Added localisation files WIP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added localisation files WIP" />
+    <MESSAGE value="Equipment UI WIP" />
+    <option name="LAST_COMMIT_MESSAGE" value="Equipment UI WIP" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

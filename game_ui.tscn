@@ -51,8 +51,6 @@ size_flags_stretch_ratio = 0.2
 
 [node name="Header" type="HBoxContainer" parent="ColorRect/HSplitContainer/VSplitContainer"]
 layout_mode = 2
-size_flags_vertical = 3
-size_flags_stretch_ratio = 0.1
 
 [node name="UserLabel" type="Label" parent="ColorRect/HSplitContainer/VSplitContainer/Header"]
 z_index = 1

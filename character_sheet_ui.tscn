@@ -49,10 +49,9 @@ text = "New Character"
 [node name="TabContainer" type="TabContainer" parent="VBox"]
 layout_mode = 2
 size_flags_vertical = 3
-current_tab = 1
+current_tab = 0
 
 [node name="Character" type="ScrollContainer" parent="VBox/TabContainer"]
-visible = false
 clip_contents = false
 layout_mode = 2
 size_flags_vertical = 3
@@ -684,7 +683,7 @@ max_value = 10000.0
 [node name="ExpContainer" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.7956044
+anchor_left = 0.79824907
 anchor_top = 0.101022065
 anchor_right = 1.0
 anchor_bottom = 0.18884104
@@ -845,10 +844,10 @@ alignment = 1
 [node name="BasicSkillsContainer1" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.00073260075
+anchor_left = 0.0025013704
 anchor_top = 0.266364
 anchor_right = 0.33260074
-anchor_bottom = 0.6255134
+anchor_bottom = 0.6246142
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
 
@@ -1327,11 +1326,12 @@ text = "0"
 horizontal_alignment = 1
 
 [node name="BasicSkillsContainer2" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
-layout_mode = 0
-anchor_left = 0.33919415
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.34018603
 anchor_top = 0.26575837
 anchor_right = 0.6652015
-anchor_bottom = 0.626119
+anchor_bottom = 0.6252605
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
 
@@ -1810,11 +1810,12 @@ text = "0"
 horizontal_alignment = 1
 
 [node name="AdvancedSkillsContainer" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
-layout_mode = 0
-anchor_left = 0.6688645
-anchor_top = 0.26515272
-anchor_right = 1.0007327
-anchor_bottom = 0.626119
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6716173
+anchor_top = 0.26593295
+anchor_right = 0.9975769
+anchor_bottom = 0.62267536
 offset_right = -0.00012207031
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
@@ -1896,10 +1897,10 @@ wrap_mode = 1
 [node name="TalentsContainer" type="VBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.00093801663
-anchor_top = 0.63236946
-anchor_right = 0.48401484
-anchor_bottom = 0.99880594
+anchor_left = 0.0032830492
+anchor_top = 0.6330157
+anchor_right = 0.48166978
+anchor_bottom = 0.9955745
 offset_right = -0.00012207031
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
@@ -1968,8 +1969,8 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.49104983
 anchor_top = 0.63172317
-anchor_right = 0.9999219
-anchor_bottom = 0.7810121
+anchor_right = 0.9975769
+anchor_bottom = 0.7777807
 offset_right = -0.00012207031
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
@@ -2027,9 +2028,9 @@ wrap_mode = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.49104983
-anchor_top = 0.7868286
-anchor_right = 0.9999219
-anchor_bottom = 0.9994522
+anchor_top = 0.7874748
+anchor_right = 0.9983586
+anchor_bottom = 0.9968671
 offset_right = -0.00012207031
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
@@ -2119,6 +2120,7 @@ size_flags_horizontal = 3
 wrap_mode = 1
 
 [node name="Equipment" type="ScrollContainer" parent="VBox/TabContainer"]
+visible = false
 clip_contents = false
 layout_mode = 2
 size_flags_vertical = 3
@@ -2148,7 +2150,7 @@ anchors_preset = -1
 anchor_left = 0.008600469
 anchor_top = 0.0011904762
 anchor_right = 0.65363574
-anchor_bottom = 0.17321429
+anchor_bottom = 0.17142858
 offset_right = -0.00012207031
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
@@ -2459,7 +2461,7 @@ anchors_preset = -1
 anchor_left = 0.00938233
 anchor_top = 0.18035714
 anchor_right = 0.33072722
-anchor_bottom = 0.5547619
+anchor_bottom = 0.5541667
 offset_right = -0.00012207031
 size_flags_horizontal = 3
 metadata/_edit_use_anchors_ = true
@@ -2585,9 +2587,9 @@ allow_lesser = true
 [node name="EncumbranceContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5027365
+anchor_left = 0.5035184
 anchor_top = 0.38809523
-anchor_right = 0.6653636
+anchor_right = 0.66536367
 anchor_bottom = 0.55773807
 offset_right = -6.1035156e-05
 offset_bottom = 6.1035156e-05
@@ -2682,7 +2684,7 @@ allow_lesser = true
 [node name="WoundsContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.6747459
+anchor_left = 0.67630965
 anchor_top = 0.38869047
 anchor_right = 0.9953088
 anchor_bottom = 0.55595237
@@ -2770,5 +2772,308 @@ layout_mode = 2
 [node name="WoundsMiscTextEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WoundsContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="PsychologyContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3432369
+anchor_top = 0.18154761
+anchor_right = 0.6637998
+anchor_bottom = 0.27797619
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/PsychologyContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Psychology"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PsychologyTextEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/PsychologyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CorruptionMutationContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3432369
+anchor_top = 0.2857143
+anchor_right = 0.6637998
+anchor_bottom = 0.3809524
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/CorruptionMutationContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Corruption & Mutation"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CorruptionMutationTextEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/CorruptionMutationContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="WeaponsContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0039093043
+anchor_top = 0.5684525
+anchor_right = 0.9976545
+anchor_bottom = 0.7636905
+offset_right = -0.00012207031
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Weapons"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WeaponsHeader" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer/WeaponsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "Name	"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer/WeaponsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+text = "Group"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer/WeaponsHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.3
+text = "Enc"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer/WeaponsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+text = "Range/Reach"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer/WeaponsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+text = "Damage"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer/WeaponsHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "Qualities"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer"]
+layout_mode = 2
+
+[node name="WeaponsContainer" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="WeaponsNameEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer/WeaponsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+wrap_mode = 1
+
+[node name="WeaponsGroupEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer/WeaponsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+wrap_mode = 1
+
+[node name="WeaponsEncEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer/WeaponsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+wrap_mode = 1
+
+[node name="WeaponsRangeEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer/WeaponsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+wrap_mode = 1
+
+[node name="WeaponsDamageEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer/WeaponsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+wrap_mode = 1
+
+[node name="WeaponsQualitiesEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/WeaponsContainer/WeaponsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+wrap_mode = 1
+
+[node name="SpellsPrayersContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0039093043
+anchor_top = 0.77380955
+anchor_right = 0.9976545
+anchor_bottom = 0.99761903
+offset_right = -0.00012207031
+size_flags_horizontal = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Spells & Prayers"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpellsPrayersHeader" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.5
+text = "Name	"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+text = "TN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+text = "Range"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+text = "Target"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 0.5
+text = "Duration"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersHeader"]
+layout_mode = 2
+size_flags_horizontal = 7
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "Effect"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer"]
+layout_mode = 2
+
+[node name="SpellsPrayersContainer" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SpellsPrayersNameEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+wrap_mode = 1
+
+[node name="SpellsPrayersTNEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+wrap_mode = 1
+
+[node name="SpellsPrayersRangeEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+wrap_mode = 1
+
+[node name="SpellsPrayersTargetEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+wrap_mode = 1
+
+[node name="SpellsPrayersDurationEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+wrap_mode = 1
+
+[node name="SpellsPrayersEffectContainer" type="VBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="SpellsPrayersEffectEdit" type="TextEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersContainer/SpellsPrayersEffectContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+wrap_mode = 1
+
+[node name="SinContainer" type="HBoxContainer" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersContainer/SpellsPrayersEffectContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersContainer/SpellsPrayersEffectContainer/SinContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sin:"
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SinEdit" type="LineEdit" parent="VBox/TabContainer/Equipment/TextureEquipment/EquipmentForm/SpellsPrayersContainer/SpellsPrayersContainer/SpellsPrayersEffectContainer/SinContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DiceAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d301a34ebaee83424748ed5d507ba18bead02297")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e924b20552b7091c6b7b81255a44dbe4bcbd38f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DiceAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DiceAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
