@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwdftodq2saj8"]
 
-[ext_resource type="Script" uid="uid://da1qdx5rp4psy" path="res://AppController.cs" id="1_lquwl"]
-[ext_resource type="Script" uid="uid://dmw7vj3tbwfrg" path="res://DiceSignalRClient.cs" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://wfai276xnnfr" path="res://AppController.cs" id="1_lquwl"]
+[ext_resource type="Script" uid="uid://bqpdnu4dvr3in" path="res://DiceSignalRClient.cs" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://du5066b2r7jwh" path="res://login_ui.tscn" id="2_7mycd"]
 [ext_resource type="PackedScene" uid="uid://b5qoc0cu3v3p1" path="res://game_ui.tscn" id="3_1bvp3"]
 
@@ -26,4 +26,5 @@ script = ExtResource("2_0xm2m")
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
+[editable path="LoginUI"]
 [editable path="GameUI"]

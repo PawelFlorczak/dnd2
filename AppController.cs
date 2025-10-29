@@ -9,7 +9,6 @@ public partial class AppController : Control
     private DiceUI _diceUI;
     private DiceSignalRClient _signalRClient;
     
-    private HSplitContainer _hsplitContainer;
     private Button _logoutButton;
     private Label _userLabel;
     
@@ -27,9 +26,8 @@ public partial class AppController : Control
         // Assuming the scene structure has these nodes
         _loginUI = GetNode<LoginUI>("LoginUI");
         _gameUI = GetNode<Control>("GameUI");
-        _hsplitContainer = GetNode<HSplitContainer>("GameUI/HSplitContainer");
-        _diceUI = GetNode<DiceUI>("GameUI/HSplitContainer/DiceRoll/DiceUI");
-        _characterSheetUI = GetNode<CharacterSheetUI>("GameUI/HSplitContainer/CharacterSheet/CharacterSheetUI");
+        _diceUI = GetNode<DiceUI>("GameUI/ColorRect/HSplitContainer/VSplitContainer/PanelContainer/DiceRoll/DiceUI");
+        _characterSheetUI = GetNode<CharacterSheetUI>("GameUI/ColorRect/HSplitContainer/CharacterSheet/CharacterSheetUI");
         try
         {
             _signalRClient = GetNode<DiceSignalRClient>("DiceSignalRClient");
@@ -42,7 +40,7 @@ public partial class AppController : Control
         
         try
         {
-            _logoutButton = GetNode<Button>("GameUI/Header/LogoutButton");
+            _logoutButton = GetNode<Button>("GameUI/ColorRect/HSplitContainer/VSplitContainer/Header/LogoutButton");
             GD.Print("✅ LogoutButton found!");
         }
         catch (Exception ex)
@@ -52,7 +50,7 @@ public partial class AppController : Control
         
         try
         {
-            _userLabel = GetNode<Label>("GameUI/Header/UserLabel");
+            _userLabel = GetNode<Label>("GameUI/ColorRect/HSplitContainer/VSplitContainer/Header/UserLabel");
             GD.Print("✅ UserLabel found!");
         }
         catch (Exception ex)

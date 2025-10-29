@@ -11,30 +11,77 @@ public partial class CharacterSheetUI : Control
     private int _currentUserId;
     private int _currentCharacterId;
     
-    // Character info controls
+    // Header Buttons
+    private Button _saveButton;
+    private Button _newCharacterButton;
+    
+    // Character Form
+    // Character Basic Info controls
     private LineEdit _nameInput;
     private LineEdit _speciesInput;
+    private LineEdit _classInput;
     private LineEdit _careerInput;
+    private LineEdit _careerLevelInput;
+    private LineEdit _careerPathInput;
+    private LineEdit _statusInput;
+    private LineEdit _ageInput;
+    private LineEdit _heightInput;
+    private LineEdit _hairInput;
+    private LineEdit _eyesInput;
     
     // Characteristics
     private SpinBox _wsInput, _bsInput, _sInput, _tInput, _iInput;
     private SpinBox _agInput, _dexInput, _intInput, _wpInput, _felInput;
     
-    // Secondary characteristics
-    private SpinBox _woundsInput, _currentWoundsInput, _movementInput;
+    private SpinBox _wsInputAdv, _bsInputAdv, _sInputAdv, _tInputAdv, _iInputAdv;
+    private SpinBox _agInputAdv, _dexInputAdv, _intInputAdv, _wpInputAdv, _felInputAdv;
     
-    // Status and experience
-    private LineEdit _statusInput;
-    private SpinBox _currentExpInput, _spentExpInput;
-    private SpinBox _fateInput, _fortuneInput;
+    private SpinBox _wsInputMod, _bsInputMod, _sInputMod, _tInputMod, _iInputMod;
+    private SpinBox _agInputMod, _dexInputMod, _intInputMod, _wpInputMod, _felInputMod;
     
-    // Buttons
-    private Button _saveButton;
-    private Button _newCharacterButton;
+    private Label _wsInputCur, _bsInputCur, _sInputCur, _tInputCur, _iInputCur;
+    private Label _agInputCur, _dexInputCur, _intInputCur, _wpInputCur, _felInputCur;   
     
     // Roll buttons for characteristics
     private Dictionary<string, Button> _rollButtons = new();
+    
+    // Resilience
+    private SpinBox _resilienceInput, _resolveInput, _motivationInput;
+    
+    //Experience points
+    private SpinBox _currentExpInput, _spentExpInput, _totalExpInput;
+    
+    // Fate
+    private SpinBox _fateInput, _fortuneInput;
+    
+    // Movement
+    private SpinBox _movementInput, _walkInput, _runInput;
+    
+    // Basic Skills
+    private Dictionary<string, Button> _basicSkillButton = new();
+    
+    // Grouped & Advanced Skills
+    private TextEdit _advNameEdit, _advCharacteristicEdit, _advCharacteristicBaseEdit, _advCharacteristicAdvEdit, _advSkillEdit;
+    
+    // Talents
+    private TextEdit _talentNameEdit, _talentTimesTakenEdit, _talentDescriptionEdit;
+    
+    // Ambitions
+    private TextEdit _shortAmbitionEdit, _longAmbitionEdit;
+    
+    // Party
+    private LineEdit _partyNameEdit;
+    private TextEdit _partyShortAmbitionEdit, _partyLongAmbitionEdit, _partyMembersEdit;
+    
+    
+    // Equipment Form
+    // Secondary characteristics
+    private SpinBox _woundsInput, _currentWoundsInput;
+    
 
+    
+
+    
     public override void _Ready()
     {
         SetupUI();
@@ -70,19 +117,20 @@ public partial class CharacterSheetUI : Control
         // Character basic info
         _nameInput = GetNode<LineEdit>("VBox/ScrollContainer/CharacterForm/BasicInfo/NameInput");
         _speciesInput = GetNode<LineEdit>("VBox/ScrollContainer/CharacterForm/BasicInfo/SpeciesInput");
+        _classInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/ClassInput");
         _careerInput = GetNode<LineEdit>("VBox/ScrollContainer/CharacterForm/BasicInfo/CareerInput");
         
         // Characteristics
-        _wsInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Characteristics/WSInput");
-        _bsInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Characteristics/BSInput");
-        _sInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Characteristics/SInput");
-        _tInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Characteristics/TInput");
-        _iInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Characteristics/IInput");
-        _agInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Characteristics/AgInput");
-        _dexInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Characteristics/DexInput");
-        _intInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Characteristics/IntInput");
-        _wpInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Characteristics/WPInput");
-        _felInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Characteristics/FelInput");
+        _wsInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/WSInput");
+        _bsInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/BSInput");
+        _sInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/SInput");
+        _tInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/TInput");
+        _iInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/IInput");
+        _agInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/AgInput");
+        _dexInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/DexInput");
+        _intInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/IntInput");
+        _wpInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/WPInput");
+        _felInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/FelInput");
         
         // Secondary characteristics
         _woundsInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Secondary/WoundsContainer/WoundsInput");
@@ -113,6 +161,7 @@ public partial class CharacterSheetUI : Control
         
         // Setup roll buttons
         SetupRollButtons();
+        SetupBasicSkillsButtons();
     }
 
     private void SetupRollButtons()
@@ -121,9 +170,25 @@ public partial class CharacterSheetUI : Control
         
         foreach (var characteristic in characteristics)
         {
-            var button = GetNode<Button>($"VBox/ScrollContainer/CharacterForm/Characteristics/{characteristic}RollButton");
+            var button = GetNode<Button>($"VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsRollContainer/{characteristic}RollButton");
             _rollButtons[characteristic] = button;
             button.Pressed += () => OnCharacteristicRoll(characteristic);
+        }
+    }
+    
+    private void SetupBasicSkillsButtons()
+    {
+        var skills = new[]
+        {
+            "Art", "Athletics", "Bribery", "Charm", "CharmAnimal", "Climb","Cool", "ConsumeAlcohol","Dodge", "Drive", "Endurance", "Entertain", "Gamble",
+            "Gossip", "Haggle","Intimidate", "Intuition", "Leadership", "MeleeBasic", "Melee", "Navigation", "OutdoorSurvival", "Perception","Ride","Row","Stealth"
+        };
+        
+        foreach (var skill in skills)
+        {
+            var button = GetNode<Button>($"VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBox{skill}/Button");
+            _rollButtons[skill] = button;
+            button.Pressed += () => OnBasicSkillRoll(skill);
         }
     }
 

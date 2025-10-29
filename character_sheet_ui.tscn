@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://dao6jneyycujg"]
 
-[ext_resource type="Script" uid="uid://cu13gnal6c46j" path="res://CharacterSheetUI.cs" id="1_rqy50"]
+[ext_resource type="Script" uid="uid://boqbqk64ctiy5" path="res://CharacterSheetUI.cs" id="1_rqy50"]
 [ext_resource type="Theme" uid="uid://dj25gbivxevrn" path="res://Theme_CharacterSheet.tres" id="1_tgtj5"]
 [ext_resource type="Texture2D" uid="uid://dauj4fl336hyi" path="res://wh1.png" id="2_kcblx"]
 [ext_resource type="Texture2D" uid="uid://c08s5hs3tx1wq" path="res://wh2.png" id="4_kefbw"]
@@ -115,7 +115,7 @@ placeholder_text = "Career"
 [node name="CareerlevelInput" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
-placeholder_text = "Career"
+placeholder_text = "Career level"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer"]
 layout_mode = 2
@@ -642,7 +642,7 @@ text = "Resilience"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SpentExpLabel" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ResilienceContainer/HBoxContainer"]
+[node name="ResolveLabel" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ResilienceContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -650,7 +650,7 @@ text = "Resolve"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TotalExpLabel" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ResilienceContainer/HBoxContainer"]
+[node name="MotivationLabel" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ResilienceContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -662,19 +662,19 @@ vertical_alignment = 1
 layout_mode = 2
 alignment = 1
 
-[node name="CurrentExpInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ResilienceContainer/HBoxContainer2"]
+[node name="ResilienceInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ResilienceContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 max_value = 10000.0
 
-[node name="SpentExpInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ResilienceContainer/HBoxContainer2"]
+[node name="ResolveInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ResilienceContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
 max_value = 10000.0
 
-[node name="TotalExpLabel2" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ResilienceContainer/HBoxContainer2"]
+[node name="MotivationInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ResilienceContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 6
@@ -737,7 +737,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 max_value = 10000.0
 
-[node name="TotalExpLabel2" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ExpContainer/HBoxContainer2"]
+[node name="TotalExpInput" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/ExpContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 10000.0

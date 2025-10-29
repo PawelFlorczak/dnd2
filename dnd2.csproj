@@ -16,7 +16,8 @@
     <Content Include="CaslonAntique.ttf.import" />
     <Content Include="CaslonAntiquePL.ttf" />
     <Content Include="CaslonAntiquePL.ttf.import" />
-    <Content Include="character_sheet.tscn" />
+    <Content Include="CharacterSheet_kopia.cs.uid" />
+    <Content Include="character_sheet_kopia.tscn" />
     <Content Include="character_sheet_ui.tscn" />
     <Content Include="game_ui.tscn" />
     <Content Include="KMOVDH+CaslonAntiqueFS.ttf" />
