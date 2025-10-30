@@ -900,7 +900,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -913,17 +913,16 @@ size_flags_horizontal = 3
 text = "Dex"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxArt"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -933,7 +932,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -946,17 +945,16 @@ size_flags_horizontal = 3
 text = "Ag"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxAthletics"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -966,7 +964,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -979,17 +977,16 @@ size_flags_horizontal = 3
 text = "Fel"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxBribery"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -999,7 +996,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1012,17 +1009,16 @@ size_flags_horizontal = 3
 text = "Fel"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharm"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1032,7 +1028,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1045,17 +1041,16 @@ size_flags_horizontal = 3
 text = "WP"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCharmAnimal"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1065,7 +1060,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1078,17 +1073,16 @@ size_flags_horizontal = 3
 text = "S"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxClimb"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1098,7 +1092,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1111,17 +1105,16 @@ size_flags_horizontal = 3
 text = "WP"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxCool"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1131,7 +1124,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1144,17 +1137,16 @@ size_flags_horizontal = 3
 text = "T"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxConsumeAlcohol"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1164,7 +1156,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1177,17 +1169,16 @@ size_flags_horizontal = 3
 text = "Ag"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDodge"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1197,7 +1188,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1210,17 +1201,16 @@ size_flags_horizontal = 3
 text = "Ag"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxDrive"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1230,7 +1220,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1243,17 +1233,16 @@ size_flags_horizontal = 3
 text = "T"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEndurance"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1263,7 +1252,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1276,17 +1265,16 @@ size_flags_horizontal = 3
 text = "Fel"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxEntertain"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1296,7 +1284,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1309,17 +1297,16 @@ size_flags_horizontal = 3
 text = "Int"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBoxGamble"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1384,7 +1371,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1397,17 +1384,16 @@ size_flags_horizontal = 3
 text = "Fel"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxGossip"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1417,7 +1403,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1430,17 +1416,16 @@ size_flags_horizontal = 3
 text = "Fel"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxHaggle"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1450,7 +1435,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1463,17 +1448,16 @@ size_flags_horizontal = 3
 text = "S"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntimidate"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1483,7 +1467,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1496,17 +1480,16 @@ size_flags_horizontal = 3
 text = "I"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxIntuition"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1516,7 +1499,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1529,17 +1512,16 @@ size_flags_horizontal = 3
 text = "Fel"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxLeadership"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1549,7 +1531,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1562,17 +1544,16 @@ size_flags_horizontal = 3
 text = "WS"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMeleeBasic"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1582,7 +1563,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1595,17 +1576,16 @@ size_flags_horizontal = 3
 text = "WS"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxMelee"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1615,7 +1595,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1628,17 +1608,16 @@ size_flags_horizontal = 3
 text = "I"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxNavigation"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1648,7 +1627,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1661,17 +1640,16 @@ size_flags_horizontal = 3
 text = "Int"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxOutdoorSurvival"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1681,7 +1659,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1694,17 +1672,16 @@ size_flags_horizontal = 3
 text = "I"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxPerception"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1714,7 +1691,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1727,17 +1704,16 @@ size_flags_horizontal = 3
 text = "Ag"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRide"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1747,7 +1723,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1760,17 +1736,16 @@ size_flags_horizontal = 3
 text = "S"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxRow"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"
@@ -1780,7 +1755,7 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
+[node name="BasicSkillButton" type="Button" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
 layout_mode = 2
 size_flags_horizontal = 7
 size_flags_stretch_ratio = 2.5
@@ -1793,17 +1768,16 @@ size_flags_horizontal = 3
 text = "Ag"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
+[node name="BasicSkillCharBase" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
 layout_mode = 2
 size_flags_horizontal = 2
 text = "0"
 
-[node name="Label4" type="LineEdit" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
+[node name="BasicSkillAdv" type="SpinBox" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
 layout_mode = 2
 size_flags_horizontal = 0
-placeholder_text = "0"
 
-[node name="Label5" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
+[node name="BasicSkillSum" type="Label" parent="VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBoxStealth"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "0"

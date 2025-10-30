@@ -23,7 +23,6 @@
     <Content Include="KMOVDH+CaslonAntiqueFS.ttf" />
     <Content Include="KMOVDH+CaslonAntiqueFS.ttf.import" />
     <Content Include="LOCALIZATION_GUIDE.md" />
-    <Content Include="login.tscn" />
     <Content Include="login_ui.tscn" />
     <Content Include="Main.cs.uid" />
     <Content Include="main.tscn" />

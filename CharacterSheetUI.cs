@@ -15,7 +15,9 @@ public partial class CharacterSheetUI : Control
     private Button _saveButton;
     private Button _newCharacterButton;
     
-    // Character Form
+    // ==========================================
+    // ===== Character Form =====================
+    
     // Character Basic Info controls
     private LineEdit _nameInput;
     private LineEdit _speciesInput;
@@ -58,7 +60,91 @@ public partial class CharacterSheetUI : Control
     private SpinBox _movementInput, _walkInput, _runInput;
     
     // Basic Skills
-    private Dictionary<string, Button> _basicSkillButton = new();
+    private Label 
+        _skillBaseCharLabelArt,
+        _skillBaseCharLabelAthletics,
+        _skillBaseCharLabelBribery,
+        _skillBaseCharLabelCharm,
+        _skillBaseCharLabelCharmAnimal,
+        _skillBaseCharLabelClimb,
+        _skillBaseCharLabelCool,
+        _skillBaseCharLabelConsumeAlcohol,
+        _skillBaseCharLabelDodge,
+        _skillBaseCharLabelDrive,
+        _skillBaseCharLabelEndurance,
+        _skillBaseCharLabelEntertain,
+        _skillBaseCharLabelGamble,
+        _skillBaseCharLabelGossip,
+        _skillBaseCharLabelHaggle,
+        _skillBaseCharLabelIntimidate,
+        _skillBaseCharLabelIntuition,
+        _skillBaseCharLabelLeadership,
+        _skillBaseCharLabelMeleeBasic,
+        _skillBaseCharLabelMelee,
+        _skillBaseCharLabelNavigation,
+        _skillBaseCharLabelOutdoorSurvival,
+        _skillBaseCharLabelPerception,
+        _skillBaseCharLabelRide,
+        _skillBaseCharLabelRow,
+        _skillBaseCharLabelStealth;
+
+    private SpinBox 
+        _skillAdvEditArt,            
+        _skillAdvEditAthletics,      
+        _skillAdvEditBribery,        
+        _skillAdvEditCharm,          
+        _skillAdvEditCharmAnimal,    
+        _skillAdvEditClimb,          
+        _skillAdvEditCool,           
+        _skillAdvEditConsumeAlcohol, 
+        _skillAdvEditDodge,          
+        _skillAdvEditDrive,          
+        _skillAdvEditEndurance,      
+        _skillAdvEditEntertain,      
+        _skillAdvEditGamble,         
+        _skillAdvEditGossip,         
+        _skillAdvEditHaggle,         
+        _skillAdvEditIntimidate,     
+        _skillAdvEditIntuition,      
+        _skillAdvEditLeadership,     
+        _skillAdvEditMeleeBasic,     
+        _skillAdvEditMelee,          
+        _skillAdvEditNavigation,     
+        _skillAdvEditOutdoorSurvival,
+        _skillAdvEditPerception,     
+        _skillAdvEditRide,           
+        _skillAdvEditRow,            
+        _skillAdvEditStealth;
+    
+    private Label 
+        _skillSumLabelArt,
+        _skillSumLabelAthletics,
+        _skillSumLabelBribery,
+        _skillSumLabelCharm,
+        _skillSumLabelCharmAnimal,
+        _skillSumLabelClimb,
+        _skillSumLabelCool,
+        _skillSumLabelConsumeAlcohol,
+        _skillSumLabelDodge,
+        _skillSumLabelDrive,
+        _skillSumLabelEndurance,
+        _skillSumLabelEntertain,
+        _skillSumLabelGamble,
+        _skillSumLabelGossip,
+        _skillSumLabelHaggle,
+        _skillSumLabelIntimidate,
+        _skillSumLabelIntuition,
+        _skillSumLabelLeadership,
+        _skillSumLabelMeleeBasic,
+        _skillSumLabelMelee,
+        _skillSumLabelNavigation,
+        _skillSumLabelOutdoorSurvival,
+        _skillSumLabelPerception,
+        _skillSumLabelRide,
+        _skillSumLabelRow,
+        _skillSumLabelStealth;    
+    
+    private Dictionary<string, Button> _basicSkillsButtons = new();
     
     // Grouped & Advanced Skills
     private TextEdit _advNameEdit, _advCharacteristicEdit, _advCharacteristicBaseEdit, _advCharacteristicAdvEdit, _advSkillEdit;
@@ -73,14 +159,74 @@ public partial class CharacterSheetUI : Control
     private LineEdit _partyNameEdit;
     private TextEdit _partyShortAmbitionEdit, _partyLongAmbitionEdit, _partyMembersEdit;
     
+    // ==========================================
+    // ====== Equipment Form ====================
     
-    // Equipment Form
-    // Secondary characteristics
-    private SpinBox _woundsInput, _currentWoundsInput;
+    // Armour
+    private TextEdit _armourNameEdit;
+    private TextEdit _armourLocatioNEdit;
+    private TextEdit _armourEncEdit;
+    private TextEdit _armourAPEdit;
+    private TextEdit _armourQualitiesEdit;
     
-
+    // Armour Points
+    private SpinBox _headAPEdit;
+    private SpinBox _leftArmAPEdit;
+    private SpinBox _rightArmAPEdit;
+    private SpinBox _bodyAPEdit;
+    private SpinBox _rightLegAPEdit;
+    private SpinBox _leftLegAPEdit;
+    private SpinBox _shiledAPEdit;
     
-
+    // Trappings
+    private TextEdit _trappingNameEdit;
+    private TextEdit _trappingEncEdit;
+    
+    // Psychology
+    private TextEdit _psychologyTextEdit;
+    
+    // Corruption & Mutation
+    private TextEdit _corruptionMutationTextEdit;
+    
+    // Wealth
+    private SpinBox _wealthInputD;
+    private SpinBox _wealthInputSS;
+    private SpinBox _wealthInputGC;
+    
+    // Encumbrance
+    private SpinBox _encumbranceInputWeapons;
+    private SpinBox _encumbranceInputArmour;
+    private SpinBox _encumbranceInputTrappings;
+    private SpinBox _encumbranceInputMaxEnc;
+    private SpinBox _encumbranceInputTotal;
+    
+    // Wounds
+    private SpinBox _woundsInputSB;
+    private SpinBox _woundsInputTB;
+    private SpinBox _woundsInputWPB;
+    private SpinBox _woundsInputHardy;
+    private SpinBox _woundsInputCurrent;
+    private TextEdit _woundsMiscTextEdit;
+    
+    // Weapons
+    private TextEdit _weaponsNameEdit;
+    private TextEdit _weaponsGroupEdit;
+    private TextEdit _weaponsEncEdit;
+    private TextEdit _weaponsRangeEdit;
+    private TextEdit _weaponsDamageEdit;
+    private TextEdit _weaponsQualitiesEdit;
+    
+    // Spells & Prayers
+    private TextEdit _spellsPrayersNameEdit;
+    private TextEdit _spellsPrayersTNEdit;
+    private TextEdit _spellsPrayersRangeEdit;
+    private TextEdit _spellsPrayersTargetEdit;
+    private TextEdit _spellsPrayersDurationEdit;
+    private TextEdit _spellsPrayersEffectEdit;
+    private LineEdit _spellsPrayersSinEdit;
+    
+    // ===== Form End =====
+    // ====================
     
     public override void _Ready()
     {
@@ -133,8 +279,6 @@ public partial class CharacterSheetUI : Control
         _felInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/FelInput");
         
         // Secondary characteristics
-        _woundsInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Secondary/WoundsContainer/WoundsInput");
-        _currentWoundsInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Secondary/WoundsContainer/CurrentWoundsInput");
         _movementInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Secondary/MovementContainer/MovementInput");
         
         // Status and XP
@@ -187,7 +331,7 @@ public partial class CharacterSheetUI : Control
         foreach (var skill in skills)
         {
             var button = GetNode<Button>($"VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBox{skill}/Button");
-            _rollButtons[skill] = button;
+            _basicSkillsButtons[skill] = button;
             button.Pressed += () => OnBasicSkillRoll(skill);
         }
     }
