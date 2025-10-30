@@ -261,10 +261,16 @@ public partial class CharacterSheetUI : Control
         }
         
         // Character basic info
-        _nameInput = GetNode<LineEdit>("VBox/ScrollContainer/CharacterForm/BasicInfo/NameInput");
-        _speciesInput = GetNode<LineEdit>("VBox/ScrollContainer/CharacterForm/BasicInfo/SpeciesInput");
+        _nameInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/NameInput");
+        _speciesInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/SpeciesInput");
         _classInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/ClassInput");
-        _careerInput = GetNode<LineEdit>("VBox/ScrollContainer/CharacterForm/BasicInfo/CareerInput");
+        _careerInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer2/CareerInput");
+        _careerLevelInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer2/CareerLevelInput");
+        _careerPathInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer3/CareerPathInput");
+        _statusInput =
+            GetNode<LineEdit>(
+            "VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer3/StatusInput");
+        
         
         // Characteristics
         _wsInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/WSInput");
@@ -394,7 +400,6 @@ public partial class CharacterSheetUI : Control
             intelligence = (int)_intInput.Value,
             willpower = (int)_wpInput.Value,
             fellowship = (int)_felInput.Value,
-            wounds = (int)_woundsInput.Value,
             currentWounds = (int)_currentWoundsInput.Value,
             movement = (int)_movementInput.Value,
             status = _statusInput.Text,
@@ -512,7 +517,6 @@ public partial class CharacterSheetUI : Control
         _wpInput.Value = character.GetProperty("willpower").GetInt32();
         _felInput.Value = character.GetProperty("fellowship").GetInt32();
         
-        _woundsInput.Value = character.GetProperty("wounds").GetInt32();
         _currentWoundsInput.Value = character.GetProperty("currentWounds").GetInt32();
         _movementInput.Value = character.GetProperty("movement").GetInt32();
         
