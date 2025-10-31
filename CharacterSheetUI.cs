@@ -19,47 +19,59 @@ public partial class CharacterSheetUI : Control
     // ===== Character Form =====================
     
     // Character Basic Info controls
-    private LineEdit _nameInput;
-    private LineEdit _speciesInput;
-    private LineEdit _classInput;
-    private LineEdit _careerInput;
-    private LineEdit _careerLevelInput;
-    private LineEdit _careerPathInput;
-    private LineEdit _statusInput;
-    private LineEdit _ageInput;
-    private LineEdit _heightInput;
-    private LineEdit _hairInput;
-    private LineEdit _eyesInput;
+    [ExportGroup("Character Form")]
+    [ExportSubgroup("Basic Info")]
+    [Export]
+    private LineEdit 
+        _nameInput,
+        _speciesInput,
+        _classInput,
+        _careerInput,
+        _careerLevelInput,
+        _careerPathInput,
+        _statusInput,
+        _ageInput,
+        _heightInput,
+        _hairInput, 
+        _eyesInput;
     
     // Characteristics
-    private SpinBox _wsInput, _bsInput, _sInput, _tInput, _iInput;
-    private SpinBox _agInput, _dexInput, _intInput, _wpInput, _felInput;
-    
-    private SpinBox _wsInputAdv, _bsInputAdv, _sInputAdv, _tInputAdv, _iInputAdv;
-    private SpinBox _agInputAdv, _dexInputAdv, _intInputAdv, _wpInputAdv, _felInputAdv;
-    
-    private SpinBox _wsInputMod, _bsInputMod, _sInputMod, _tInputMod, _iInputMod;
-    private SpinBox _agInputMod, _dexInputMod, _intInputMod, _wpInputMod, _felInputMod;
-    
-    private Label _wsInputCur, _bsInputCur, _sInputCur, _tInputCur, _iInputCur;
-    private Label _agInputCur, _dexInputCur, _intInputCur, _wpInputCur, _felInputCur;   
+    [ExportSubgroup("Characteristics")]
+    [Export]
+    private SpinBox _wsInput, _bsInput, _sInput, _tInput, _iInput, _agInput, _dexInput, _intInput, _wpInput, _felInput;
+    [Export]
+    private SpinBox _wsInputAdv, _bsInputAdv, _sInputAdv, _tInputAdv, _iInputAdv, _agInputAdv, _dexInputAdv, _intInputAdv, _wpInputAdv, _felInputAdv;
+    [Export]
+    private SpinBox _wsInputMod, _bsInputMod, _sInputMod, _tInputMod, _iInputMod, _agInputMod, _dexInputMod, _intInputMod, _wpInputMod, _felInputMod;
+    [Export]
+    private Label _wsInputCur, _bsInputCur, _sInputCur, _tInputCur, _iInputCur, _agInputCur, _dexInputCur, _intInputCur, _wpInputCur, _felInputCur;   
     
     // Roll buttons for characteristics
     private Dictionary<string, Button> _rollButtons = new();
     
     // Resilience
+    [ExportSubgroup("Resilience")]
+    [Export]
     private SpinBox _resilienceInput, _resolveInput, _motivationInput;
     
     //Experience points
+    [ExportSubgroup("Experience")]
+    [Export]
     private SpinBox _currentExpInput, _spentExpInput, _totalExpInput;
     
     // Fate
+    [ExportSubgroup("Fate")]
+    [Export]
     private SpinBox _fateInput, _fortuneInput;
     
     // Movement
+    [ExportSubgroup("movement")]
+    [Export]
     private SpinBox _movementInput, _walkInput, _runInput;
     
     // Basic Skills
+    [ExportSubgroup("Basic Skills")]
+    [Export]
     private Label 
         _skillBaseCharLabelArt,
         _skillBaseCharLabelAthletics,
@@ -88,6 +100,7 @@ public partial class CharacterSheetUI : Control
         _skillBaseCharLabelRow,
         _skillBaseCharLabelStealth;
 
+    [Export]
     private SpinBox 
         _skillAdvEditArt,            
         _skillAdvEditAthletics,      
@@ -116,6 +129,7 @@ public partial class CharacterSheetUI : Control
         _skillAdvEditRow,            
         _skillAdvEditStealth;
     
+    [Export]
     private Label 
         _skillSumLabelArt,
         _skillSumLabelAthletics,
@@ -147,83 +161,113 @@ public partial class CharacterSheetUI : Control
     private Dictionary<string, Button> _basicSkillsButtons = new();
     
     // Grouped & Advanced Skills
+    [ExportSubgroup("Grouped & Advanced Skills")]
+    [Export]
     private TextEdit _advNameEdit, _advCharacteristicEdit, _advCharacteristicBaseEdit, _advCharacteristicAdvEdit, _advSkillEdit;
     
     // Talents
+    [ExportSubgroup("Talents")]
+    [Export]
     private TextEdit _talentNameEdit, _talentTimesTakenEdit, _talentDescriptionEdit;
     
     // Ambitions
+    [ExportSubgroup("Ambitions")]
+    [Export]
     private TextEdit _shortAmbitionEdit, _longAmbitionEdit;
     
     // Party
+    [ExportSubgroup("Party")]
+    [Export]
     private LineEdit _partyNameEdit;
+    [Export]
     private TextEdit _partyShortAmbitionEdit, _partyLongAmbitionEdit, _partyMembersEdit;
     
     // ==========================================
     // ====== Equipment Form ====================
     
     // Armour
-    private TextEdit _armourNameEdit;
-    private TextEdit _armourLocatioNEdit;
-    private TextEdit _armourEncEdit;
-    private TextEdit _armourAPEdit;
-    private TextEdit _armourQualitiesEdit;
+    [ExportGroup("Equipment Form")]
+    [ExportSubgroup("Armour")]
+    [Export]
+    private TextEdit 
+        _armourNameEdit,
+        _armourLocatioNEdit,
+        _armourEncEdit,
+        _armourAPEdit,
+        _armourQualitiesEdit;
+    
     
     // Armour Points
-    private SpinBox _headAPEdit;
-    private SpinBox _leftArmAPEdit;
-    private SpinBox _rightArmAPEdit;
-    private SpinBox _bodyAPEdit;
-    private SpinBox _rightLegAPEdit;
-    private SpinBox _leftLegAPEdit;
-    private SpinBox _shiledAPEdit;
+    [ExportSubgroup("Armour Points")]
+    [Export]
+    private SpinBox 
+        _headAPEdit,
+        _leftArmAPEdit,
+        _rightArmAPEdit,
+        _bodyAPEdit,
+        _rightLegAPEdit,
+        _leftLegAPEdit,
+        _shiledAPEdit;
     
     // Trappings
-    private TextEdit _trappingNameEdit;
-    private TextEdit _trappingEncEdit;
+    [ExportSubgroup("Trappings")]
+    [Export]
+    private TextEdit _trappingNameEdit, _trappingEncEdit;
     
     // Psychology
+    [ExportSubgroup("Psychology")]
+    [Export]
     private TextEdit _psychologyTextEdit;
     
     // Corruption & Mutation
+    [ExportSubgroup("Corruption & Mutation")]
+    [Export]
     private TextEdit _corruptionMutationTextEdit;
     
     // Wealth
-    private SpinBox _wealthInputD;
-    private SpinBox _wealthInputSS;
-    private SpinBox _wealthInputGC;
+    [ExportSubgroup("Wealth")]
+    [Export]
+    private SpinBox _wealthInputD, _wealthInputSS, _wealthInputGC;
     
     // Encumbrance
-    private SpinBox _encumbranceInputWeapons;
-    private SpinBox _encumbranceInputArmour;
-    private SpinBox _encumbranceInputTrappings;
-    private SpinBox _encumbranceInputMaxEnc;
-    private SpinBox _encumbranceInputTotal;
+    [ExportSubgroup("Encumbrance")]
+    [Export]
+    private SpinBox 
+        _encumbranceInputWeapons,
+        _encumbranceInputArmour,
+        _encumbranceInputTrappings,
+        _encumbranceInputMaxEnc,
+        _encumbranceInputTotal;
     
     // Wounds
-    private SpinBox _woundsInputSB;
-    private SpinBox _woundsInputTB;
-    private SpinBox _woundsInputWPB;
-    private SpinBox _woundsInputHardy;
-    private SpinBox _woundsInputCurrent;
+    [ExportSubgroup(("Wounds"))]
+    [Export]
+    private SpinBox _woundsInputSB, _woundsInputTB, _woundsInputWPB, _woundsInputHardy, _woundsInputCurrent;
     private TextEdit _woundsMiscTextEdit;
     
     // Weapons
-    private TextEdit _weaponsNameEdit;
-    private TextEdit _weaponsGroupEdit;
-    private TextEdit _weaponsEncEdit;
-    private TextEdit _weaponsRangeEdit;
-    private TextEdit _weaponsDamageEdit;
-    private TextEdit _weaponsQualitiesEdit;
+    [ExportSubgroup("Weapons")]
+    [Export]
+    private TextEdit 
+        _weaponsNameEdit,
+        _weaponsGroupEdit,
+        _weaponsEncEdit,
+        _weaponsRangeEdit,
+        _weaponsDamageEdit,
+        _weaponsQualitiesEdit;
     
     // Spells & Prayers
-    private TextEdit _spellsPrayersNameEdit;
-    private TextEdit _spellsPrayersTNEdit;
-    private TextEdit _spellsPrayersRangeEdit;
-    private TextEdit _spellsPrayersTargetEdit;
-    private TextEdit _spellsPrayersDurationEdit;
-    private TextEdit _spellsPrayersEffectEdit;
+    [ExportSubgroup("Spells & Prayers")] [Export]
+    private TextEdit
+        _spellsPrayersNameEdit,
+        _spellsPrayersTNEdit,
+        _spellsPrayersRangeEdit,
+        _spellsPrayersTargetEdit,
+        _spellsPrayersDurationEdit,
+        _spellsPrayersEffectEdit;
+    [Export]
     private LineEdit _spellsPrayersSinEdit;
+    
     
     // ===== Form End =====
     // ====================
@@ -260,39 +304,39 @@ public partial class CharacterSheetUI : Control
             GD.PrintErr("❌ NewButton not found: ", ex.Message);
         }
         
-        // Character basic info
-        _nameInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/NameInput");
-        _speciesInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/SpeciesInput");
-        _classInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/ClassInput");
-        _careerInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer2/CareerInput");
-        _careerLevelInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer2/CareerLevelInput");
-        _careerPathInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer3/CareerPathInput");
-        _statusInput =
-            GetNode<LineEdit>(
-            "VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer3/StatusInput");
+        // // Character basic info
+        // _nameInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/NameInput");
+        // _speciesInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/SpeciesInput");
+        // _classInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/ClassInput");
+        // _careerInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer2/CareerInput");
+        // _careerLevelInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer2/CareerLevelInput");
+        // _careerPathInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer3/CareerPathInput");
+        // _statusInput =
+        //     GetNode<LineEdit>(
+        //     "VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer3/StatusInput");
         
         
-        // Characteristics
-        _wsInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/WSInput");
-        _bsInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/BSInput");
-        _sInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/SInput");
-        _tInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/TInput");
-        _iInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/IInput");
-        _agInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/AgInput");
-        _dexInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/DexInput");
-        _intInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/IntInput");
-        _wpInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/WPInput");
-        _felInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/FelInput");
-        
-        // Secondary characteristics
-        _movementInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Secondary/MovementContainer/MovementInput");
-        
-        // Status and XP
-        _statusInput = GetNode<LineEdit>("VBox/ScrollContainer/CharacterForm/Status/StatusInput");
-        _currentExpInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Status/ExpContainer/CurrentExpInput");
-        _spentExpInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Status/ExpContainer/SpentExpInput");
-        _fateInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Status/FateContainer/FateInput");
-        _fortuneInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Status/FateContainer/FortuneInput");
+        // // Characteristics
+        // _wsInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/WSInput");
+        // _bsInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/BSInput");
+        // _sInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/SInput");
+        // _tInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/TInput");
+        // _iInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/IInput");
+        // _agInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/AgInput");
+        // _dexInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/DexInput");
+        // _intInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/IntInput");
+        // _wpInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/WPInput");
+        // _felInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/FelInput");
+        //
+        // // Secondary characteristics
+        // _movementInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Secondary/MovementContainer/MovementInput");
+        //
+        // // Status and XP
+        // _statusInput = GetNode<LineEdit>("VBox/ScrollContainer/CharacterForm/Status/StatusInput");
+        // _currentExpInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Status/ExpContainer/CurrentExpInput");
+        // _spentExpInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Status/ExpContainer/SpentExpInput");
+        // _fateInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Status/FateContainer/FateInput");
+        // _fortuneInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Status/FateContainer/FortuneInput");
         
         // Connect signals
         _characterSelect.ItemSelected += OnCharacterSelected;
@@ -342,6 +386,8 @@ public partial class CharacterSheetUI : Control
         }
     }
 
+
+
     public void LoadUserCharacters(int userId)
     {
         _currentUserId = userId;
@@ -379,6 +425,13 @@ public partial class CharacterSheetUI : Control
         _httpRequest.Request("http://localhost:5000/dice/character-roll", headers, HttpClient.Method.Post, json);
     }
 
+    private void OnBasicSkillRoll(string skill)
+    {
+        if (_currentCharacterId == 0) return;
+        
+        throw new NotImplementedException();
+    }
+    
     private void OnSavePressed()
     {
         if (_currentCharacterId == 0) return;
@@ -400,7 +453,7 @@ public partial class CharacterSheetUI : Control
             intelligence = (int)_intInput.Value,
             willpower = (int)_wpInput.Value,
             fellowship = (int)_felInput.Value,
-            currentWounds = (int)_currentWoundsInput.Value,
+            currentWounds = (int)_woundsInputCurrent.Value,
             movement = (int)_movementInput.Value,
             status = _statusInput.Text,
             currentExp = (int)_currentExpInput.Value,
@@ -517,7 +570,7 @@ public partial class CharacterSheetUI : Control
         _wpInput.Value = character.GetProperty("willpower").GetInt32();
         _felInput.Value = character.GetProperty("fellowship").GetInt32();
         
-        _currentWoundsInput.Value = character.GetProperty("currentWounds").GetInt32();
+        _woundsInputCurrent.Value = character.GetProperty("currentWounds").GetInt32();
         _movementInput.Value = character.GetProperty("movement").GetInt32();
         
         _statusInput.Text = character.GetProperty("status").GetString() ?? "";
