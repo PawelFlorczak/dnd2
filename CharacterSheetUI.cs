@@ -158,7 +158,9 @@ public partial class CharacterSheetUI : Control
         _skillSumLabelRow,
         _skillSumLabelStealth;    
     
-    private Dictionary<string, Button> _basicSkillsButtons = new();
+    
+    private Dictionary<string, Button> _basicSkillsButtons1 = new();
+    private Dictionary<string, Button> _basicSkillsButtons2 = new();
     
     // Grouped & Advanced Skills
     [ExportSubgroup("Grouped & Advanced Skills")]
@@ -304,39 +306,6 @@ public partial class CharacterSheetUI : Control
             GD.PrintErr("❌ NewButton not found: ", ex.Message);
         }
         
-        // // Character basic info
-        // _nameInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/NameInput");
-        // _speciesInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/SpeciesInput");
-        // _classInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer/ClassInput");
-        // _careerInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer2/CareerInput");
-        // _careerLevelInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer2/CareerLevelInput");
-        // _careerPathInput = GetNode<LineEdit>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer3/CareerPathInput");
-        // _statusInput =
-        //     GetNode<LineEdit>(
-        //     "VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicInfoContainer/HBoxContainer3/StatusInput");
-        
-        
-        // // Characteristics
-        // _wsInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/WSInput");
-        // _bsInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/BSInput");
-        // _sInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/SInput");
-        // _tInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/TInput");
-        // _iInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/IInput");
-        // _agInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/AgInput");
-        // _dexInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/DexInput");
-        // _intInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/IntInput");
-        // _wpInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/WPInput");
-        // _felInput = GetNode<SpinBox>("VBox/TabContainer/Character/TextureCharacter/CharacterForm/CharacteristicsContainer/FelInput");
-        //
-        // // Secondary characteristics
-        // _movementInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Secondary/MovementContainer/MovementInput");
-        //
-        // // Status and XP
-        // _statusInput = GetNode<LineEdit>("VBox/ScrollContainer/CharacterForm/Status/StatusInput");
-        // _currentExpInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Status/ExpContainer/CurrentExpInput");
-        // _spentExpInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Status/ExpContainer/SpentExpInput");
-        // _fateInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Status/FateContainer/FateInput");
-        // _fortuneInput = GetNode<SpinBox>("VBox/ScrollContainer/CharacterForm/Status/FateContainer/FortuneInput");
         
         // Connect signals
         _characterSelect.ItemSelected += OnCharacterSelected;
@@ -372,17 +341,32 @@ public partial class CharacterSheetUI : Control
     
     private void SetupBasicSkillsButtons()
     {
-        var skills = new[]
+        var skills1 = new[]
         {
-            "Art", "Athletics", "Bribery", "Charm", "CharmAnimal", "Climb","Cool", "ConsumeAlcohol","Dodge", "Drive", "Endurance", "Entertain", "Gamble",
-            "Gossip", "Haggle","Intimidate", "Intuition", "Leadership", "MeleeBasic", "Melee", "Navigation", "OutdoorSurvival", "Perception","Ride","Row","Stealth"
+            "Art", "Athletics", "Bribery", "Charm", "CharmAnimal", "Climb","Cool",
+            "ConsumeAlcohol","Dodge", "Drive", "Endurance", "Entertain", "Gamble"
+        };
+
+        var skills2 = new[]
+        {
+            "Gossip", "Haggle", "Intimidate", "Intuition", "Leadership", "MeleeBasic", "Melee", "Navigation",
+            "OutdoorSurvival", "Perception", "Ride", "Row", "Stealth"
         };
         
-        foreach (var skill in skills)
+        foreach (var skill in skills1)
         {
-            var button = GetNode<Button>($"VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBox{skill}/Button");
-            _basicSkillsButtons[skill] = button;
-            button.Pressed += () => OnBasicSkillRoll(skill);
+            var button1 = GetNode<Button>($"VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer1/HBox{skill}/BasicSkillButton");
+            
+            _basicSkillsButtons1[skill] = button1;
+            button1.Pressed += () => OnBasicSkillRoll(skill);
+        }
+
+        foreach (var skill in skills2)
+        {
+            var button2 = GetNode<Button>($"VBox/TabContainer/Character/TextureCharacter/CharacterForm/BasicSkillsContainer2/HBox{skill}/BasicSkillButton");
+            
+            _basicSkillsButtons2[skill] = button2;
+            button2.Pressed += () => OnBasicSkillRoll(skill);
         }
     }
 
@@ -410,6 +394,7 @@ public partial class CharacterSheetUI : Control
 
     private void OnCharacteristicRoll(string characteristic)
     {
+        GD.Print($"{characteristic}");
         if (_currentCharacterId == 0) return;
         
         var rollData = new
@@ -427,9 +412,20 @@ public partial class CharacterSheetUI : Control
 
     private void OnBasicSkillRoll(string skill)
     {
+        GD.Print($"{skill}");
         if (_currentCharacterId == 0) return;
         
-        throw new NotImplementedException();
+        var rollData = new
+        {
+            characterId = _currentCharacterId,
+            skill = skill,
+            testName = $"{skill} Test"
+        };
+
+        var json = JsonSerializer.Serialize(rollData);
+        var headers = new[] { "Content-Type: application/json" };
+        
+        _httpRequest.Request("http://localhost:5000/dice/skill-roll", headers, HttpClient.Method.Post, json);
     }
     
     private void OnSavePressed()
