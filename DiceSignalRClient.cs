@@ -18,6 +18,8 @@ public partial class DiceSignalRClient : Node
     [Signal]
     public delegate void OnCharacterRollReceivedEventHandler(Godot.Collections.Dictionary rollResult);
 
+    [Signal]
+    public delegate void OnSkillRollReceivedEventHandler(Godot.Collections.Dictionary skillRollResult);
 
     public override async void _Ready()
     {
@@ -44,6 +46,14 @@ public partial class DiceSignalRClient : Node
             CallDeferred(nameof(EmitCharacterRollSignalDeferred), jsonString);
         });
 
+        _connection.On<object>("OnSkillRollReceived", (skillRollResult) =>
+        {
+            GD.Print($"🎲 Otrzymano rzut umiejetnosci: {skillRollResult}");
+            var jsonString = skillRollResult?.ToString() ?? "";
+            CallDeferred(nameof(EmitSkillRollSignalDeferred), jsonString);
+        });
+        
+
         try
         {
             await _connection.StartAsync();
@@ -60,6 +70,22 @@ public partial class DiceSignalRClient : Node
         EmitSignal(SignalName.OnRollReceived, playerName, result, sides, timestamp);
     }
 
+    private void EmitSkillRollSignalDeferred(string jsonString)
+    {
+        var json = new Json();
+        var parseResult = json.Parse(jsonString);
+
+        if (parseResult == Error.Ok)
+        {
+            var dict = json.Data.AsGodotDictionary();
+            EmitSignal(SignalName.OnSkillRollReceived, dict);
+        }
+        else
+        {
+            GD.PrintErr("Failed to parse character roll result");
+        }
+    }
+    
     private void EmitCharacterRollSignalDeferred(string jsonString)
     {
         // Convert the rollResult to a Godot dictionary

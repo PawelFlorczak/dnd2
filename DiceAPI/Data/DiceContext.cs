@@ -11,8 +11,6 @@ public class DiceContext : DbContext
     public DbSet<User> Users { get; set; }
     public DbSet<Character> Characters { get; set; }
     public DbSet<CharacterSkill> CharacterSkills { get; set; }
-    public DbSet<CharacterTalent> CharacterTalents { get; set; }
-    public DbSet<CharacterItem> CharacterItems { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -49,26 +47,7 @@ public class DiceContext : DbContext
                   .HasForeignKey(e => e.CharacterId)
                   .OnDelete(DeleteBehavior.Cascade);
         });
-
-        // Configure CharacterTalent entity
-        modelBuilder.Entity<CharacterTalent>(entity =>
-        {
-            entity.HasKey(e => e.Id);
-            entity.HasOne(e => e.Character)
-                  .WithMany(e => e.Talents)
-                  .HasForeignKey(e => e.CharacterId)
-                  .OnDelete(DeleteBehavior.Cascade);
-        });
-
-        // Configure CharacterItem entity
-        modelBuilder.Entity<CharacterItem>(entity =>
-        {
-            entity.HasKey(e => e.Id);
-            entity.HasOne(e => e.Character)
-                  .WithMany(e => e.Items)
-                  .HasForeignKey(e => e.CharacterId)
-                  .OnDelete(DeleteBehavior.Cascade);
-        });
+        
 
         // Update DiceRoll to link with User
         modelBuilder.Entity<DiceRoll>(entity =>

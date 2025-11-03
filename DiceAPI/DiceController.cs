@@ -71,7 +71,7 @@ public class DiceController : ControllerBase
         }
 
         var characteristic = GetCharacteristic(character, request.Characteristic);
-        var skillAdvances = request.SkillAdvances ?? 0;
+        var skillAdvances = request.SkillAdvances;
         var totalValue = characteristic + skillAdvances + request.Modifier;
         
         var diceResult = Random.Shared.Next(1, 101); // d100 roll
@@ -102,6 +102,152 @@ public class DiceController : ControllerBase
         return Ok(rollResult);
     }
 
+    /// <summary>
+    /// Performs a skill-based dice roll for a character
+    /// This endpoint is called by CharacterSheetUI.cs when a skill button is pressed
+    /// </summary>
+    /// <param name="request">Contains characterId, skill name, and test name</param>
+    /// <returns>The result of the skill roll including success/failure</returns>
+    [HttpPost("skill-roll")]
+    [ProducesResponseType(typeof(SkillRollResult), 200)]
+    [ProducesResponseType(404)]
+    public async Task<IActionResult> SkillRoll([FromBody] SkillRollRequest request)
+    {
+        // Step 1: Find the character in the database
+        // We include the User to get the username for display
+        var character = await _context.Characters
+            .Include(c => c.User)
+            .Include(c => c.Skills) // Include skills to check if character has this skill trained
+            .FirstOrDefaultAsync(c => c.Id == request.CharacterId);
+            
+        if (character == null)
+        {
+            return NotFound("Character not found");
+        }
+
+        // Step 2: Look up the skill in the character's skill list
+        var characterSkill = character.Skills
+            .FirstOrDefault(s => s.SkillName.Equals(request.Skill, StringComparison.OrdinalIgnoreCase));
+        
+        // Step 3: Determine the characteristic and advances for this skill
+        string characteristic = "";
+        int skillAdvances = 0;
+        
+        if (characterSkill != null)
+        {
+            // Character has this skill trained - use their specific data
+            characteristic = characterSkill.Characteristic;
+            skillAdvances = characterSkill.Advances;
+        }
+        else
+        {
+            // Character doesn't have this skill trained - use default characteristic
+            // This maps common skills to their governing characteristics
+            characteristic = GetDefaultCharacteristicForSkill(request.Skill);
+            skillAdvances = 0; // Untrained skill = 0 advances
+        }
+        
+        // Step 4: Calculate the target number for the roll
+        var characteristicValue = GetCharacteristic(character, characteristic);
+        var totalValue = characteristicValue + skillAdvances;
+        
+        // Step 5: Roll the dice (d100 in WFRP)
+        var diceResult = Random.Shared.Next(1, 101); // d100 roll (1-100)
+        var success = diceResult <= totalValue; // Success if roll is under or equal to target
+        
+        // Step 6: Create the dice roll record for history
+        var roll = new DiceRoll
+        {
+            PlayerName = $"{character.User.Username} ({character.Name})",
+            Sides = 100,
+            Result = diceResult,
+            Timestamp = DateTime.UtcNow
+        };
+
+        // Step 7: Save the roll to the database
+        _context.DiceRolls.Add(roll);
+        await _context.SaveChangesAsync();
+        
+        // Step 8: Create the detailed result object
+        var rollResult = new SkillRollResult
+        {
+            Roll = roll,
+            TargetNumber = totalValue,
+            Success = success,
+            CharacterName = character.Name,
+            TestName = request.TestName,
+            SkillName = request.Skill,
+            Characteristic = characteristic,
+            SkillAdvances = skillAdvances
+        };
+        
+        // Step 9: Broadcast the result to all connected clients via SignalR
+        await _hubContext.Clients.All.SendAsync("OnSkillRollReceived", rollResult);
+
+        // Step 10: Return the result to the calling client
+        return Ok(rollResult);
+    }
+
+
+    /// <summary>
+    /// Maps skill names to their default governing characteristics
+    /// This is used when a character doesn't have a specific skill trained
+    /// Based on WFRP 4th Edition skill list
+    /// </summary>
+    /// <param name="skillName">The name of the skill</param>
+    /// <returns>The characteristic abbreviation that governs this skill</returns>
+    private string GetDefaultCharacteristicForSkill(string skillName)
+    {
+        // Convert to lowercase for case-insensitive comparison
+        var skill = skillName.ToLower();
+        
+        // Map common WFRP skills to their governing characteristics
+        // This covers the most common skills - you can expand this list
+        return skill switch
+        {
+            // Agility-based skills
+            "athletics" => "AG",
+            "climb" => "AG", 
+            "dodge" => "AG",
+            "stealth" => "AG",
+            
+            // Dexterity-based skills
+            "art" => "DEX",
+            "lockpicking" => "DEX",
+            "pickpocket" => "DEX",
+            "sleight of hand" => "DEX",
+            
+            // Intelligence-based skills
+            "lore" => "INT",
+            "language" => "INT",
+            "research" => "INT",
+            "trade" => "INT",
+            
+            // Fellowship-based skills
+            "charm" => "FEL",
+            "gossip" => "FEL",
+            "haggle" => "FEL",
+            "intimidate" => "FEL",
+            "leadership" => "FEL",
+            "perform" => "FEL",
+            
+            // Willpower-based skills
+            "cool" => "WP",
+            "endurance" => "WP",
+            "pray" => "WP",
+            
+            // Weapon Skill-based
+            "melee" => "WS",
+            
+            // Ballistic Skill-based  
+            "ranged" => "BS",
+            
+            // Default to Intelligence if skill not found
+            // This is a reasonable default for unknown skills
+            _ => "INT"
+        };
+    }
+    
     private int GetCharacteristic(Character character, string characteristic)
     {
         return characteristic.ToUpper() switch

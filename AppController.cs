@@ -72,6 +72,11 @@ public partial class AppController : Control
         {
             _signalRClient.Connect("OnCharacterRollReceived", new Callable(this, nameof(OnCharacterRollReceived)));
         }
+        
+        if (_signalRClient != null)
+        {
+            _signalRClient.Connect("OnSkillRollReceived", new Callable(this, nameof(OnSkillRollReceived)));
+        }
     }
 
     private void ShowLoginScreen()
@@ -113,6 +118,35 @@ public partial class AppController : Control
     }
 
     private void OnCharacterRollReceived(Godot.Collections.Dictionary rollResult)
+    {
+        try
+        {
+            var roll = rollResult["roll"].AsGodotDictionary();
+            var targetNumber = rollResult["targetNumber"].AsInt32();
+            var success = rollResult["success"].AsBool();
+            var characterName = rollResult["characterName"].AsString();
+            var testName = rollResult["testName"].AsString();
+            
+            var playerName = roll["playerName"].AsString();
+            var result = roll["result"].AsInt32();
+            var timestamp = roll["timestamp"].AsString();
+            
+            // Format the message to show success/failure
+            var successText = success ? "SUCCESS" : "FAILURE";
+            var message = $"{timestamp} — {playerName}: {testName} = {result}/{targetNumber} ({successText})";
+            
+            // Add to dice UI display
+            _diceUI.RollReceived(playerName, result, 100, timestamp);
+            
+            GD.Print($"Character roll: {message}");
+        }
+        catch (Exception ex)
+        {
+            GD.PrintErr("Error processing character roll: ", ex.Message);
+        }
+    }
+    
+    private void OnSkillRollReceived(Godot.Collections.Dictionary rollResult)
     {
         try
         {

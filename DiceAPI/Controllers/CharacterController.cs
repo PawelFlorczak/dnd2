@@ -23,8 +23,6 @@ public class CharacterController : ControllerBase
         var characters = await _context.Characters
             .Where(c => c.UserId == userId)
             .Include(c => c.Skills)
-            .Include(c => c.Talents)
-            .Include(c => c.Items)
             .ToListAsync();
 
         return Ok(characters);
@@ -35,8 +33,6 @@ public class CharacterController : ControllerBase
     {
         var character = await _context.Characters
             .Include(c => c.Skills)
-            .Include(c => c.Talents)
-            .Include(c => c.Items)
             .Include(c => c.User)
             .FirstOrDefaultAsync(c => c.Id == id);
 
@@ -156,37 +152,5 @@ public class CharacterController : ControllerBase
         await _context.SaveChangesAsync();
 
         return CreatedAtAction(nameof(GetCharacter), new { id = characterId }, skill);
-    }
-
-    [HttpPost("{characterId}/talents")]
-    public async Task<IActionResult> AddTalent(int characterId, [FromBody] CharacterTalent talent)
-    {
-        var character = await _context.Characters.FindAsync(characterId);
-        if (character == null)
-        {
-            return NotFound("Character not found.");
-        }
-
-        talent.CharacterId = characterId;
-        _context.CharacterTalents.Add(talent);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction(nameof(GetCharacter), new { id = characterId }, talent);
-    }
-
-    [HttpPost("{characterId}/items")]
-    public async Task<IActionResult> AddItem(int characterId, [FromBody] CharacterItem item)
-    {
-        var character = await _context.Characters.FindAsync(characterId);
-        if (character == null)
-        {
-            return NotFound("Character not found.");
-        }
-
-        item.CharacterId = characterId;
-        _context.CharacterItems.Add(item);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction(nameof(GetCharacter), new { id = characterId }, item);
     }
 }

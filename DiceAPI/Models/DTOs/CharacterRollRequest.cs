@@ -4,7 +4,7 @@ public class CharacterRollRequest
 {
     public int CharacterId { get; set; }
     public string Characteristic { get; set; } = string.Empty; // WS, BS, S, T, I, Ag, Dex, Int, WP, Fel
-    public int? SkillAdvances { get; set; }
+    public int SkillAdvances { get; set; }
     public string? TestName { get; set; }
     public int Modifier { get; set; } = 0;
 }

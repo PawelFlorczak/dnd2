@@ -11,19 +11,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8e027a5-9be0-4afb-8ad5-886cba30df82" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/DTOs/SkillRollRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CharacterSheetUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CharacterSheetUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AppController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/Controllers/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Controllers/CharacterController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/Data/DiceContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Data/DiceContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/DiceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/DiceController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/Models/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Models/Character.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/Models/CharacterItem.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/Models/CharacterItem.cs.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/Models/CharacterTalent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/Models/CharacterTalent.cs.uid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/Models/DTOs/CharacterRollRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Models/DTOs/CharacterRollRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/dice_local.db" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/dice_local.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/character_sheet_ui.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/character_sheet_ui.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceSignalRClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceSignalRClient.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +65,12 @@
     <setting file="file://$PROJECT_DIR$/CharacterSheet_kopia.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/DiceController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/Hubs/DiceHub.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DiceAPI/Models/DTOs/SkillRollRequest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DiceAPI/bin/Release/net8.0/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LocalizationManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LocalizedUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://diff.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
@@ -268,7 +280,8 @@
       <workItem from="1761212310365" duration="5841000" />
       <workItem from="1761293713609" duration="11350000" />
       <workItem from="1761815428900" duration="6577000" />
-      <workItem from="1761901857762" duration="8233000" />
+      <workItem from="1761901857762" duration="11946000" />
+      <workItem from="1762161524698" duration="13675000" />
     </task>
     <task id="LOCAL-00001" summary="Innit">
       <option name="closed" value="true" />
@@ -542,7 +555,23 @@
       <option name="project" value="LOCAL" />
       <updated>1761835508604</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Changed the variables path to Export">
+      <option name="closed" value="true" />
+      <created>1761918804809</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1761918804809</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Buttons setup done, need to create endpoint for skill-roll">
+      <option name="closed" value="true" />
+      <created>1761922654858</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1761922654858</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,8 +592,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="DiceHub mk1" />
-    <MESSAGE value="WebSocket with SignalR Test 1" />
     <MESSAGE value="zapomniałem o tym XD" />
     <MESSAGE value="WebSocket with SignalR Test 2" />
     <MESSAGE value="WebSocket with SignalR Test 3" />
@@ -588,7 +615,9 @@
     <MESSAGE value="UI design completed" />
     <MESSAGE value="Reverted UI logic back to remake it by hand. Character Form vars ready, Equipment Form not started." />
     <MESSAGE value="Started filling the SetupUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started filling the SetupUI" />
+    <MESSAGE value="Changed the variables path to Export" />
+    <MESSAGE value="Buttons setup done, need to create endpoint for skill-roll" />
+    <option name="LAST_COMMIT_MESSAGE" value="Buttons setup done, need to create endpoint for skill-roll" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
