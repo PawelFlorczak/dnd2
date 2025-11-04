@@ -10,23 +10,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d8e027a5-9be0-4afb-8ad5-886cba30df82" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/dice_local.db" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/dice_local.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceSignalRClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceSignalRClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceUI.cs" afterDir="false" />
-    </list>
+    <list default="true" id="d8e027a5-9be0-4afb-8ad5-886cba30df82" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -274,7 +258,7 @@
       <workItem from="1761815428900" duration="6577000" />
       <workItem from="1761901857762" duration="11946000" />
       <workItem from="1762161524698" duration="13725000" />
-      <workItem from="1762247132136" duration="14381000" />
+      <workItem from="1762247132136" duration="15828000" />
     </task>
     <task id="LOCAL-00001" summary="Innit">
       <option name="closed" value="true" />
@@ -572,7 +556,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762181553009</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Corrected the formatting of the timestamp in the labels of the rolls.">
+      <option name="closed" value="true" />
+      <created>1762264913354</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1762264913354</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,7 +585,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="WebSocket with SignalR Test 2" />
     <MESSAGE value="WebSocket with SignalR Test 3" />
     <MESSAGE value="Websocket test 4 ughhh" />
     <MESSAGE value="Przejście na localhosta" />
@@ -618,7 +609,8 @@
     <MESSAGE value="Changed the variables path to Export" />
     <MESSAGE value="Buttons setup done, need to create endpoint for skill-roll" />
     <MESSAGE value="Added endpoint for skill rolls(to read about it)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added endpoint for skill rolls(to read about it)" />
+    <MESSAGE value="Corrected the formatting of the timestamp in the labels of the rolls." />
+    <option name="LAST_COMMIT_MESSAGE" value="Corrected the formatting of the timestamp in the labels of the rolls." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
