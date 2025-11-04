@@ -13,7 +13,7 @@ public partial class DiceSignalRClient : Node
     private HubConnection _connection;
 
     [Signal]
-    public delegate void OnRollReceivedEventHandler(string player, int result, int sides, string timestamp);
+    public delegate void OnRollReceivedEventHandler(string player, int result, int sides, string timestamp, string testname);
     
     [Signal]
     public delegate void OnCharacterRollReceivedEventHandler(Godot.Collections.Dictionary rollResult);
@@ -35,7 +35,7 @@ public partial class DiceSignalRClient : Node
             GD.Print($"🎲 Otrzymano rzut od {roll.PlayerName}: {roll.Result}/{roll.Sides}");
             // Używamy CallDeferred, żeby przenieść wywołanie na główny wątek Godota
             CallDeferred(nameof(EmitSignalDeferred), 
-                roll.PlayerName, roll.Result, roll.Sides, roll.Timestamp.ToString("HH:mm:ss"));
+                roll.PlayerName, roll.Result, roll.Sides, roll.Timestamp.ToString("HH:mm:ss"), "");
         });
 
         _connection.On<object>("OnCharacterRollReceived", (rollResult) =>
@@ -65,9 +65,9 @@ public partial class DiceSignalRClient : Node
         }
     }
 
-    private void EmitSignalDeferred(string playerName, int result, int sides, string timestamp)
+    private void EmitSignalDeferred(string playerName, int result, int sides, string timestamp, string testname)
     {
-        EmitSignal(SignalName.OnRollReceived, playerName, result, sides, timestamp);
+        EmitSignal(SignalName.OnRollReceived, playerName, result, sides, timestamp, testname);
     }
 
     private void EmitSkillRollSignalDeferred(string jsonString)

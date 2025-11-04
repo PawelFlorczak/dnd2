@@ -11,32 +11,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8e027a5-9be0-4afb-8ad5-886cba30df82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DiceAPI/Models/DTOs/SkillRollRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dnd2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AppController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/AppController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/Controllers/CharacterController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Controllers/CharacterController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/Data/DiceContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Data/DiceContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/DiceController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/DiceController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/Models/Character.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Models/Character.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/Models/CharacterItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/Models/CharacterItem.cs.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/Models/CharacterTalent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/Models/CharacterTalent.cs.uid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/Models/DTOs/CharacterRollRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/Models/DTOs/CharacterRollRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/bin/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/dice_local.db" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/dice_local.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/DiceAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/apphost.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/ref/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DiceAPI/obj/Debug/net8.0/refint/DiceAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiceSignalRClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceSignalRClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DiceUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DiceUI.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +47,8 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/8C036F549DC4F48AC25691C5/Godot.SourceGenerators/Godot.SourceGenerators.ScriptSerializationGenerator/DiceSignalRClient_ScriptSerialization.generated.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Temp/SourceGeneratedDocuments/8C036F549DC4F48AC25691C5/Godot.SourceGenerators/Godot.SourceGenerators.ScriptSignalsGenerator/DiceSignalRClient_ScriptSignals.generated.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/4b9c23aac6cb430a8538fc21510bc3494c00/61/048e4f1e/02000003pdb2.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/5e5dffaf94b24d09a042fe733776ffa24e00/e1/fa233f2e/02000003pdb2.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/6436c37f38a047caa600bdf0d2858b674e00/0c/2218e9b9/02000002pdb1.il" root0="FORCE_HIGHLIGHTING" />
@@ -85,28 +76,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Executable.Player.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;,
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite",
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Executable.Player">
     <configuration name="Player GDScript" type="GDSCRIPT_DEBUG_RUN_CONFIGURATION" factoryName="GdScriptRunFactory" show_console_on_std_err="false" show_console_on_std_out="false" port="6006">
       <option name="address" value="127.0.0.1" />
@@ -281,7 +273,8 @@
       <workItem from="1761293713609" duration="11350000" />
       <workItem from="1761815428900" duration="6577000" />
       <workItem from="1761901857762" duration="11946000" />
-      <workItem from="1762161524698" duration="13675000" />
+      <workItem from="1762161524698" duration="13725000" />
+      <workItem from="1762247132136" duration="14381000" />
     </task>
     <task id="LOCAL-00001" summary="Innit">
       <option name="closed" value="true" />
@@ -571,7 +564,15 @@
       <option name="project" value="LOCAL" />
       <updated>1761922654858</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Added endpoint for skill rolls(to read about it)">
+      <option name="closed" value="true" />
+      <created>1762181553009</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1762181553009</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +593,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="zapomniałem o tym XD" />
     <MESSAGE value="WebSocket with SignalR Test 2" />
     <MESSAGE value="WebSocket with SignalR Test 3" />
     <MESSAGE value="Websocket test 4 ughhh" />
@@ -617,7 +617,8 @@
     <MESSAGE value="Started filling the SetupUI" />
     <MESSAGE value="Changed the variables path to Export" />
     <MESSAGE value="Buttons setup done, need to create endpoint for skill-roll" />
-    <option name="LAST_COMMIT_MESSAGE" value="Buttons setup done, need to create endpoint for skill-roll" />
+    <MESSAGE value="Added endpoint for skill rolls(to read about it)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added endpoint for skill rolls(to read about it)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

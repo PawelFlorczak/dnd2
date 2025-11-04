@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Data;
 
 public partial class DiceUI : Control
 {
@@ -27,10 +28,23 @@ public partial class DiceUI : Control
         }
     }
 
-    public void RollReceived(string player, int result, int sides, string timestamp)
+    public void RollReceived(string player, int result, int sides, string timestamp, string testname)
     {
+        string formattedTimestamp = timestamp;
+        if (DateTime.TryParse(timestamp, out DateTime parsedTime))
+        {
+            formattedTimestamp = parsedTime.ToString("HH:mm:ss");
+        }
+        
         var label = new Label();
-        label.Text = $"{timestamp} — {player} rzucił {result}/{sides}";
+        if (String.IsNullOrEmpty(testname))
+        {
+            label.Text = $"{formattedTimestamp} — {player} rzucił {result}/{sides}";
+        }
+        else
+        {
+            label.Text = $"{formattedTimestamp} — {player} rzucił {result}/{sides} w {testname}";
+        }
         label.AutowrapMode = TextServer.AutowrapMode.WordSmart;  
         _container.AddChild(label);
         

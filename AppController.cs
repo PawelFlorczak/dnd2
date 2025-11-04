@@ -136,7 +136,7 @@ public partial class AppController : Control
             var message = $"{timestamp} — {playerName}: {testName} = {result}/{targetNumber} ({successText})";
             
             // Add to dice UI display
-            _diceUI.RollReceived(playerName, result, 100, timestamp);
+            _diceUI.RollReceived(playerName, result, 100, timestamp, testName);
             
             GD.Print($"Character roll: {message}");
         }
@@ -165,13 +165,13 @@ public partial class AppController : Control
             var message = $"{timestamp} — {playerName}: {testName} = {result}/{targetNumber} ({successText})";
             
             // Add to dice UI display
-            _diceUI.RollReceived(playerName, result, 100, timestamp);
+            _diceUI.RollReceived(playerName, result, 100, timestamp, testName);
             
-            GD.Print($"Character roll: {message}");
+            GD.Print($"Skill roll: {message}");
         }
         catch (Exception ex)
         {
-            GD.PrintErr("Error processing character roll: ", ex.Message);
+            GD.PrintErr("Error processing skill roll: ", ex.Message);
         }
     }
 }
