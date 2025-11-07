@@ -18,6 +18,10 @@ public class Character
     public int Intelligence { get; set; }
     public int Willpower { get; set; }
     public int Fellowship { get; set; }
+    
+    public int WeaponSkillAdv { get; set; }
+    
+    public int WeaponSkillMod {get;set;}
 
     // Secondary Characteristics
     public int Wounds { get; set; }

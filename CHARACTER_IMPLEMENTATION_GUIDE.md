@@ -229,30 +229,6 @@ private void ValidateCharacteristicInput(SpinBox input, int min = 0, int max = 1
 - ✅ **Only update visible labels** 
 - ❌ **Don't call API** on every value change
 
-### **WFRP-Specific Features**
-```csharp
-// Characteristic bonus calculation (for WFRP skills)
-private int GetCharacteristicBonus(int characteristic)
-{
-    return characteristic / 10; // 45 WS = +4 bonus
-}
-
-// Species racial bonuses
-private void ApplySpeciesBonus(string species)
-{
-    switch (species.ToLower())
-    {
-        case "dwarf":
-            _tInputMod.Value += 20; // Dwarfs are tough!
-            _wpInputMod.Value += 20; // And stubborn!
-            break;
-        case "halfling":
-            _dexInputMod.Value += 20; // Nimble fingers
-            break;
-        // Add other species...
-    }
-}
-```
 
 ## 🎯 Quick Start Checklist
 

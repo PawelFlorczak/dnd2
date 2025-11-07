@@ -71,8 +71,9 @@ public class DiceController : ControllerBase
         }
 
         var characteristic = GetCharacteristic(character, request.Characteristic);
-        var skillAdvances = request.SkillAdvances;
-        var totalValue = characteristic + skillAdvances + request.Modifier;
+        var characteristicAdvances = request.CharacteristicAdv;
+        var characteristicMod = request.CharacteristicMod;
+        var totalValue = characteristic + characteristicAdvances + characteristicMod;
         
         var diceResult = Random.Shared.Next(1, 101); // d100 roll
         var success = diceResult <= totalValue;

@@ -94,6 +94,9 @@ public class CharacterController : ControllerBase
         existingCharacter.Intelligence = character.Intelligence;
         existingCharacter.Willpower = character.Willpower;
         existingCharacter.Fellowship = character.Fellowship;
+        existingCharacter.WeaponSkillAdv = character.WeaponSkillAdv;
+        existingCharacter.WeaponSkillMod = character.WeaponSkillMod;
+            
         existingCharacter.Wounds = character.Wounds;
         existingCharacter.CurrentWounds = character.CurrentWounds;
         existingCharacter.Movement = character.Movement;
