@@ -21,6 +21,21 @@ public class SkillRollRequest
     /// A descriptive name for the test being performed (e.g., "Athletics Test")
     /// </summary>
     public string TestName { get; set; } = string.Empty;
+    
+    /// <summary>
+    /// Skill advances from the UI (optional, defaults to 0 if not provided)
+    /// </summary>
+    public int SkillAdvances { get; set; } = 0;
+    
+    /// <summary>
+    /// Characteristic advances from the UI (for more accurate target calculation)
+    /// </summary>
+    public int CharacteristicAdv { get; set; } = 0;
+    
+    /// <summary>
+    /// Characteristic modifiers from the UI (for more accurate target calculation)
+    /// </summary>
+    public int CharacteristicMod { get; set; } = 0;
 }
 
 /// <summary>

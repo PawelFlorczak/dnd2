@@ -30,7 +30,28 @@ namespace DiceAPI.Migrations
                     b.Property<int>("Agility")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("AgilityAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("AgilityMod")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ArtAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("AthleticsAdv")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("BallisticSkill")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("BallisticSkillAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("BallisticSkillMod")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("BriberyAdv")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Career")
@@ -44,6 +65,21 @@ namespace DiceAPI.Migrations
                     b.Property<string>("CareerPath")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("CharmAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CharmAnimalAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ClimbAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ConsumeAlcoholAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CoolAdv")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Corruption")
                         .HasColumnType("INTEGER");
@@ -60,6 +96,24 @@ namespace DiceAPI.Migrations
                     b.Property<int>("Dexterity")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("DexterityAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("DexterityMod")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("DodgeAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("DriveAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("EnduranceAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("EntertainAdv")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Eyes")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -70,7 +124,22 @@ namespace DiceAPI.Migrations
                     b.Property<int>("Fellowship")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("FellowshipAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("FellowshipMod")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("Fortune")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("GambleAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("GossipAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("HaggleAdv")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Hair")
@@ -84,12 +153,39 @@ namespace DiceAPI.Migrations
                     b.Property<int>("Initiative")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("InitiativeAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("InitiativeMod")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("Intelligence")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("IntelligenceAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("IntelligenceMod")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("IntimidateAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("IntuitionAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("LeadershipAdv")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("LongTermAmbition")
                         .IsRequired()
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("MeleeAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("MeleeBasicAdv")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Movement")
                         .HasColumnType("INTEGER");
@@ -99,10 +195,25 @@ namespace DiceAPI.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("NavigationAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("OutdoorSurvivalAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PerceptionAdv")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("Resilience")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Resolve")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("RideAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("RowAdv")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ShortTermAmbition")
@@ -123,10 +234,25 @@ namespace DiceAPI.Migrations
                     b.Property<int>("StatusTier")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("StealthAdv")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("Strength")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("StrengthAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("StrengthMod")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("Toughness")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ToughnessAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ToughnessMod")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -138,7 +264,19 @@ namespace DiceAPI.Migrations
                     b.Property<int>("WeaponSkill")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("WeaponSkillAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("WeaponSkillMod")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("Willpower")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("WillpowerAdv")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("WillpowerMod")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Wounds")
@@ -149,61 +287,6 @@ namespace DiceAPI.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Characters");
-                });
-
-            modelBuilder.Entity("DiceAPI.Models.CharacterItem", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("ArmourPoints")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("CharacterId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Coverage")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Damage")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsEquipped")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("ItemName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ItemType")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Qualities")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Range")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("WeaponGroup")
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("Weight")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CharacterId");
-
-                    b.ToTable("CharacterItems");
                 });
 
             modelBuilder.Entity("DiceAPI.Models.CharacterSkill", b =>
@@ -238,33 +321,6 @@ namespace DiceAPI.Migrations
                     b.HasIndex("CharacterId");
 
                     b.ToTable("CharacterSkills");
-                });
-
-            modelBuilder.Entity("DiceAPI.Models.CharacterTalent", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("CharacterId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TalentName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("TimesAdvanced")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CharacterId");
-
-                    b.ToTable("CharacterTalents");
                 });
 
             modelBuilder.Entity("DiceAPI.Models.DiceRoll", b =>
@@ -340,17 +396,6 @@ namespace DiceAPI.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("DiceAPI.Models.CharacterItem", b =>
-                {
-                    b.HasOne("DiceAPI.Models.Character", "Character")
-                        .WithMany("Items")
-                        .HasForeignKey("CharacterId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Character");
-                });
-
             modelBuilder.Entity("DiceAPI.Models.CharacterSkill", b =>
                 {
                     b.HasOne("DiceAPI.Models.Character", "Character")
@@ -362,24 +407,9 @@ namespace DiceAPI.Migrations
                     b.Navigation("Character");
                 });
 
-            modelBuilder.Entity("DiceAPI.Models.CharacterTalent", b =>
-                {
-                    b.HasOne("DiceAPI.Models.Character", "Character")
-                        .WithMany("Talents")
-                        .HasForeignKey("CharacterId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Character");
-                });
-
             modelBuilder.Entity("DiceAPI.Models.Character", b =>
                 {
-                    b.Navigation("Items");
-
                     b.Navigation("Skills");
-
-                    b.Navigation("Talents");
                 });
 
             modelBuilder.Entity("DiceAPI.Models.User", b =>

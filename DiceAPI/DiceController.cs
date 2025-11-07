@@ -150,7 +150,13 @@ public class DiceController : ControllerBase
         
         // Step 4: Calculate the target number for the roll
         var characteristicValue = GetCharacteristic(character, characteristic);
-        var totalValue = characteristicValue + skillAdvances;
+        
+        // Use UI-provided values if available, otherwise use database/default values
+        var finalSkillAdvances = request.SkillAdvances != 0 ? request.SkillAdvances : skillAdvances;
+        var characteristicAdv = request.CharacteristicAdv;
+        var characteristicMod = request.CharacteristicMod;
+        
+        var totalValue = characteristicValue + characteristicAdv + characteristicMod + finalSkillAdvances;
         
         // Step 5: Roll the dice (d100 in WFRP)
         var diceResult = Random.Shared.Next(1, 101); // d100 roll (1-100)

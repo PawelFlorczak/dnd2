@@ -84,6 +84,8 @@ public class CharacterController : ControllerBase
 
         // Update character properties
         existingCharacter.Name = character.Name;
+        
+        // Core characteristics
         existingCharacter.WeaponSkill = character.WeaponSkill;
         existingCharacter.BallisticSkill = character.BallisticSkill;
         existingCharacter.Strength = character.Strength;
@@ -94,8 +96,30 @@ public class CharacterController : ControllerBase
         existingCharacter.Intelligence = character.Intelligence;
         existingCharacter.Willpower = character.Willpower;
         existingCharacter.Fellowship = character.Fellowship;
+        
+        // Characteristic advances
         existingCharacter.WeaponSkillAdv = character.WeaponSkillAdv;
+        existingCharacter.BallisticSkillAdv = character.BallisticSkillAdv;
+        existingCharacter.StrengthAdv = character.StrengthAdv;
+        existingCharacter.ToughnessAdv = character.ToughnessAdv;
+        existingCharacter.InitiativeAdv = character.InitiativeAdv;
+        existingCharacter.AgilityAdv = character.AgilityAdv;
+        existingCharacter.DexterityAdv = character.DexterityAdv;
+        existingCharacter.IntelligenceAdv = character.IntelligenceAdv;
+        existingCharacter.WillpowerAdv = character.WillpowerAdv;
+        existingCharacter.FellowshipAdv = character.FellowshipAdv;
+        
+        // Characteristic modifiers
         existingCharacter.WeaponSkillMod = character.WeaponSkillMod;
+        existingCharacter.BallisticSkillMod = character.BallisticSkillMod;
+        existingCharacter.StrengthMod = character.StrengthMod;
+        existingCharacter.ToughnessMod = character.ToughnessMod;
+        existingCharacter.InitiativeMod = character.InitiativeMod;
+        existingCharacter.AgilityMod = character.AgilityMod;
+        existingCharacter.DexterityMod = character.DexterityMod;
+        existingCharacter.IntelligenceMod = character.IntelligenceMod;
+        existingCharacter.WillpowerMod = character.WillpowerMod;
+        existingCharacter.FellowshipMod = character.FellowshipMod;
             
         existingCharacter.Wounds = character.Wounds;
         existingCharacter.CurrentWounds = character.CurrentWounds;
@@ -118,6 +142,35 @@ public class CharacterController : ControllerBase
         existingCharacter.Resolve = character.Resolve;
         existingCharacter.ShortTermAmbition = character.ShortTermAmbition;
         existingCharacter.LongTermAmbition = character.LongTermAmbition;
+        
+        // Basic Skills Advances
+        existingCharacter.ArtAdv = character.ArtAdv;
+        existingCharacter.AthleticsAdv = character.AthleticsAdv;
+        existingCharacter.BriberyAdv = character.BriberyAdv;
+        existingCharacter.CharmAdv = character.CharmAdv;
+        existingCharacter.CharmAnimalAdv = character.CharmAnimalAdv;
+        existingCharacter.ClimbAdv = character.ClimbAdv;
+        existingCharacter.CoolAdv = character.CoolAdv;
+        existingCharacter.ConsumeAlcoholAdv = character.ConsumeAlcoholAdv;
+        existingCharacter.DodgeAdv = character.DodgeAdv;
+        existingCharacter.DriveAdv = character.DriveAdv;
+        existingCharacter.EnduranceAdv = character.EnduranceAdv;
+        existingCharacter.EntertainAdv = character.EntertainAdv;
+        existingCharacter.GambleAdv = character.GambleAdv;
+        existingCharacter.GossipAdv = character.GossipAdv;
+        existingCharacter.HaggleAdv = character.HaggleAdv;
+        existingCharacter.IntimidateAdv = character.IntimidateAdv;
+        existingCharacter.IntuitionAdv = character.IntuitionAdv;
+        existingCharacter.LeadershipAdv = character.LeadershipAdv;
+        existingCharacter.MeleeBasicAdv = character.MeleeBasicAdv;
+        existingCharacter.MeleeAdv = character.MeleeAdv;
+        existingCharacter.NavigationAdv = character.NavigationAdv;
+        existingCharacter.OutdoorSurvivalAdv = character.OutdoorSurvivalAdv;
+        existingCharacter.PerceptionAdv = character.PerceptionAdv;
+        existingCharacter.RideAdv = character.RideAdv;
+        existingCharacter.RowAdv = character.RowAdv;
+        existingCharacter.StealthAdv = character.StealthAdv;
+        
         existingCharacter.Corruption = character.Corruption;
         existingCharacter.UpdatedAt = DateTime.UtcNow;
 

@@ -52,7 +52,9 @@ public partial class CharacterSheetUI : Control
     // Resilience
     [ExportSubgroup("Resilience")]
     [Export]
-    private SpinBox _resilienceInput, _resolveInput, _motivationInput;
+    private SpinBox _resilienceInput, _resolveInput;
+    [Export] 
+    private LineEdit _motivationInput;
     
     //Experience points
     [ExportSubgroup("Experience")]
@@ -328,6 +330,8 @@ public partial class CharacterSheetUI : Control
         SetupBasicSkillsButtons();
         // Setup characteristic bindings for live updates
         SetupCharacteristicBindings();
+        // Setup basic skills bindings for live updates
+        SetupBasicSkillsBindings();
     }
 
     private void SetupCharacteristicBindings()
@@ -382,6 +386,78 @@ public partial class CharacterSheetUI : Control
         _felInputAdv.ValueChanged += (double value) => UpdateCurrentCharacteristic("FEL");
         _felInputMod.ValueChanged += (double value) => UpdateCurrentCharacteristic("FEL");
     }
+    
+    private void SetupBasicSkillsBindings()
+    {
+        // When any characteristic changes, update all basic skills that use it
+        _wsInput.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _wsInputAdv.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _wsInputMod.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        
+        _bsInput.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _bsInputAdv.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _bsInputMod.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        
+        _sInput.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _sInputAdv.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _sInputMod.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        
+        _tInput.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _tInputAdv.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _tInputMod.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        
+        _iInput.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _iInputAdv.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _iInputMod.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        
+        _agInput.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _agInputAdv.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _agInputMod.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        
+        _dexInput.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _dexInputAdv.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _dexInputMod.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        
+        _intInput.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _intInputAdv.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _intInputMod.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        
+        _wpInput.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _wpInputAdv.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _wpInputMod.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        
+        _felInput.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _felInputAdv.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        _felInputMod.ValueChanged += (double value) => UpdateBasicSkillDisplays();
+        
+        // When skill advances change, update the displays
+        _skillAdvEditArt.ValueChanged += (double value) => UpdateBasicSkillDisplay("Art");
+        _skillAdvEditAthletics.ValueChanged += (double value) => UpdateBasicSkillDisplay("Athletics");
+        _skillAdvEditBribery.ValueChanged += (double value) => UpdateBasicSkillDisplay("Bribery");
+        _skillAdvEditCharm.ValueChanged += (double value) => UpdateBasicSkillDisplay("Charm");
+        _skillAdvEditCharmAnimal.ValueChanged += (double value) => UpdateBasicSkillDisplay("CharmAnimal");
+        _skillAdvEditClimb.ValueChanged += (double value) => UpdateBasicSkillDisplay("Climb");
+        _skillAdvEditCool.ValueChanged += (double value) => UpdateBasicSkillDisplay("Cool");
+        _skillAdvEditConsumeAlcohol.ValueChanged += (double value) => UpdateBasicSkillDisplay("ConsumeAlcohol");
+        _skillAdvEditDodge.ValueChanged += (double value) => UpdateBasicSkillDisplay("Dodge");
+        _skillAdvEditDrive.ValueChanged += (double value) => UpdateBasicSkillDisplay("Drive");
+        _skillAdvEditEndurance.ValueChanged += (double value) => UpdateBasicSkillDisplay("Endurance");
+        _skillAdvEditEntertain.ValueChanged += (double value) => UpdateBasicSkillDisplay("Entertain");
+        _skillAdvEditGamble.ValueChanged += (double value) => UpdateBasicSkillDisplay("Gamble");
+        _skillAdvEditGossip.ValueChanged += (double value) => UpdateBasicSkillDisplay("Gossip");
+        _skillAdvEditHaggle.ValueChanged += (double value) => UpdateBasicSkillDisplay("Haggle");
+        _skillAdvEditIntimidate.ValueChanged += (double value) => UpdateBasicSkillDisplay("Intimidate");
+        _skillAdvEditIntuition.ValueChanged += (double value) => UpdateBasicSkillDisplay("Intuition");
+        _skillAdvEditLeadership.ValueChanged += (double value) => UpdateBasicSkillDisplay("Leadership");
+        _skillAdvEditMeleeBasic.ValueChanged += (double value) => UpdateBasicSkillDisplay("MeleeBasic");
+        _skillAdvEditMelee.ValueChanged += (double value) => UpdateBasicSkillDisplay("Melee");
+        _skillAdvEditNavigation.ValueChanged += (double value) => UpdateBasicSkillDisplay("Navigation");
+        _skillAdvEditOutdoorSurvival.ValueChanged += (double value) => UpdateBasicSkillDisplay("OutdoorSurvival");
+        _skillAdvEditPerception.ValueChanged += (double value) => UpdateBasicSkillDisplay("Perception");
+        _skillAdvEditRide.ValueChanged += (double value) => UpdateBasicSkillDisplay("Ride");
+        _skillAdvEditRow.ValueChanged += (double value) => UpdateBasicSkillDisplay("Row");
+        _skillAdvEditStealth.ValueChanged += (double value) => UpdateBasicSkillDisplay("Stealth");
+    }
 
     private void UpdateCurrentCharacteristic(string characteristic)
     {
@@ -418,6 +494,201 @@ public partial class CharacterSheetUI : Control
                 _felInputCur.Text = ((int)(_felInput.Value + _felInputAdv.Value + _felInputMod.Value)).ToString();
                 break;
         }
+    }
+    
+    private void UpdateBasicSkillDisplays()
+    {
+        // Update all basic skills when characteristics change
+        var skills = new[]
+        {
+            "Art", "Athletics", "Bribery", "Charm", "CharmAnimal", "Climb", "Cool",
+            "ConsumeAlcohol", "Dodge", "Drive", "Endurance", "Entertain", "Gamble",
+            "Gossip", "Haggle", "Intimidate", "Intuition", "Leadership", "MeleeBasic", 
+            "Melee", "Navigation", "OutdoorSurvival", "Perception", "Ride", "Row", "Stealth"
+        };
+        
+        foreach (var skill in skills)
+        {
+            UpdateBasicSkillDisplay(skill);
+        }
+    }
+    
+    private void UpdateBasicSkillDisplay(string skill)
+    {
+        var characteristic = GetCharacteristicForSkill(skill);
+        var baseCharValue = GetCharacteristicValue(characteristic);
+        var advValue = GetCharacteristicAdvValue(characteristic);
+        var modValue = GetCharacteristicModValue(characteristic);
+        var skillAdvValue = GetSkillAdvValue(skill);
+        
+        var baseCharLabel = GetSkillBaseCharLabel(skill);
+        var sumLabel = GetSkillSumLabel(skill);
+        
+        if (baseCharLabel != null)
+        {
+            baseCharLabel.Text = (baseCharValue + advValue + modValue).ToString();
+        }
+        
+        if (sumLabel != null)
+        {
+            sumLabel.Text = (baseCharValue + advValue + modValue + skillAdvValue).ToString();
+        }
+    }
+    
+    private int GetCharacteristicValue(string characteristic)
+    {
+        return characteristic switch
+        {
+            "WS" => (int)_wsInput.Value,
+            "BS" => (int)_bsInput.Value,
+            "S" => (int)_sInput.Value,
+            "T" => (int)_tInput.Value,
+            "I" => (int)_iInput.Value,
+            "AG" => (int)_agInput.Value,
+            "DEX" => (int)_dexInput.Value,
+            "INT" => (int)_intInput.Value,
+            "WP" => (int)_wpInput.Value,
+            "FEL" => (int)_felInput.Value,
+            _ => 0
+        };
+    }
+    
+    private int GetCharacteristicAdvValue(string characteristic)
+    {
+        return characteristic switch
+        {
+            "WS" => (int)_wsInputAdv.Value,
+            "BS" => (int)_bsInputAdv.Value,
+            "S" => (int)_sInputAdv.Value,
+            "T" => (int)_tInputAdv.Value,
+            "I" => (int)_iInputAdv.Value,
+            "AG" => (int)_agInputAdv.Value,
+            "DEX" => (int)_dexInputAdv.Value,
+            "INT" => (int)_intInputAdv.Value,
+            "WP" => (int)_wpInputAdv.Value,
+            "FEL" => (int)_felInputAdv.Value,
+            _ => 0
+        };
+    }
+    
+    private int GetCharacteristicModValue(string characteristic)
+    {
+        return characteristic switch
+        {
+            "WS" => (int)_wsInputMod.Value,
+            "BS" => (int)_bsInputMod.Value,
+            "S" => (int)_sInputMod.Value,
+            "T" => (int)_tInputMod.Value,
+            "I" => (int)_iInputMod.Value,
+            "AG" => (int)_agInputMod.Value,
+            "DEX" => (int)_dexInputMod.Value,
+            "INT" => (int)_intInputMod.Value,
+            "WP" => (int)_wpInputMod.Value,
+            "FEL" => (int)_felInputMod.Value,
+            _ => 0
+        };
+    }
+    
+    private int GetSkillAdvValue(string skill)
+    {
+        return skill switch
+        {
+            "Art" => (int)_skillAdvEditArt.Value,
+            "Athletics" => (int)_skillAdvEditAthletics.Value,
+            "Bribery" => (int)_skillAdvEditBribery.Value,
+            "Charm" => (int)_skillAdvEditCharm.Value,
+            "CharmAnimal" => (int)_skillAdvEditCharmAnimal.Value,
+            "Climb" => (int)_skillAdvEditClimb.Value,
+            "Cool" => (int)_skillAdvEditCool.Value,
+            "ConsumeAlcohol" => (int)_skillAdvEditConsumeAlcohol.Value,
+            "Dodge" => (int)_skillAdvEditDodge.Value,
+            "Drive" => (int)_skillAdvEditDrive.Value,
+            "Endurance" => (int)_skillAdvEditEndurance.Value,
+            "Entertain" => (int)_skillAdvEditEntertain.Value,
+            "Gamble" => (int)_skillAdvEditGamble.Value,
+            "Gossip" => (int)_skillAdvEditGossip.Value,
+            "Haggle" => (int)_skillAdvEditHaggle.Value,
+            "Intimidate" => (int)_skillAdvEditIntimidate.Value,
+            "Intuition" => (int)_skillAdvEditIntuition.Value,
+            "Leadership" => (int)_skillAdvEditLeadership.Value,
+            "MeleeBasic" => (int)_skillAdvEditMeleeBasic.Value,
+            "Melee" => (int)_skillAdvEditMelee.Value,
+            "Navigation" => (int)_skillAdvEditNavigation.Value,
+            "OutdoorSurvival" => (int)_skillAdvEditOutdoorSurvival.Value,
+            "Perception" => (int)_skillAdvEditPerception.Value,
+            "Ride" => (int)_skillAdvEditRide.Value,
+            "Row" => (int)_skillAdvEditRow.Value,
+            "Stealth" => (int)_skillAdvEditStealth.Value,
+            _ => 0
+        };
+    }
+    
+    private Label GetSkillBaseCharLabel(string skill)
+    {
+        return skill switch
+        {
+            "Art" => _skillBaseCharLabelArt,
+            "Athletics" => _skillBaseCharLabelAthletics,
+            "Bribery" => _skillBaseCharLabelBribery,
+            "Charm" => _skillBaseCharLabelCharm,
+            "CharmAnimal" => _skillBaseCharLabelCharmAnimal,
+            "Climb" => _skillBaseCharLabelClimb,
+            "Cool" => _skillBaseCharLabelCool,
+            "ConsumeAlcohol" => _skillBaseCharLabelConsumeAlcohol,
+            "Dodge" => _skillBaseCharLabelDodge,
+            "Drive" => _skillBaseCharLabelDrive,
+            "Endurance" => _skillBaseCharLabelEndurance,
+            "Entertain" => _skillBaseCharLabelEntertain,
+            "Gamble" => _skillBaseCharLabelGamble,
+            "Gossip" => _skillBaseCharLabelGossip,
+            "Haggle" => _skillBaseCharLabelHaggle,
+            "Intimidate" => _skillBaseCharLabelIntimidate,
+            "Intuition" => _skillBaseCharLabelIntuition,
+            "Leadership" => _skillBaseCharLabelLeadership,
+            "MeleeBasic" => _skillBaseCharLabelMeleeBasic,
+            "Melee" => _skillBaseCharLabelMelee,
+            "Navigation" => _skillBaseCharLabelNavigation,
+            "OutdoorSurvival" => _skillBaseCharLabelOutdoorSurvival,
+            "Perception" => _skillBaseCharLabelPerception,
+            "Ride" => _skillBaseCharLabelRide,
+            "Row" => _skillBaseCharLabelRow,
+            "Stealth" => _skillBaseCharLabelStealth,
+            _ => null
+        };
+    }
+    
+    private Label GetSkillSumLabel(string skill)
+    {
+        return skill switch
+        {
+            "Art" => _skillSumLabelArt,
+            "Athletics" => _skillSumLabelAthletics,
+            "Bribery" => _skillSumLabelBribery,
+            "Charm" => _skillSumLabelCharm,
+            "CharmAnimal" => _skillSumLabelCharmAnimal,
+            "Climb" => _skillSumLabelClimb,
+            "Cool" => _skillSumLabelCool,
+            "ConsumeAlcohol" => _skillSumLabelConsumeAlcohol,
+            "Dodge" => _skillSumLabelDodge,
+            "Drive" => _skillSumLabelDrive,
+            "Endurance" => _skillSumLabelEndurance,
+            "Entertain" => _skillSumLabelEntertain,
+            "Gamble" => _skillSumLabelGamble,
+            "Gossip" => _skillSumLabelGossip,
+            "Haggle" => _skillSumLabelHaggle,
+            "Intimidate" => _skillSumLabelIntimidate,
+            "Intuition" => _skillSumLabelIntuition,
+            "Leadership" => _skillSumLabelLeadership,
+            "MeleeBasic" => _skillSumLabelMeleeBasic,
+            "Melee" => _skillSumLabelMelee,
+            "Navigation" => _skillSumLabelNavigation,
+            "OutdoorSurvival" => _skillSumLabelOutdoorSurvival,
+            "Perception" => _skillSumLabelPerception,
+            "Ride" => _skillSumLabelRide,
+            "Row" => _skillSumLabelRow,
+            "Stealth" => _skillSumLabelStealth,
+            _ => null
+        };
     }
     
     private void SetupRollButtons()
@@ -461,6 +732,40 @@ public partial class CharacterSheetUI : Control
             _basicSkillsButtons2[skill] = button2;
             button2.Pressed += () => OnBasicSkillRoll(skill);
         }
+    }
+    
+    private string GetCharacteristicForSkill(string skillName)
+    {
+        return skillName.ToLower() switch
+        {
+            "art" => "DEX",
+            "athletics" => "AG", 
+            "bribery" => "FEL",
+            "charm" => "FEL",
+            "charmanimal" => "WP",
+            "climb" => "S",
+            "cool" => "WP",
+            "consumealcohol" => "T",
+            "dodge" => "AG",
+            "drive" => "AG",
+            "endurance" => "T",
+            "entertain" => "FEL",
+            "gamble" => "INT",
+            "gossip" => "FEL",
+            "haggle" => "FEL",
+            "intimidate" => "S",
+            "intuition" => "I",
+            "leadership" => "FEL",
+            "meleebasic" => "WS",
+            "melee" => "WS",
+            "navigation" => "I",
+            "outdoorsurvival" => "INT",
+            "perception" => "I",
+            "ride" => "AG",
+            "row" => "S",
+            "stealth" => "AG",
+            _ => "INT"
+        };
     }
 
 
@@ -558,11 +863,24 @@ public partial class CharacterSheetUI : Control
         GD.Print($"{skill}");
         if (_currentCharacterId == 0) return;
         
+        // Get the governing characteristic for this skill
+        var characteristic = GetCharacteristicForSkill(skill);
+        
+        // Get characteristic values
+        var characteristicAdv = GetCharacteristicAdvValue(characteristic);
+        var characteristicMod = GetCharacteristicModValue(characteristic);
+        
+        // Get skill advances
+        var skillAdvances = GetSkillAdvValue(skill);
+        
         var rollData = new
         {
             characterId = _currentCharacterId,
             skill = skill,
-            testName = $"{skill} Test"
+            testName = $"{skill} Test",
+            skillAdvances = skillAdvances,
+            characteristicAdv = characteristicAdv,
+            characteristicMod = characteristicMod
         };
 
         var json = JsonSerializer.Serialize(rollData);
@@ -598,12 +916,12 @@ public partial class CharacterSheetUI : Control
             ballisticSkillAdv = (int)_bsInputAdv.Value,
             strengthAdv = (int)_sInputAdv.Value,
             toughnessAdv = (int)_tInputAdv.Value,
-            initiativeADv = (int)_iInputAdv.Value,
+            initiativeAdv = (int)_iInputAdv.Value,
             agilityAdv = (int)_agInputAdv.Value,
-            dexterityAv = (int)_dexInputAdv.Value,
+            dexterityAdv = (int)_dexInputAdv.Value,
             intelligenceAdv = (int)_intInputAdv.Value,
             willpowerAdv = (int)_wpInputAdv.Value,
-            fellowshipADv = (int)_felInputAdv.Value,
+            fellowshipAdv = (int)_felInputAdv.Value,
             // Mod characteristics
             weaponSkillMod = (int)_wsInputMod.Value,
             ballisticSkillMod = (int)_bsInputMod.Value,
@@ -633,7 +951,34 @@ public partial class CharacterSheetUI : Control
             currentExp = (int)_currentExpInput.Value,
             spentExp = (int)_spentExpInput.Value,
             fate = (int)_fateInput.Value,
-            fortune = (int)_fortuneInput.Value
+            fortune = (int)_fortuneInput.Value,
+            // Basic Skills Advances
+            artAdv = (int)_skillAdvEditArt.Value,
+            athleticsAdv = (int)_skillAdvEditAthletics.Value,
+            briberyAdv = (int)_skillAdvEditBribery.Value,
+            charmAdv = (int)_skillAdvEditCharm.Value,
+            charmAnimalAdv = (int)_skillAdvEditCharmAnimal.Value,
+            climbAdv = (int)_skillAdvEditClimb.Value,
+            coolAdv = (int)_skillAdvEditCool.Value,
+            consumeAlcoholAdv = (int)_skillAdvEditConsumeAlcohol.Value,
+            dodgeAdv = (int)_skillAdvEditDodge.Value,
+            driveAdv = (int)_skillAdvEditDrive.Value,
+            enduranceAdv = (int)_skillAdvEditEndurance.Value,
+            entertainAdv = (int)_skillAdvEditEntertain.Value,
+            gambleAdv = (int)_skillAdvEditGamble.Value,
+            gossipAdv = (int)_skillAdvEditGossip.Value,
+            haggleAdv = (int)_skillAdvEditHaggle.Value,
+            intimidateAdv = (int)_skillAdvEditIntimidate.Value,
+            intuitionAdv = (int)_skillAdvEditIntuition.Value,
+            leadershipAdv = (int)_skillAdvEditLeadership.Value,
+            meleeBasicAdv = (int)_skillAdvEditMeleeBasic.Value,
+            meleeAdv = (int)_skillAdvEditMelee.Value,
+            navigationAdv = (int)_skillAdvEditNavigation.Value,
+            outdoorSurvivalAdv = (int)_skillAdvEditOutdoorSurvival.Value,
+            perceptionAdv = (int)_skillAdvEditPerception.Value,
+            rideAdv = (int)_skillAdvEditRide.Value,
+            rowAdv = (int)_skillAdvEditRow.Value,
+            stealthAdv = (int)_skillAdvEditStealth.Value
         };
 
         var json = JsonSerializer.Serialize(characterData);
@@ -749,12 +1094,12 @@ public partial class CharacterSheetUI : Control
         _bsInputAdv.Value = character.GetProperty("ballisticSkillAdv").GetInt32();
         _sInputAdv.Value = character.GetProperty("strengthAdv").GetInt32();
         _tInputAdv.Value = character.GetProperty("toughnessAdv").GetInt32();
-        _iInputAdv.Value = character.GetProperty("initiativeADv").GetInt32();
+        _iInputAdv.Value = character.GetProperty("initiativeAdv").GetInt32();
         _agInputAdv.Value = character.GetProperty("agilityAdv").GetInt32();
-        _dexInputAdv.Value = character.GetProperty("dexterityAv").GetInt32();
+        _dexInputAdv.Value = character.GetProperty("dexterityAdv").GetInt32();
         _intInputAdv.Value = character.GetProperty("intelligenceAdv").GetInt32();
         _wpInputAdv.Value = character.GetProperty("willpowerAdv").GetInt32();
-        _felInputAdv.Value = character.GetProperty("fellowshipADv").GetInt32();
+        _felInputAdv.Value = character.GetProperty("fellowshipAdv").GetInt32();
         
         // Load Mod values for all characteristics
         _wsInputMod.Value = character.GetProperty("weaponSkillMod").GetInt32();
@@ -779,6 +1124,37 @@ public partial class CharacterSheetUI : Control
         UpdateCurrentCharacteristic("INT");
         UpdateCurrentCharacteristic("WP");
         UpdateCurrentCharacteristic("FEL");
+        
+        // Load Basic Skills Advances
+        _skillAdvEditArt.Value = character.GetProperty("artAdv").GetInt32();
+        _skillAdvEditAthletics.Value = character.GetProperty("athleticsAdv").GetInt32();
+        _skillAdvEditBribery.Value = character.GetProperty("briberyAdv").GetInt32();
+        _skillAdvEditCharm.Value = character.GetProperty("charmAdv").GetInt32();
+        _skillAdvEditCharmAnimal.Value = character.GetProperty("charmAnimalAdv").GetInt32();
+        _skillAdvEditClimb.Value = character.GetProperty("climbAdv").GetInt32();
+        _skillAdvEditCool.Value = character.GetProperty("coolAdv").GetInt32();
+        _skillAdvEditConsumeAlcohol.Value = character.GetProperty("consumeAlcoholAdv").GetInt32();
+        _skillAdvEditDodge.Value = character.GetProperty("dodgeAdv").GetInt32();
+        _skillAdvEditDrive.Value = character.GetProperty("driveAdv").GetInt32();
+        _skillAdvEditEndurance.Value = character.GetProperty("enduranceAdv").GetInt32();
+        _skillAdvEditEntertain.Value = character.GetProperty("entertainAdv").GetInt32();
+        _skillAdvEditGamble.Value = character.GetProperty("gambleAdv").GetInt32();
+        _skillAdvEditGossip.Value = character.GetProperty("gossipAdv").GetInt32();
+        _skillAdvEditHaggle.Value = character.GetProperty("haggleAdv").GetInt32();
+        _skillAdvEditIntimidate.Value = character.GetProperty("intimidateAdv").GetInt32();
+        _skillAdvEditIntuition.Value = character.GetProperty("intuitionAdv").GetInt32();
+        _skillAdvEditLeadership.Value = character.GetProperty("leadershipAdv").GetInt32();
+        _skillAdvEditMeleeBasic.Value = character.GetProperty("meleeBasicAdv").GetInt32();
+        _skillAdvEditMelee.Value = character.GetProperty("meleeAdv").GetInt32();
+        _skillAdvEditNavigation.Value = character.GetProperty("navigationAdv").GetInt32();
+        _skillAdvEditOutdoorSurvival.Value = character.GetProperty("outdoorSurvivalAdv").GetInt32();
+        _skillAdvEditPerception.Value = character.GetProperty("perceptionAdv").GetInt32();
+        _skillAdvEditRide.Value = character.GetProperty("rideAdv").GetInt32();
+        _skillAdvEditRow.Value = character.GetProperty("rowAdv").GetInt32();
+        _skillAdvEditStealth.Value = character.GetProperty("stealthAdv").GetInt32();
+        
+        // Update all basic skills displays
+        UpdateBasicSkillDisplays();
         
         _woundsInputCurrent.Value = character.GetProperty("currentWounds").GetInt32();
         _movementInput.Value = character.GetProperty("movement").GetInt32();
